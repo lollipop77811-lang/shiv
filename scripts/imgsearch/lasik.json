@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "query": "LASIK laser eye surgery procedure ophthalmologist preparing patient",
+  "count": 4,
+  "ranked": false,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f539458a4d64.jpg",
+      "caption": "",
+      "source": "EZContacts.com",
+      "original_width": "1170px",
+      "original_height": "1248px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/13fa34600871.jpeg",
+      "caption": "",
+      "source": "CLS Health",
+      "original_width": "3648px",
+      "original_height": "3648px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fbd60da5c911.jpg",
+      "caption": "",
+      "source": "SuraVision",
+      "original_width": "2000px",
+      "original_height": "1271px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4958a0f5d913.jpg",
+      "caption": "",
+      "source": "Dello Russo Laser Vision",
+      "original_width": "1648px",
+      "original_height": "1330px"
+    }
+  ]
+}

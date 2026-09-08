@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { TREATMENTS } from "@/lib/site-data";
 import { useNav } from "@/lib/nav";
 import { Reveal } from "@/components/site/reveal";
@@ -75,39 +75,39 @@ export function TreatmentsView() {
           {TREATMENTS.map((t, i) => (
             <Reveal key={t.id} delay={(i % 3) * 0.06}>
               <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border/70 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">
-                {/* cover */}
-                <div className={`relative flex h-32 items-center justify-center bg-gradient-to-br ${t.gradient}`}>
-                  <svg className="absolute inset-0 h-full w-full opacity-20" aria-hidden="true">
-                    <defs>
-                      <pattern id={`p-${t.id}`} width="28" height="28" patternUnits="userSpaceOnUse">
-                        <circle cx="2" cy="2" r="1.2" fill="#fff" />
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill={`url(#p-${t.id})`} />
-                  </svg>
-                  <t.icon className="relative h-12 w-12 text-white transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
-                  <span className="absolute bottom-3 right-4 text-[0.65rem] font-extrabold uppercase tracking-[0.18em] text-white/70">
-                    {t.name}
+                {/* cover photo */}
+                <button
+                  onClick={() => nav.navigate({ view: "treatment", treatmentId: t.id })}
+                  className="relative block h-48 w-full overflow-hidden"
+                  aria-label={`Learn about ${t.name}`}
+                >
+                  {t.image ? (
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className={`block h-full w-full bg-gradient-to-br ${t.gradient}`} />
+                  )}
+                  <span
+                    className="absolute inset-0 bg-gradient-to-t from-brand-950/45 via-brand-950/5 to-transparent"
+                    aria-hidden="true"
+                  />
+                  <span className="absolute bottom-3 left-5 inline-flex items-center gap-2 text-sm font-extrabold text-white">
+                    <t.icon className="h-4.5 w-4.5 text-gold-400" strokeWidth={1.8} />
+                    {t.shortName}
                   </span>
-                </div>
+                </button>
 
                 <div className="flex flex-1 flex-col p-6">
                   <h2 className="text-lg font-extrabold tracking-tight text-brand-900">{t.name}</h2>
-                  <p className="mt-1.5 text-sm font-semibold text-jade-700">{t.tagline}</p>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-500">{t.cardDescription}</p>
-
-                  <ul className="mt-4 space-y-1.5">
-                    {t.symptoms.items.slice(0, 3).map((s) => (
-                      <li key={s} className="flex items-start gap-2 text-xs font-semibold text-ink-500">
-                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-jade-500" />
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-1.5 flex-1 text-sm leading-relaxed text-ink-500">{t.tagline}</p>
 
                   <button
                     onClick={() => nav.navigate({ view: "treatment", treatmentId: t.id })}
-                    className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-800"
+                    className="mt-5 inline-flex items-center justify-center gap-2 rounded-full border border-jade-200 bg-jade-50/60 px-5 py-2.5 text-sm font-bold text-jade-700 transition hover:border-jade-300 hover:bg-jade-50"
                   >
                     Learn More
                     <ArrowUpRight className="h-4 w-4" />

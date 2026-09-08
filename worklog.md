@@ -155,3 +155,22 @@ Work Log:
 Stage Summary:
 - Deliverable: full multi-page website — 10+ real URLs (/, /treatments, /treatments/[8 ids], /doctors, /doctors/[4 ids], /appointment, /about, /facilities, /patient-resources, /contact, branded 404) with per-page titles/metadata, shared chrome, consistent navy PageHero pattern, and unchanged visual design.
 - Home remains the rich one-page landing (MediCare-reference structure); all nav destinations are now dedicated pages.
+
+---
+Task ID: 9
+Agent: main (Super Z)
+Task: Home page redesign as lean landing (user: "home page has the detail of all pages in one single page — fix it") + stock images on treatment cards with short user-POV copy ("too much text on that cards").
+
+Work Log:
+- Slimmed HomeView to a true landing: Hero, QuickAppointment, WhyUs, Services, Testimonials, FinalCta. Removed from home (all still live on their own pages): FindCare, About, DoctorsSection, Technology, Journey, Blog, Faq, Emergency, Location. Home height dropped to ~5,690px.
+- Sourced stock photos: 8 parallel->sequential z-ai image-search queries (429 rate limits solved with delays + retries, stdout-captured JSON since -o flag unreliable); downloaded 3 candidates per treatment; visually inspected every image and REJECTED watermarked/branded ones (3x Alamy cornea, lasik e2 logo, retina A/B journal figure, 2 pediatric text overlays, dry-eye product packshot, general title overlay).
+- Final card images saved to public/images/treatments/{cataract,lasik,glaucoma,retina,cornea,dry-eye,pediatric,general}.jpg: cataract=OR surgeon at microscope, lasik=laser surgery close-up, glaucoma=tonometry at slit lamp, retina=fundus camera (existing clean local), cornea=anterior-segment gold-instrument close-up, dry-eye=eye drops, pediatric=child at slit lamp (existing local), general=senior slit-lamp exam.
+- site-data.ts: Treatment interface gained image?: string; all 8 treatments populated.
+- services.tsx home cards rebuilt image-first: h-44 photo cover with hover zoom + navy bottom fade, shortName, tagline (user-POV one-liner) as the ONLY copy, Explore link. Removed icon tile + cardDescription wall.
+- treatments-view.tsx listing cards rebuilt: h-48 photo cover with gold icon + shortName chip overlay, name, tagline, outlined Learn More pill. Removed cardDescription + symptoms checklist + gradient pattern cover.
+- Verified: curl 200 on /, /treatments, /treatments/cataract, /about, /doctors, /contact, /appointment; browser screenshots (home full/lean 1440px, services close-up, treatments full + mobile 390px, cataract detail, doctors, about); zero page errors, zero app console errors; bun run lint clean.
+
+Stage Summary:
+- Home is now a focused 6-section landing (5,688px tall) — all detailed content lives on dedicated pages; nav = real multi-page URLs.
+- Treatment cards (home + /treatments) are image-first with a single user-POV line each (uses existing tagline field), matching the MediCare white-card + photo language.
+- Screenshots in download/shots/lean-*.png; search scripts + candidate JSONs kept in scripts/ for future image swaps.

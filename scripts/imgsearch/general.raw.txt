@@ -1,0 +1,40 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "senior patient having comprehensive eye examination with slit lamp"
+✅ Got 4 images
+{
+  "success": true,
+  "query": "senior patient having comprehensive eye examination with slit lamp",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/90527f10b2cf.jpg",
+      "caption": "",
+      "source": "Oscar Wylee",
+      "original_width": "1640px",
+      "original_height": "840px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d7ff44bd7741.jpg",
+      "caption": "",
+      "source": "Intelligent Medicine with Dr. Ronald Hoffman",
+      "original_width": "2121px",
+      "original_height": "1414px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3122b62c4864.png",
+      "caption": "",
+      "source": "Department of Emergency Medicine | Saint John",
+      "original_width": "1846px",
+      "original_height": "1154px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9df565a9b6a5.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    }
+  ]
+}

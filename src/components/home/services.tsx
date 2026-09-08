@@ -43,23 +43,36 @@ export function Services() {
             <StaggerItem key={t.id}>
               <button
                 onClick={() => nav.navigate({ view: "treatment", treatmentId: t.id })}
-                className="group flex h-full w-full flex-col rounded-3xl border border-border/60 bg-white p-6 text-left shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-jade-300 hover:shadow-lift"
+                className="group flex h-full w-full flex-col overflow-hidden rounded-3xl border border-border/60 bg-white text-left shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-jade-300 hover:shadow-lift"
                 aria-label={`Learn about ${t.name}`}
               >
-                <span
-                  className={`relative grid h-14 w-14 place-items-center overflow-hidden rounded-2xl bg-gradient-to-br ${t.gradient} text-white shadow-soft transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3`}
-                >
-                  <t.icon className="h-7 w-7" strokeWidth={1.8} />
+                <span className="relative block h-44 overflow-hidden">
+                  {t.image ? (
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className={`block h-full w-full bg-gradient-to-br ${t.gradient}`} />
+                  )}
+                  <span
+                    className="absolute inset-0 bg-gradient-to-t from-brand-950/40 via-brand-950/5 to-transparent"
+                    aria-hidden="true"
+                  />
                 </span>
-                <h3 className="mt-5 text-lg font-extrabold tracking-tight text-brand-900">
-                  {t.shortName}
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-500">
-                  {t.cardDescription}
-                </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-jade-700">
-                  Explore
-                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span className="flex flex-1 flex-col p-5">
+                  <h3 className="text-lg font-extrabold tracking-tight text-brand-900">
+                    {t.shortName}
+                  </h3>
+                  <p className="mt-1.5 flex-1 text-sm leading-relaxed text-ink-500">
+                    {t.tagline}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-jade-700">
+                    Explore
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
                 </span>
               </button>
             </StaggerItem>

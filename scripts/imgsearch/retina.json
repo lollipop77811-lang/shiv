@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "retina examination with fundus camera digital eye scan in eye clinic",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fe8a51b954a7.webp",
+      "caption": "",
+      "source": "Greenwich Ophthalmology Associates",
+      "original_width": "960px",
+      "original_height": "960px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/07c66d1d9753.jpg",
+      "caption": "",
+      "source": "Nature",
+      "original_width": "1499px",
+      "original_height": "757px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/edff65616e57.jpg",
+      "caption": "",
+      "source": "www.vibhavadi.com",
+      "original_width": "3400px",
+      "original_height": "1779px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/479f323a6cb4.jpg",
+      "caption": "",
+      "source": "Consult QD - Cleveland Clinic",
+      "original_width": "1300px",
+      "original_height": "900px"
+    }
+  ]
+}

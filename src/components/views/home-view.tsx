@@ -3,12 +3,15 @@
 import { Hero } from "@/components/home/hero";
 import { QuickAppointment } from "@/components/home/quick-appointment";
 import { WhyUs } from "@/components/home/why-us";
-import { Services, FindCare } from "@/components/home/services";
-import { About, DoctorsSection } from "@/components/home/about";
-import { Technology, Journey } from "@/components/home/technology";
-import { Testimonials, Blog } from "@/components/home/testimonials";
-import { Faq, Emergency, FinalCta, Location } from "@/components/home/faq";
+import { Services } from "@/components/home/services";
+import { Testimonials } from "@/components/home/testimonials";
+import { FinalCta } from "@/components/home/faq";
 
+/**
+ * Home = a focused landing page. Every section below is a short teaser;
+ * the full detail lives on its own page:
+ *   /about, /doctors, /facilities, /patient-resources, /contact, /treatments
+ */
 export function HomeView() {
   return (
     <>
@@ -16,17 +19,8 @@ export function HomeView() {
       <QuickAppointment />
       <WhyUs />
       <Services />
-      <FindCare />
-      <About />
-      <DoctorsSection />
-      <Technology />
-      <Journey />
       <Testimonials />
-      <Blog />
-      <Faq />
-      <Emergency />
       <FinalCta />
-      <Location />
     </>
   );
 }

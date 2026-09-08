@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "query": "eye pressure measurement tonometry glaucoma test at optometrist clinic",
+  "count": 4,
+  "ranked": false,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1051df3c071b.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6d811662745a.jpg",
+      "caption": "",
+      "source": "Healthline",
+      "original_width": "1296px",
+      "original_height": "728px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b49df0a2264a.jpg",
+      "caption": "",
+      "source": "Bahrain This Week",
+      "original_width": "2048px",
+      "original_height": "1360px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b6da0dc6ba0d.jpg",
+      "caption": "",
+      "source": "Glaucoma Physician",
+      "original_width": "1445px",
+      "original_height": "810px"
+    }
+  ]
+}

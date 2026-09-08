@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "query": "eye drops being applied to a patient eye for dry eye treatment",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e9c531c982b0.png",
+      "caption": "",
+      "source": "Deen-Gross Eye Centers",
+      "original_width": "1080px",
+      "original_height": "972px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1eae82bdba01.jpg",
+      "caption": "",
+      "source": "Vitacost",
+      "original_width": "1600px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/324f4aa7bc14.jpg",
+      "caption": "",
+      "source": "Kadrmas Eye Care New England",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b77259fdf4ca.jpg",
+      "caption": "",
+      "source": "www.theratears.com",
+      "original_width": "1176px",
+      "original_height": "964px"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "child having eyes examined by optometrist with equipment"
+✅ Got 4 images
+{
+  "success": true,
+  "query": "child having eyes examined by optometrist with equipment",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e75309eeddda.jpg",
+      "caption": "",
+      "source": "InfantSEE",
+      "original_width": "2180px",
+      "original_height": "1050px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7c84ef23b25f.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d9ad84e2861e.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5375933572fe.jpg",
+      "caption": "",
+      "source": "Clarity News",
+      "original_width": "2560px",
+      "original_height": "1708px"
+    }
+  ]
+}

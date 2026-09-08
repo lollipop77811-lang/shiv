@@ -1,0 +1,40 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "cataract surgery performed by eye surgeon using operating microscope in hospital operating room"
+✅ Got 4 images
+{
+  "success": true,
+  "query": "cataract surgery performed by eye surgeon using operating microscope in hospital operating room",
+  "count": 4,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/62ba6e9af1b0.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "961px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6d0d94cd8a6a.jpg",
+      "caption": "",
+      "source": "Popular Science",
+      "original_width": "2000px",
+      "original_height": "1125px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/239fdde932a3.jpg",
+      "caption": "",
+      "source": "Cataract Surgery",
+      "original_width": "1024px",
+      "original_height": "831px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0475236da751.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    }
+  ]
+}

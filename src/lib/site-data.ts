@@ -60,6 +60,7 @@ export interface Treatment {
   tagline: string;
   cardDescription: string;
   heroImage?: string;
+  image?: string; // stock photo shown on treatment cards
   gradient: string; // tailwind gradient classes for icon covers
   overview: string[];
   symptoms: { title: string; items: string[] };
@@ -79,6 +80,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Clearer vision begins with the right diagnosis and care.",
     cardDescription:
       "Diagnosis and treatment of cataract with modern surgical options and premium intraocular lenses.",
+    image: "/images/treatments/cataract.jpg",
     heroImage: "/images/surgery-microscope.jpg",
     gradient: "from-jade-500 to-brand-800",
     overview: [
@@ -196,6 +198,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Freedom from glasses, engineered for your eyes.",
     cardDescription:
       "Vision correction solutions for eligible patients, with detailed screening and modern laser platforms.",
+    image: "/images/treatments/lasik.jpg",
     gradient: "from-jade-400 to-brand-700",
     overview: [
       "LASIK reshapes the cornea with a cool, ultra-precise laser so light focuses correctly on the retina — reducing or eliminating the need for glasses and contact lenses.",
@@ -271,6 +274,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Protecting your sight before symptoms ever appear.",
     cardDescription:
       "Diagnosis, monitoring and management of glaucoma to safeguard the optic nerve and preserve vision.",
+    image: "/images/treatments/glaucoma.jpg",
     gradient: "from-jade-600 to-brand-900",
     overview: [
       "Glaucoma is a group of conditions that damage the optic nerve, most often related to raised pressure inside the eye. It is called the silent thief of sight because peripheral vision fades gradually and painlessly.",
@@ -347,6 +351,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Specialised care for the delicate tissue that makes sight possible.",
     cardDescription:
       "Diagnosis and treatment of retinal conditions including diabetic retinopathy, tears and macular disorders.",
+    image: "/images/treatments/retina.jpg",
     heroImage: "/images/equip-oct-consult.jpg",
     gradient: "from-brand-600 to-brand-900",
     overview: [
@@ -424,6 +429,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Clarity starts at the surface — expert care for the eye's clear window.",
     cardDescription:
       "Specialised care for corneal infections, injuries, dystrophies and surface disorders.",
+    image: "/images/treatments/cornea.jpg",
     gradient: "from-jade-400 to-brand-700",
     overview: [
       "The cornea is the transparent front window of the eye. Even a small scar, infection or swelling here can blur vision dramatically — the rest of the eye may be perfectly healthy.",
@@ -500,6 +506,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Lasting relief for tired, gritty, watery eyes.",
     cardDescription:
       "Diagnosis and structured management of dry-eye disease, from lifestyle therapy to advanced treatments.",
+    image: "/images/treatments/dry-eye.jpg",
     gradient: "from-jade-300 to-jade-600",
     overview: [
       "Dry eye is one of the most common — and most dismissed — eye conditions. Burning, grittiness, fluctuating blur and even watery eyes are all part of the same disrupted tear film.",
@@ -576,6 +583,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Giving every child the clear start they deserve.",
     cardDescription:
       "Specialised eye care for children — vision screening, squint, lazy eye and developmental eye health.",
+    image: "/images/treatments/pediatric.jpg",
     heroImage: "/images/hero-pediatric.jpg",
     gradient: "from-jade-400 to-jade-700",
     overview: [
@@ -653,6 +661,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "A complete picture of your eye health — not just a number for glasses.",
     cardDescription:
       "Comprehensive vision and eye-health evaluation for the whole family, with detailed counselling.",
+    image: "/images/treatments/general.jpg",
     gradient: "from-jade-500 to-brand-700",
     overview: [
       "A comprehensive examination answers three questions: How well do you see? How healthy are your eyes? What should we watch in the future?",
