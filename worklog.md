@@ -120,3 +120,19 @@ Work Log:
 Stage Summary:
 - Hero card now mirrors the reference's measured geometry: 56px gutters, 8px top gap, 28px bottom gap, ~816px tall card, 104px inner padding, inline bottom-left stats, bottom-flush photo.
 - No content changes; all copy, CTAs, trust chips, rating card and stats preserved.
+
+---
+Task ID: 7
+Agent: main (Super Z)
+Task: Convert the single-page view-switched prototype into a real multi-page URL-routed website (client request: "make it multi page website").
+
+Work Log:
+- Rewrote src/lib/nav.tsx as a URL-routed NavProvider: route derived from usePathname() (routeFromPath maps /, /treatments, /treatments/:id, /doctors/:id, /appointment), navigate() = router.push(hrefForRoute(next)) with query-string prefill encoding (?department=&doctor=), goHomeSection() = smooth-scroll when on / else router.push('/#anchor'), plus a hash-scroll effect after landing home. Same NavContextValue API + useNav hook so ALL existing components (header, footer, mobile bar, home sections, 4 views) work unchanged; hrefForRoute exported for <Link> use.
+- Created src/components/site/site-shell.tsx ("use client"): NavProvider + Header + <main>{children}</main> + Footer + MobileActionBar; mounted once in src/app/layout.tsx so chrome is shared across every route.
+- Replaced src/app/page.tsx (old client state-router root) with a server home page rendering <HomeView/>.
+- New routes (all server components): /treatments (metadata), /treatments/[treatmentId] (generateStaticParams over 8 treatments + generateMetadata per treatment + notFound() guard), /doctors/[doctorId] (generateStaticParams over 4 doctors + generateMetadata + notFound() guard), /appointment (awaits searchParams, builds prefill {department, doctorId} from query, remounts flow via key so prefill always applies). Added styled /not-found.tsx (white card, gradient 404, gold "Back to Home" + outline "Explore Treatments").
+- Verified via curl: 200 on /, /treatments, /treatments/cataract, /doctors/dr-mehta, /appointment?department=glaucoma&doctor=dr-verma; 404 on unknown path. Browser (agent-browser): direct loads render with per-route document titles; URL query prefill fills department + doctor correctly; cross-page hash nav (subpage → header "About Us") lands scrolled on the home section; complete booking flow (strip → ?department=cataract → No Preference → Sep 12 → 11:00 AM → details → success summary) passes on real URLs; mobile bar navigates /treatments → /appointment. Only console noise = Next dev Turbopack HMR internal TypeError + FedCM GSI env error (both non-app). Lint clean.
+
+Stage Summary:
+- Deliverable: the same MediCare-styled, content-complete site now running as a true multi-page Next.js App Router website with shareable/bookmarkable URLs, per-page titles/metadata, statically prebuilt treatment & doctor pages, query-driven appointment prefill, and a branded 404.
+- Architecture: nav API unchanged (navigate/goHomeSection/route) so future sections need zero refactor; chrome lives in layout via SiteShell; adding new pages = new folder under src/app + optional site-data entries.

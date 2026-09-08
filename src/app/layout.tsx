@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { SiteShell } from "@/components/site/site-shell";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -50,7 +51,7 @@ export default function RootLayout({
       <body
         className={`${jakarta.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <SiteShell>{children}</SiteShell>
         <Toaster />
       </body>
     </html>
