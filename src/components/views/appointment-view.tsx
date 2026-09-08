@@ -191,7 +191,7 @@ export function AppointmentView({ prefill }: { prefill?: { department?: string; 
             Book an Appointment
           </span>
           <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl lg:text-[2.75rem]">
-            Schedule Your <span className="text-gradient">Eye Care Visit</span>
+            Schedule Your <span className="text-hero-accent">Eye Care Visit</span>
           </h1>
           <p className="mt-4 text-base leading-relaxed text-ink-500 sm:text-lg">
             Five quick steps. Our front desk will confirm your appointment by

@@ -136,3 +136,22 @@ Work Log:
 Stage Summary:
 - Deliverable: the same MediCare-styled, content-complete site now running as a true multi-page Next.js App Router website with shareable/bookmarkable URLs, per-page titles/metadata, statically prebuilt treatment & doctor pages, query-driven appointment prefill, and a branded 404.
 - Architecture: nav API unchanged (navigate/goHomeSection/route) so future sections need zero refactor; chrome lives in layout via SiteShell; adding new pages = new folder under src/app + optional site-data entries.
+
+---
+Task ID: 8
+Agent: main (Super Z)
+Task: Give every header/footer destination a real standalone page (user feedback: "it is the single page what about multiple page i said earlier?" — About/Doctors/Facilities/Patient Resources/Contact nav items were still scrolling to home sections).
+
+Work Log:
+- Extended ViewName union (site-data.ts) with about / doctors / facilities / resources / contact; extended hrefForRoute + routeFromPath (nav.tsx) to map /about, /doctors, /facilities, /patient-resources, /contact.
+- Built reusable PageHero (src/components/site/page-hero.tsx): navy gradient band with Home breadcrumb, animated title + description, optional children — matches the treatments-view hero pattern.
+- Created 5 standalone views composed from existing section components: AboutView (About + WhyUs + Journey + FinalCta), DoctorsView (DoctorsSection hideHeading + FinalCta), FacilitiesView (Technology + FinalCta), ResourcesView (Blog + Faq), ContactView (Location + Emergency + FinalCta). No content rewritten — sections reused as-is.
+- New server routes with per-page metadata: src/app/{about,doctors,facilities,patient-resources,contact}/page.tsx.
+- Header NAV_LINKS rewritten to real views for all 7 items; generalized active-state (treatments highlights on treatment detail; doctors on doctor profile); utility-strip "Clinic Location" now navigates to /contact. Footer quick links + resources and mobile-bar Directions updated to the new views. Remaining goHomeSection call sites (blog cards, doctor breadcrumb) migrated; goHomeSection API kept for future anchor needs.
+- Readability fix: .text-hero-accent light gradient (#C3D8EC→#9BBAD9→#FDE174) for titles on navy bands — dark navy gradient start was invisible on dark backgrounds; applied to all 7 page-hero titles (about/doctors/facilities/resources/contact/appointment/treatments).
+- Duplicate-heading fix: DoctorsSection gained hideHeading prop so /doctors doesn't repeat the hero title.
+- Verified: curl 200 on all 5 new routes; browser screenshots of doctors (hero title readable, no duplicate heading, grid + FinalCta), about, contact (active nav pills correct); home unchanged; lint clean.
+
+Stage Summary:
+- Deliverable: full multi-page website — 10+ real URLs (/, /treatments, /treatments/[8 ids], /doctors, /doctors/[4 ids], /appointment, /about, /facilities, /patient-resources, /contact, branded 404) with per-page titles/metadata, shared chrome, consistent navy PageHero pattern, and unchanged visual design.
+- Home remains the rich one-page landing (MediCare-reference structure); all nav destinations are now dedicated pages.

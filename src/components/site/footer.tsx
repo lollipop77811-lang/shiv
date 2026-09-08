@@ -11,20 +11,20 @@ export function Footer() {
 
   const quickLinks = [
     { label: "Home", action: () => nav.navigate({ view: "home" }) },
-    { label: "About Us", action: () => nav.goHomeSection("about") },
-    { label: "Our Doctors", action: () => nav.goHomeSection("doctors") },
+    { label: "About Us", action: () => nav.navigate({ view: "about" }) },
+    { label: "Our Doctors", action: () => nav.navigate({ view: "doctors" }) },
     { label: "Treatments", action: () => nav.navigate({ view: "treatments" }) },
-    { label: "Facilities & Technology", action: () => nav.goHomeSection("technology") },
-    { label: "Contact", action: () => nav.goHomeSection("location") },
+    { label: "Facilities & Technology", action: () => nav.navigate({ view: "facilities" }) },
+    { label: "Contact", action: () => nav.navigate({ view: "contact" }) },
   ];
 
   const resources = [
     { label: "Book an Appointment", action: () => nav.navigate({ view: "appointment" }) },
-    { label: "Eye Care Insights", action: () => nav.goHomeSection("resources") },
-    { label: "Patient Journey", action: () => nav.goHomeSection("top") },
-    { label: "FAQs", action: () => nav.goHomeSection("resources") },
-    { label: "Emergency Eye Care", action: () => nav.goHomeSection("location") },
-    { label: "Privacy Policy", action: () => nav.goHomeSection("top") },
+    { label: "Eye Care Insights", action: () => nav.navigate({ view: "resources" }) },
+    { label: "Patient Journey", action: () => nav.navigate({ view: "about" }) },
+    { label: "FAQs", action: () => nav.navigate({ view: "resources" }) },
+    { label: "Emergency Eye Care", action: () => nav.navigate({ view: "contact" }) },
+    { label: "Privacy Policy", action: () => nav.navigate({ view: "contact" }) },
   ];
 
   return (

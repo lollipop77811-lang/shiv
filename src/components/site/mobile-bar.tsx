@@ -30,7 +30,7 @@ export function MobileActionBar() {
             Appointment
           </button>
           <button
-            onClick={() => nav.goHomeSection("location")}
+            onClick={() => nav.navigate({ view: "contact" })}
             className="flex flex-col items-center gap-1 py-2.5 text-[0.7rem] font-bold text-jade-100 transition active:bg-brand-800"
           >
             <span className="grid h-8 w-8 place-items-center rounded-full bg-jade-600/90">

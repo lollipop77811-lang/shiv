@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CalendarCheck, ChevronRight, Menu, Phone, X } from "lucide-react";
-import { CLINIC } from "@/lib/site-data";
+import { CLINIC, type RouteState } from "@/lib/site-data";
 import { useNav } from "@/lib/nav";
 
 export function Logo({ light = false }: { light?: boolean }) {
@@ -48,14 +48,14 @@ export function Logo({ light = false }: { light?: boolean }) {
   );
 }
 
-const NAV_LINKS: { label: string; anchor?: string; view?: "treatments" }[] = [
-  { label: "Home", anchor: "top" },
-  { label: "About Us", anchor: "about" },
+const NAV_LINKS: { label: string; view: RouteState["view"] }[] = [
+  { label: "Home", view: "home" },
+  { label: "About Us", view: "about" },
   { label: "Treatments", view: "treatments" },
-  { label: "Doctors", anchor: "doctors" },
-  { label: "Facilities", anchor: "technology" },
-  { label: "Patient Resources", anchor: "resources" },
-  { label: "Contact", anchor: "location" },
+  { label: "Doctors", view: "doctors" },
+  { label: "Facilities", view: "facilities" },
+  { label: "Patient Resources", view: "resources" },
+  { label: "Contact", view: "contact" },
 ];
 
 export function Header() {
@@ -79,11 +79,7 @@ export function Header() {
 
   const handleLink = (link: (typeof NAV_LINKS)[number]) => {
     setOpen(false);
-    if (link.view) {
-      nav.navigate({ view: link.view });
-    } else if (link.anchor) {
-      nav.goHomeSection(link.anchor);
-    }
+    nav.navigate({ view: link.view });
   };
 
   return (
@@ -97,7 +93,7 @@ export function Header() {
               <Phone className="h-3.5 w-3.5 text-gold-400" /> {CLINIC.phoneDisplay}
             </a>
             <button
-              onClick={() => nav.goHomeSection("location")}
+              onClick={() => nav.navigate({ view: "contact" })}
               className="inline-flex items-center gap-1.5 transition hover:text-gold-400"
             >
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -122,8 +118,9 @@ export function Header() {
           <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
             {NAV_LINKS.map((link) => {
               const active =
-                link.view === "treatments" &&
-                (nav.route.view === "treatments" || nav.route.view === "treatment");
+                nav.route.view === link.view ||
+                (link.view === "treatments" && nav.route.view === "treatment") ||
+                (link.view === "doctors" && nav.route.view === "doctor");
               return (
                 <button
                   key={link.label}

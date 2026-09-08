@@ -192,7 +192,7 @@ export function Blog() {
           {BLOG_POSTS.map((post, i) => (
             <StaggerItem key={post.title}>
               <button
-                onClick={() => nav.goHomeSection("resources")}
+                onClick={() => nav.navigate({ view: "resources" })}
                 className="group flex h-full w-full flex-col overflow-hidden rounded-3xl border border-border/70 bg-white text-left shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift"
                 aria-label={`Read article: ${post.title}`}
               >

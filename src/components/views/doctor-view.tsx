@@ -39,7 +39,7 @@ export function DoctorView({ id }: { id?: string }) {
           >
             <button onClick={() => nav.navigate({ view: "home" })} className="transition hover:text-white">Home</button>
             <ChevronRight className="h-3.5 w-3.5" />
-            <button onClick={() => nav.goHomeSection("doctors")} className="transition hover:text-white">Doctors</button>
+            <button onClick={() => nav.navigate({ view: "doctors" })} className="transition hover:text-white">Doctors</button>
             <ChevronRight className="h-3.5 w-3.5" />
             <span className="text-white">{d.name}</span>
           </motion.nav>

@@ -11,7 +11,17 @@ import {
 } from "lucide-react";
 
 /* ── Navigation / routing types ─────────────────────────────── */
-export type ViewName = "home" | "treatments" | "treatment" | "doctor" | "appointment";
+export type ViewName =
+  | "home"
+  | "treatments"
+  | "treatment"
+  | "doctor"
+  | "appointment"
+  | "about"
+  | "doctors"
+  | "facilities"
+  | "resources"
+  | "contact";
 
 export interface RouteState {
   view: ViewName;

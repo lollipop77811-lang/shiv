@@ -13,7 +13,7 @@ export function hrefForRoute(route: RouteState): string {
     case "treatment":
       return route.treatmentId ? `/treatments/${route.treatmentId}` : "/treatments";
     case "doctor":
-      return route.doctorId ? `/doctors/${route.doctorId}` : "/";
+      return route.doctorId ? `/doctors/${route.doctorId}` : "/doctors";
     case "appointment": {
       const params = new URLSearchParams();
       if (route.prefill?.department) params.set("department", route.prefill.department);
@@ -21,6 +21,16 @@ export function hrefForRoute(route: RouteState): string {
       const qs = params.toString();
       return qs ? `/appointment?${qs}` : "/appointment";
     }
+    case "about":
+      return "/about";
+    case "doctors":
+      return "/doctors";
+    case "facilities":
+      return "/facilities";
+    case "resources":
+      return "/patient-resources";
+    case "contact":
+      return "/contact";
     case "home":
     default:
       return "/";
@@ -35,7 +45,12 @@ function routeFromPath(pathname: string): RouteState {
     return parts[1] ? { view: "treatment", treatmentId: parts[1] } : { view: "treatments" };
   }
   if (parts[0] === "doctors" && parts[1]) return { view: "doctor", doctorId: parts[1] };
+  if (parts[0] === "doctors") return { view: "doctors" };
   if (parts[0] === "appointment") return { view: "appointment" };
+  if (parts[0] === "about") return { view: "about" };
+  if (parts[0] === "facilities") return { view: "facilities" };
+  if (parts[0] === "patient-resources") return { view: "resources" };
+  if (parts[0] === "contact") return { view: "contact" };
   return { view: "home" };
 }
 

@@ -103,20 +103,22 @@ export function About() {
   );
 }
 
-export function DoctorsSection() {
+export function DoctorsSection({ hideHeading = false }: { hideHeading?: boolean }) {
   const nav = useNav();
   return (
-    <section id="doctors" className="scroll-mt-24 bg-cream py-16 sm:py-20 lg:py-24" aria-labelledby="doctors-heading">
+    <section id="doctors" className="scroll-mt-24 bg-cream py-16 sm:py-20 lg:py-24" aria-labelledby={hideHeading ? undefined : "doctors-heading"}>
       <div className="container-x">
-        <SectionHeading
-          eyebrow="Our Team"
-          title={
-            <span id="doctors-heading">
-              Meet Our <span className="text-gradient">Eye Care Specialists</span>
-            </span>
-          }
-          description="Qualified ophthalmologists with subspecialty expertise — unhurried consultations and treatment plans you can trust."
-        />
+        {hideHeading ? null : (
+          <SectionHeading
+            eyebrow="Our Team"
+            title={
+              <span id="doctors-heading">
+                Meet Our <span className="text-gradient">Eye Care Specialists</span>
+              </span>
+            }
+            description="Qualified ophthalmologists with subspecialty expertise — unhurried consultations and treatment plans you can trust."
+          />
+        )}
 
         {/* flat expert grid — square portraits on cream, like the reference */}
         <StaggerGrid className="mt-12 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">

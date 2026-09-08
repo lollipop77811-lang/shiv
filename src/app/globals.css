@@ -198,6 +198,14 @@
     color: transparent;
   }
 
+  /* light gradient text — readable on dark navy bands */
+  .text-hero-accent {
+    background: linear-gradient(100deg, #c3d8ec 10%, #9bbad9 55%, #fde174 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   /* glass chip / glass cards */
   .glass {
     background: rgba(255, 255, 255, 0.75);

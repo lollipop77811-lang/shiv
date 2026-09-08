@@ -37,7 +37,7 @@ export function TreatmentsView() {
             transition={{ delay: 0.05 }}
             className="max-w-2xl text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl"
           >
-            Eye Care <span className="text-gradient">Treatments</span>
+            Eye Care <span className="text-hero-accent">Treatments</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 22 }}
