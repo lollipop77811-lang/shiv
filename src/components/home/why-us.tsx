@@ -23,7 +23,7 @@ const ICONS: Record<string, LucideIcon> = {
 
 export function WhyUs() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24" aria-labelledby="why-heading">
+    <section className="bg-white py-16 sm:py-20 lg:py-24" aria-labelledby="why-heading">
       <div className="container-x">
         <SectionHeading
           eyebrow="Why Shiv Netralay"
@@ -35,25 +35,32 @@ export function WhyUs() {
           description="Expertise, technology, services and patient trust — placed together so your eyes get complete care."
         />
 
-        <StaggerGrid className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {WHY_US.map((item) => {
-            const Icon = ICONS[item.icon];
-            return (
-              <StaggerItem key={item.title}>
-                <article className="group h-full rounded-3xl glass-card p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-jade-200 hover:shadow-lift">
-                  <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-jade-50 to-jade-100 text-jade-600 transition-all duration-300 group-hover:from-jade-500 group-hover:to-jade-700 group-hover:text-white group-hover:shadow-soft">
-                    <Icon className="h-7 w-7" strokeWidth={1.8} />
-                  </span>
-                  <h3 className="mt-5 text-lg font-extrabold tracking-tight text-brand-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-ink-500">
-                    {item.description}
-                  </p>
-                </article>
-              </StaggerItem>
-            );
-          })}
+        {/* soft yellow-glow container — signature of the specialty grid */}
+        <StaggerGrid className="relative mx-auto mt-12 max-w-6xl rounded-[2rem] bg-gradient-to-br from-gold-50 via-gold-50/70 to-white p-3 ring-1 ring-gold-200/60 sm:p-4">
+          <div
+            className="pointer-events-none absolute -top-10 left-1/2 h-40 w-[28rem] -translate-x-1/2 rounded-full bg-gold-300/30 blur-3xl"
+            aria-hidden="true"
+          />
+          <div className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {WHY_US.map((item) => {
+              const Icon = ICONS[item.icon];
+              return (
+                <StaggerItem key={item.title}>
+                  <article className="group h-full rounded-2xl border border-white bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+                    <span className="grid h-12 w-12 place-items-center rounded-xl bg-gold-500/15 text-gold-600 transition-all duration-300 group-hover:bg-gold-500 group-hover:text-brand-900">
+                      <Icon className="h-6 w-6" strokeWidth={1.9} />
+                    </span>
+                    <h3 className="mt-4 text-lg font-extrabold tracking-tight text-brand-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-500">
+                      {item.description}
+                    </p>
+                  </article>
+                </StaggerItem>
+              );
+            })}
+          </div>
         </StaggerGrid>
       </div>
     </section>

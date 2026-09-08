@@ -24,7 +24,7 @@ export function MobileActionBar() {
             onClick={() => nav.navigate({ view: "appointment" })}
             className="relative -top-2 flex flex-col items-center gap-1 text-[0.7rem] font-bold"
           >
-            <span className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-jade-400 to-jade-600 text-white shadow-lift ring-4 ring-brand-900">
+            <span className="grid h-12 w-12 place-items-center rounded-full bg-gold-500 text-brand-900 shadow-lift ring-4 ring-brand-900">
               <CalendarCheck className="h-5 w-5" />
             </span>
             Appointment

@@ -27,7 +27,7 @@ export function DoctorView({ id }: { id?: string }) {
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-jade-800 py-14 sm:py-18">
         <svg className="pointer-events-none absolute -left-24 -bottom-28 h-[26rem] w-[26rem] opacity-15" viewBox="0 0 200 200" aria-hidden="true">
           {[30, 60, 90].map((r) => (
-            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7BD0C4" strokeWidth="0.8" strokeDasharray="2 8" />
+            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#FDE174" strokeWidth="0.8" strokeDasharray="2 8" />
           ))}
         </svg>
         <div className="container-x relative">
@@ -200,7 +200,7 @@ export function DoctorView({ id }: { id?: string }) {
                 </div>
                 <button
                   onClick={() => nav.navigate({ view: "appointment", prefill: { doctorId: d.id, department: d.departments[0] } })}
-                  className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-jade-600 px-5 py-3.5 text-sm font-bold text-white shadow-soft transition hover:bg-jade-700"
+                  className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-5 py-3.5 text-sm font-bold text-brand-900 shadow-soft transition hover:bg-gold-400"
                 >
                   <CalendarCheck className="h-4.5 w-4.5" />
                   Book with {d.name.split(" ").slice(0, 2).join(" ")}

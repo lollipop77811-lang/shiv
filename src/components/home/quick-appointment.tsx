@@ -122,7 +122,7 @@ export function QuickAppointment() {
               </p>
               <button
                 onClick={findAppointment}
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-extrabold text-brand-900 shadow-soft transition hover:bg-jade-50 sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-extrabold text-brand-900 shadow-soft transition hover:bg-gold-400 sm:w-auto"
               >
                 Find Appointment
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

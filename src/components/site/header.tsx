@@ -24,7 +24,7 @@ export function Logo({ light = false }: { light?: boolean }) {
             strokeLinejoin="round"
           />
           <circle cx="24" cy="24" r="5" fill="#fff" />
-          <circle cx="24" cy="24" r="2.1" fill="#163B3D" />
+          <circle cx="24" cy="24" r="2.1" fill="#1A1D4E" />
           <circle cx="26.2" cy="21.8" r="0.9" fill="#fff" />
         </svg>
       </span>
@@ -89,16 +89,16 @@ export function Header() {
   return (
     <>
       {/* ── utility strip ─────────────────────────────────── */}
-      <div className="hidden border-b border-jade-100 bg-jade-50 text-brand-900 lg:block">
-        <div className="container-x flex h-9 items-center justify-between text-xs font-medium text-ink-600">
+      <div className="hidden bg-brand-900 text-white lg:block">
+        <div className="container-x flex h-9 items-center justify-between text-xs font-medium text-jade-100/85">
           <p>Mon – Sat · 9:00 AM – 7:00 PM · Comprehensive eye care for the whole family</p>
           <div className="flex items-center gap-5">
-            <a href={CLINIC.phoneHref} className="inline-flex items-center gap-1.5 transition hover:text-jade-700">
-              <Phone className="h-3.5 w-3.5" /> {CLINIC.phoneDisplay}
+            <a href={CLINIC.phoneHref} className="inline-flex items-center gap-1.5 transition hover:text-gold-400">
+              <Phone className="h-3.5 w-3.5 text-gold-400" /> {CLINIC.phoneDisplay}
             </a>
             <button
               onClick={() => nav.goHomeSection("location")}
-              className="inline-flex items-center gap-1.5 transition hover:text-jade-700"
+              className="inline-flex items-center gap-1.5 transition hover:text-gold-400"
             >
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11Z" />
@@ -113,9 +113,7 @@ export function Header() {
       {/* ── main header ───────────────────────────────────── */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "glass shadow-soft"
-            : "border-b border-transparent bg-white/95 backdrop-blur-sm"
+          scrolled ? "glass shadow-soft" : "border-b border-transparent bg-transparent"
         }`}
       >
         <div className="container-x flex h-[4.5rem] items-center justify-between gap-3">
@@ -153,7 +151,7 @@ export function Header() {
             </a>
             <button
               onClick={() => nav.navigate({ view: "appointment" })}
-              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-jade-600 px-4 py-2.5 text-sm font-bold text-white shadow-soft transition hover:bg-jade-700 hover:shadow-lift md:px-5"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-gold-500 px-4 py-2.5 text-sm font-bold text-brand-900 shadow-soft transition hover:bg-gold-600 hover:shadow-lift md:px-5"
             >
               <CalendarCheck className="h-4 w-4" />
               <span className="hidden sm:inline">Book Appointment</span>
@@ -223,7 +221,7 @@ export function Header() {
                     setOpen(false);
                     nav.navigate({ view: "appointment" });
                   }}
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-jade-600 px-4 py-3 text-sm font-bold text-white shadow-soft"
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-4 py-3 text-sm font-bold text-brand-900 shadow-soft"
                 >
                   <CalendarCheck className="h-4 w-4" /> Book Appointment
                 </button>

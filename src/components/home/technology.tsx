@@ -118,9 +118,9 @@ export function Technology() {
               <article
                 key={t.name}
                 role="listitem"
-                className="group w-[19rem] shrink-0 snap-start overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition-all duration-300 hover:border-jade-400/40 hover:shadow-[0_0_44px_rgba(53,184,166,0.16)] sm:w-[21.5rem]"
+                className="group w-[19rem] shrink-0 snap-start overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition-all duration-300 hover:border-gold-400/50 hover:shadow-[0_0_44px_rgba(247,213,84,0.16)] sm:w-[21.5rem]"
               >
-                <div className="relative h-52 overflow-hidden bg-ivory-50">
+                <div className="relative h-52 overflow-hidden bg-jade-50">
                   <img
                     src={t.image}
                     alt={t.subtitle}

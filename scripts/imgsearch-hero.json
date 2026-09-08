@@ -1,0 +1,54 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "eye doctor ophthalmologist examining patient with slit lamp blue background modern clinic"
+✅ Got 6 images
+{
+  "success": true,
+  "query": "eye doctor ophthalmologist examining patient with slit lamp blue background modern clinic",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0800feecab70.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1167px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fdf8cde39582.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "1067px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/27cdba9dc094.jpg",
+      "caption": "",
+      "source": "Yelp",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5b6dead4f6c7.png",
+      "caption": "",
+      "source": "AI in Eye Care",
+      "original_width": "1080px",
+      "original_height": "745px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/67bfdd1bc5b1.png",
+      "caption": "",
+      "source": "OPTIUSA",
+      "original_width": "1254px",
+      "original_height": "1254px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1a03cefa2985.jpg",
+      "caption": "",
+      "source": "Integra Eyecare Centre",
+      "original_width": "1183px",
+      "original_height": "946px"
+    }
+  ]
+}

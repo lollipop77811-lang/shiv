@@ -15,7 +15,7 @@ export function TreatmentsView() {
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-jade-800 py-16 sm:py-20">
         <svg className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 opacity-15" viewBox="0 0 200 200" aria-hidden="true">
           {[30, 60, 90].map((r) => (
-            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7BD0C4" strokeWidth="0.8" strokeDasharray="2 8" />
+            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#FDE174" strokeWidth="0.8" strokeDasharray="2 8" />
           ))}
         </svg>
         <div className="container-x relative">
@@ -134,7 +134,7 @@ export function TreatmentsView() {
               </div>
               <button
                 onClick={() => nav.navigate({ view: "appointment" })}
-                className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-jade-600 px-8 py-4 text-base font-extrabold text-white shadow-lift transition hover:bg-jade-700"
+                className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-gold-500 px-8 py-4 text-base font-extrabold text-brand-900 shadow-lift transition hover:bg-gold-400"
               >
                 Book an Eye Exam
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

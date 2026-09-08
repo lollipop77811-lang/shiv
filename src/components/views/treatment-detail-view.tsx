@@ -36,7 +36,7 @@ export function TreatmentDetailView({ id }: { id?: string }) {
         ) : (
           <svg className="pointer-events-none absolute -right-24 -top-28 h-[28rem] w-[28rem] opacity-15" viewBox="0 0 200 200" aria-hidden="true">
             {[30, 60, 90, 120].map((r) => (
-              <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7BD0C4" strokeWidth="0.8" strokeDasharray="2 8" />
+              <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#FDE174" strokeWidth="0.8" strokeDasharray="2 8" />
             ))}
           </svg>
         )}
@@ -154,7 +154,7 @@ export function TreatmentDetailView({ id }: { id?: string }) {
                 </ul>
                 <button
                   onClick={() => nav.navigate({ view: "appointment", prefill: { department: t.id } })}
-                  className="group mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-jade-600 px-5 py-3.5 text-sm font-bold text-white shadow-soft transition hover:bg-jade-700"
+                  className="group mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-gold-500 px-5 py-3.5 text-sm font-bold text-brand-900 shadow-soft transition hover:bg-gold-400"
                 >
                   Discuss Your Symptoms
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

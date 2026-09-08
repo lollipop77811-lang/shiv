@@ -40,8 +40,13 @@ export function Testimonials() {
   const item = TESTIMONIALS[index];
 
   return (
-    <section className="bg-cream py-16 sm:py-20 lg:py-24" aria-labelledby="testimonials-heading">
-      <div className="container-x">
+    <section className="relative overflow-hidden bg-cream py-16 sm:py-20 lg:py-24" aria-labelledby="testimonials-heading">
+      {/* signature yellow sun glow rising behind the cards */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[42rem] w-[64rem] max-w-none -translate-x-1/2 -translate-y-1/4 rounded-full bg-[radial-gradient(closest-side,#FBD35C66,transparent)] blur-2xl"
+        aria-hidden="true"
+      />
+      <div className="container-x relative">
         <SectionHeading
           eyebrow="Patient Voices"
           title={
@@ -55,7 +60,7 @@ export function Testimonials() {
         <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-[1.5fr_1fr]">
           {/* slider */}
           <Reveal className="relative">
-            <div className="relative h-full overflow-hidden rounded-[2rem] border border-border/70 bg-white p-8 shadow-soft sm:p-12">
+            <div className="relative h-full overflow-hidden rounded-[2rem] border border-gold-200/60 bg-white p-8 shadow-soft sm:p-12">
               <Quote className="absolute right-8 top-8 h-16 w-16 text-gold-500/25" aria-hidden="true" />
               <AnimatePresence mode="wait" custom={dir}>
                 <motion.figure

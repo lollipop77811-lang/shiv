@@ -82,3 +82,23 @@ Stage Summary:
 - Deliverable: the verified 5-view prototype in Teal + Cream + Charcoal + Gold with the requested band-by-band rhythm and premium polish; screenshots in download/shots/teal-*.png (14).
 - Palette remains token-driven (globals.css only for future value tweaks); token names unchanged (brand/jade/ivory/mist/cream/gold/ink/coral).
 - Gold strategy: #F4B942 reserved for stars, rating numeral, eyebrow dots, CTA phrase, dashed hero ring — restrained per user request; teal owns CTAs/bands; dark teal owns technology + footer.
+
+---
+Task ID: 5
+Agent: main (Super Z)
+Task: Re-design to match the client's uploaded MediCare reference screenshot (Dribbble "Golf Coaching" thread resolved to a MediCare medical layout): steel-blue rounded hero card, deep-navy top bar & dark bands, yellow CTA pills, cream zones, white sheet/cards — WITHOUT changing any clinic content.
+
+Work Log:
+- Rendered the uploaded 1905x10251 reference (scripts/split-ref.py + sample-medi.py), extracted exact palette: navy #1A1D4E, steel blue #6690B3 (light #7FAACB), yellow #FDE174/#F7D554, cream #FAF7EF, page blue #E0E9F4, white sheet #FFFFFF.
+- Values-only token re-skin in globals.css (names unchanged: brand/jade/ivory/mist/cream/gold/ink): brand-950 #131740..brand-600 (navy ramp, brand-900 = #1A1D4E), jade-700 #3D6795..jade-50 (jade-500 = steel #6690B3), ivory-50 #E9F0F8, mist #F6F9FD, cream #FAF7EF, gold-400 #FDE174 / gold-500 #F7D554 / gold-600 #E5BD2F, ink ramp navy-gray, charcoal #1C2130; body background = #E9F0F8 with soft top gradient #CBDEF1; :root shadcn primary = YELLOW #F7D554 with navy foreground; text-gradient navy→steel (WCAG-large safe); navy-tinted shadows/selection/scrollbar/pin-pulse.
+- header.tsx: utility strip → deep navy bar with gold phone accent; header initial state transparent over page-blue; Book Appointment CTAs (desktop + drawer) → gold pill with navy text.
+- hero.tsx rebuilt: steel-blue gradient rounded-[2.5rem] card, white 2-line heading with gold accent span, yellow primary + white-outline secondary CTA, glass trust chips, floating rating card (gold star), photo right with steel duotone overlay flush to card bottom, NEW bottom stats row (25+ / 10,000+ / 4.8-5) like reference, iris SVG recolored to white/gold glow.
+- Section restructuring to reference language: why-us → white cards with gold icons inside soft yellow-glow gradient container (p3 ring-gold wrapper); services → solid white cards; quick-appointment + find-care + final CTA → deep navy bands with gold CTAs; about → steel-blue gradient card with gold check circles + gold button + white stat card; doctors → flat cream "Meet The Experts" grid (square portraits, centered meta, gold Book buttons, stagger offsets removed); technology → navy band with gold hover glow; testimonials → cream band with big radial yellow "sun" glow behind white slider card; location → cream zone with white info cards (gold icon chips) + light-blue map; footer → WHITE rounded card floating on yellow gradient zone (gold link accents, navy headings); mobile bar → navy with gold appointment circle.
+- Views: treatments/detail/doctor/appointment key booking CTAs switched to gold pills (selection states keep steel-blue); 5 leftover #7BD0C4 deco strokes → #FDE174; logo pupil → #1A1D4E.
+- Image search for blue-tone hero photo attempted; watermarked stock rejected — kept existing imagery with CSS steel duotone treatment.
+- Verified agent-browser 1440px: hero + full-page all sections, treatments listing, cataract detail, doctor profile, complete booking gold path (prefilled Dr. Rajesh Mehta → Sep 12 → 11:00 AM → Priya Nair → success summary + demo disclaimer); mobile 390px hero/location/footer + bottom bar with gold appointment button; scrolled glass header over steel hero; only console message is environment GSI/FedCM noise, zero app errors; lint clean.
+
+Stage Summary:
+- Deliverable: the same content-complete 5-view prototype, visually aligned to the MediCare reference (steel blue + navy + yellow + cream on light-blue page); screenshots in download/shots/medi-*.png.
+- Content untouched: all copy, treatments, doctors, testimonials, FAQ and disclaimers identical; only colors, typography feel (Plus Jakarta retained — closest to reference geometric sans), button shapes and section backgrounds changed.
+- Palette remains single-file token-driven (globals.css); yellow = action color, navy = bands/headings, steel blue = feature cards, cream = warm zones, coral = emergency only.

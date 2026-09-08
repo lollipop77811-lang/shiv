@@ -43,92 +43,91 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ── Shiv Netralay brand palette — Teal & Cream ────────────────
-   Primary     #087F8C  jade-600    teal CTA buttons / links
-   Deep brand  #163B3D  brand-900   dark charcoal-teal headings & bands
-   Depth       #0A2226  brand-950   footer / technology depth
-   Secondary   #35B8A6  jade-400    mint accents & glows
-   Background  #F4FBF9  ivory-50    very light mint page base
-   Warm white  #FBFAF4  mist        alternating warm bands
-   Cream       #F7F4EA  cream       testimonials / warm editorial band
-   Accent      #F4B942  gold-500    restrained champagne-gold highlights
-   Text        #0F2A2C  charcoal    near-black teal body text
-   Cards       #FFFFFF  white       soft teal-tinted shadows          */
+/* ── Shiv Netralay — MediCare-inspired palette ─────────────────
+   Deep navy     #1A1D4E  brand-900   top bar / dark bands / headings
+   Navy depth    #131740  brand-950   footer & technology depth
+   Steel blue    #6690B3  jade-500    hero / about feature cards
+   Steel light   #7FAACB  jade-400    gradients & glows
+   Page blue     #E9F0F8  background  light blue page base
+   Cream         #FAF7EF  cream       logo bar / experts / contact zone
+   Yellow        #F7D554  gold-500    CTA pills, icons, stars, checkmarks
+   Yellow light  #FDE174  gold-400    gradient partner
+   Ink charcoal  #1C2130  charcoal    body text                        */
 @theme {
-  /* Deep teal charcoal */
-  --color-brand-950: #0a2226;
-  --color-brand-900: #163b3d;
-  --color-brand-800: #1a4a4f;
-  --color-brand-700: #125a62;
-  --color-brand-600: #0d6b74;
+  /* Deep navy ramp */
+  --color-brand-950: #131740;
+  --color-brand-900: #1a1d4e;
+  --color-brand-800: #262c6b;
+  --color-brand-700: #303880;
+  --color-brand-600: #3c479e;
 
-  /* Teal -> mint/aqua */
-  --color-jade-700: #0a5c60;
-  --color-jade-600: #087f8c;
-  --color-jade-500: #1e9e9e;
-  --color-jade-400: #35b8a6;
-  --color-jade-300: #7bd0c4;
-  --color-jade-200: #b7e6dd;
-  --color-jade-100: #d9f2ec;
-  --color-jade-50: #eaf6f1;
+  /* Steel blue ramp */
+  --color-jade-700: #3d6795;
+  --color-jade-600: #55789f;
+  --color-jade-500: #6690b3;
+  --color-jade-400: #7faacb;
+  --color-jade-300: #9bbad9;
+  --color-jade-200: #c3d8ec;
+  --color-jade-100: #dce8f5;
+  --color-jade-50: #eaf1f9;
 
-  /* Light mint & warm white tints */
-  --color-ivory-100: #e3f2ed;
-  --color-ivory-50: #f4fbf9;
-  --color-mist: #fbfaf4;
-  --color-cream: #f7f4ea;
+  /* Light blue & cream tints */
+  --color-ivory-100: #dce7f3;
+  --color-ivory-50: #e9f0f8;
+  --color-mist: #f6f9fd;
+  --color-cream: #faf7ef;
 
-  /* Champagne gold accents */
-  --color-gold-400: #f8cb6b;
-  --color-gold-500: #f4b942;
-  --color-gold-600: #dda32b;
-  --color-gold-50: #fdf6e0;
+  /* Warm yellow accents */
+  --color-gold-400: #fde174;
+  --color-gold-500: #f7d554;
+  --color-gold-600: #e5bd2f;
+  --color-gold-50: #fef7dc;
 
   /* Red (emergency accents only) */
   --color-coral-600: #c2483f;
   --color-coral-50: #fdf1ef;
 
-  --color-charcoal: #0f2a2c;
+  --color-charcoal: #1c2130;
 
-  /* Teal-tinted ink ramp (secondary text) */
-  --color-ink-400: #7fa09b;
-  --color-ink-500: #537a74;
-  --color-ink-600: #385b56;
+  /* Navy-tinted ink ramp (secondary text) */
+  --color-ink-400: #93a0bc;
+  --color-ink-500: #5a6584;
+  --color-ink-600: #3c4566;
 }
 
 :root {
   --radius: 1rem;
-  --background: #f4fbf9;
-  --foreground: #12383a;
+  --background: #e9f0f8;
+  --foreground: #1c2130;
   --card: #ffffff;
-  --card-foreground: #12383a;
+  --card-foreground: #1c2130;
   --popover: #ffffff;
-  --popover-foreground: #12383a;
-  --primary: #087f8c;
-  --primary-foreground: #ffffff;
-  --secondary: #d9f2ec;
-  --secondary-foreground: #163b3d;
-  --muted: #ecf6f1;
-  --muted-foreground: #4f7370;
-  --accent: #d9f2ec;
-  --accent-foreground: #163b3d;
+  --popover-foreground: #1c2130;
+  --primary: #f7d554;
+  --primary-foreground: #1a1d4e;
+  --secondary: #dce8f5;
+  --secondary-foreground: #1a1d4e;
+  --muted: #eef3fa;
+  --muted-foreground: #5a6584;
+  --accent: #dce8f5;
+  --accent-foreground: #1a1d4e;
   --destructive: #c2483f;
-  --border: #dcebe6;
-  --input: #dcebe6;
-  --ring: #087f8c;
-  --chart-1: #163b3d;
-  --chart-2: #087f8c;
-  --chart-3: #f4b942;
-  --chart-4: #35b8a6;
-  --chart-5: #d9f2ec;
-  --sidebar: #fbfaf4;
-  --sidebar-foreground: #12383a;
-  --sidebar-primary: #087f8c;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #d9f2ec;
-  --sidebar-accent-foreground: #163b3d;
-  --sidebar-border: #dcebe6;
-  --sidebar-ring: #087f8c;
+  --border: #dfe7f2;
+  --input: #dfe7f2;
+  --ring: #6690b3;
+  --chart-1: #1a1d4e;
+  --chart-2: #6690b3;
+  --chart-3: #f7d554;
+  --chart-4: #7faacb;
+  --chart-5: #dce8f5;
+  --sidebar: #f6f9fd;
+  --sidebar-foreground: #1c2130;
+  --sidebar-primary: #f7d554;
+  --sidebar-primary-foreground: #1a1d4e;
+  --sidebar-accent: #dce8f5;
+  --sidebar-accent-foreground: #1a1d4e;
+  --sidebar-border: #dfe7f2;
+  --sidebar-ring: #6690b3;
 }
 
 @layer base {
@@ -139,12 +138,15 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: #e9f0f8;
+    background-image: linear-gradient(180deg, #cbdef1 0%, #e9f0f8 30rem);
+    background-repeat: no-repeat;
     font-feature-settings: "ss01";
   }
   ::selection {
-    background: #c5e9e1;
-    color: #0f2a2c;
+    background: #fde174;
+    color: #1a1d4e;
   }
 }
 
@@ -169,28 +171,28 @@
     width: 6px;
   }
   .thin-scrollbar::-webkit-scrollbar-thumb {
-    background: #b7e6dd;
+    background: #c3d8ec;
     border-radius: 999px;
   }
   .thin-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  /* soft premium shadows — teal-tinted, very subtle */
+  /* soft premium shadows — navy-tinted, very subtle */
   .shadow-soft {
     box-shadow:
-      0 1px 2px rgba(15, 42, 44, 0.04),
-      0 12px 32px -12px rgba(22, 59, 61, 0.15);
+      0 1px 2px rgba(26, 29, 78, 0.05),
+      0 12px 32px -12px rgba(26, 29, 78, 0.16);
   }
   .shadow-lift {
     box-shadow:
-      0 2px 4px rgba(15, 42, 44, 0.05),
-      0 24px 48px -16px rgba(22, 59, 61, 0.24);
+      0 2px 4px rgba(26, 29, 78, 0.06),
+      0 24px 48px -16px rgba(26, 29, 78, 0.26);
   }
 
-  /* brand gradient text — deep teal -> aqua (WCAG-large safe on mint) */
+  /* brand gradient text — navy -> steel blue (WCAG-large safe on white) */
   .text-gradient {
-    background: linear-gradient(100deg, #0a5459 10%, #087f8c 55%, #17a094 90%);
+    background: linear-gradient(100deg, #1a1d4e 10%, #3d6795 55%, #6690b3 90%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -262,7 +264,7 @@
     position: absolute;
     inset: 0;
     border-radius: 9999px;
-    background: rgba(8, 127, 140, 0.32);
+    background: rgba(102, 144, 179, 0.32);
     animation: pin-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
   @keyframes pin-ping {

@@ -556,7 +556,7 @@ export function AppointmentView({ prefill }: { prefill?: { department?: string; 
                     disabled={!canContinue}
                     className={`group inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-extrabold transition-all ${
                       canContinue
-                        ? "bg-jade-600 text-white shadow-soft hover:bg-jade-700"
+                        ? "bg-gold-500 text-brand-900 shadow-soft hover:bg-gold-400"
                         : "cursor-not-allowed bg-mist text-ink-400"
                     }`}
                   >
