@@ -45,3 +45,21 @@ Stage Summary:
 - Deliverable: the same verified 5-view prototype, now fully in the Midnight Plum + Lavender + Ivory premium-eye-institute palette; before/after screenshots in download/shots/.
 - Palette is token-driven from globals.css only — future color tweaks are single-file edits; token names now semantically match the brand (plum/orchid/ivory/ink).
 - Kept intentionally: amber-400 rating stars (gold×plum = premium), natural blue tones inside photography (e.g. surgeon scrubs, clinic signage), coral reserved for emergency accents only.
+
+---
+Task ID: 3
+Agent: main (Super Z)
+Task: Second palette experiment — re-theme to Emerald + Cream + Dark Charcoal (#087A68 emerald primary / #123C35 forest charcoal / #FAF8F2 warm cream / #D8EEE7 pale green / #D6A84F champagne gold).
+
+Work Log:
+- Neutralized token families so future palette swaps are values-only edits: plum-*→brand-*, orchid-*→jade-*, amber-400→gold-500 (scripts/retheme-emerald.sh, idempotent, \b anchored).
+- Rewrote globals.css ramps: brand-950 #0A2B25..600 (forest depth), jade-700 #055F4F..jade-50 #EDF6F2 (jade-600 = emerald #087A68, jade-100 = user's pale green #D8EEE7), ivory-50 #FAF8F2 warm cream page base, mist #FCFBF7, gold-500 #D6A84F / gold-600 #BE9038 champagne accents, warm ink ramp #8A8F87/#6B7269/#575E55, charcoal #21312B, warm border #E5E0D3, forest-tinted shadows/selection/scrollbar/pin-pulse, text-gradient #0B4F41→#087A68→#2E9E85 (WCAG-large safe).
+- :root shadcn: primary=#087A68 (emerald CTAs), foreground #21312B, ring #087A68, charts gold/emerald mix.
+- Swapped 8 hardcoded plum hexes in SVG decorations (hero iris glow/ticks/rings, logo pupil, FAQ/services/views deco strokes) to forest/jade equivalents.
+- Verified agent-browser 1440px: emerald hero (cream bg, forest typography, emerald CTA, gold rating chip), full-page all sections (forest technology + CTA bands, emerald gradients), treatments grid (deep forest Retina → light jade Dry Eye), appointment step 1 + Continue-enabled interaction sanity; mobile 390px booking page + bottom action bar all emerald.
+- Zero stray raw-palette classes (grep sky|cyan|blue|violet|amber|slate = none), zero page errors, zero console errors, lint clean.
+
+Stage Summary:
+- Deliverable: same verified 5-view prototype in Emerald + Cream + Champagne Gold; screenshots in download/shots/emerald-*.png.
+- Architecture note: token names are now palette-neutral (brand/jade/ivory/ink/gold/coral) — the next palette experiment only needs new hex values in globals.css @theme + :root, no renames.
+- Gold strategy: champagne reserved for stars, rating chip, small premium accents; emerald owns CTAs; forest owns headings/dark bands; raspberry still emergency-only.

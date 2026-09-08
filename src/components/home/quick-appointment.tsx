@@ -26,15 +26,15 @@ export function QuickAppointment() {
   };
 
   const selectCls =
-    "w-full appearance-none rounded-2xl border border-white/15 bg-white/10 px-4 py-3.5 text-sm font-semibold text-white outline-none transition focus:border-orchid-300/60 focus:bg-white/15 [&>option]:text-plum-900";
+    "w-full appearance-none rounded-2xl border border-white/15 bg-white/10 px-4 py-3.5 text-sm font-semibold text-white outline-none transition focus:border-jade-300/60 focus:bg-white/15 [&>option]:text-brand-900";
 
   return (
     <section className="relative z-10 -mt-1">
       <div className="container-x">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-plum-900 via-plum-800 to-orchid-700 shadow-lift">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-900 via-brand-800 to-jade-700 shadow-lift">
             <div
-              className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-orchid-400/20 blur-3xl"
+              className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-jade-400/20 blur-3xl"
               aria-hidden="true"
             />
             <div className="relative grid gap-6 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.4fr] lg:items-center lg:gap-10 lg:p-10">
@@ -42,7 +42,7 @@ export function QuickAppointment() {
                 <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
                   Need an Eye Consultation?
                 </h2>
-                <p className="mt-2.5 text-sm leading-relaxed text-orchid-100/90 sm:text-base">
+                <p className="mt-2.5 text-sm leading-relaxed text-jade-100/90 sm:text-base">
                   Book your visit with our ophthalmology specialists — pick a
                   department and doctor, and we will match the earliest
                   convenient slot.
@@ -51,7 +51,7 @@ export function QuickAppointment() {
 
               <div className="grid gap-3 sm:grid-cols-3">
                 <label className="relative block">
-                  <span className="mb-1.5 block text-[0.7rem] font-bold uppercase tracking-[0.14em] text-orchid-200">
+                  <span className="mb-1.5 block text-[0.7rem] font-bold uppercase tracking-[0.14em] text-jade-200">
                     Select Department
                   </span>
                   <select
@@ -69,11 +69,11 @@ export function QuickAppointment() {
                       </option>
                     ))}
                   </select>
-                  <ChevronDown className="pointer-events-none absolute bottom-4 right-3.5 h-4 w-4 text-orchid-200" />
+                  <ChevronDown className="pointer-events-none absolute bottom-4 right-3.5 h-4 w-4 text-jade-200" />
                 </label>
 
                 <label className="relative block">
-                  <span className="mb-1.5 block text-[0.7rem] font-bold uppercase tracking-[0.14em] text-orchid-200">
+                  <span className="mb-1.5 block text-[0.7rem] font-bold uppercase tracking-[0.14em] text-jade-200">
                     Select Doctor
                   </span>
                   <select
@@ -89,11 +89,11 @@ export function QuickAppointment() {
                       </option>
                     ))}
                   </select>
-                  <ChevronDown className="pointer-events-none absolute bottom-4 right-3.5 h-4 w-4 text-orchid-200" />
+                  <ChevronDown className="pointer-events-none absolute bottom-4 right-3.5 h-4 w-4 text-jade-200" />
                 </label>
 
                 <label className="relative block">
-                  <span className="mb-1.5 block text-[0.7rem] font-bold uppercase tracking-[0.14em] text-orchid-200">
+                  <span className="mb-1.5 block text-[0.7rem] font-bold uppercase tracking-[0.14em] text-jade-200">
                     Preferred Time
                   </span>
                   <select
@@ -106,19 +106,19 @@ export function QuickAppointment() {
                     <option>Next week</option>
                     <option>Flexible</option>
                   </select>
-                  <ChevronDown className="pointer-events-none absolute bottom-4 right-3.5 h-4 w-4 text-orchid-200" />
+                  <ChevronDown className="pointer-events-none absolute bottom-4 right-3.5 h-4 w-4 text-jade-200" />
                 </label>
               </div>
             </div>
 
             <div className="relative flex flex-col items-center justify-between gap-4 border-t border-white/10 px-6 py-5 sm:flex-row sm:px-10">
-              <p className="inline-flex items-center gap-2 text-sm font-semibold text-orchid-100">
+              <p className="inline-flex items-center gap-2 text-sm font-semibold text-jade-100">
                 <CalendarSearch className="h-4.5 w-4.5" />
                 Frontend demo — preferences carry into the booking flow.
               </p>
               <button
                 onClick={findAppointment}
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-extrabold text-plum-900 shadow-soft transition hover:bg-orchid-50 sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-extrabold text-brand-900 shadow-soft transition hover:bg-jade-50 sm:w-auto"
               >
                 Find Appointment
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

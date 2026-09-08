@@ -14,7 +14,7 @@ export function Logo({ light = false }: { light?: boolean }) {
       className="flex shrink-0 items-center gap-3 text-left"
       aria-label="Shiv Netralay — Home"
     >
-      <span className="relative grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-orchid-500 to-plum-900 shadow-soft">
+      <span className="relative grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-jade-500 to-brand-900 shadow-soft">
         <svg viewBox="0 0 48 48" className="h-7 w-7" aria-hidden="true">
           <path
             d="M24 14c-6.6 0-11.4 4.6-13.7 8.2a3.5 3.5 0 0 0 0 3.6C12.6 29.4 17.4 34 24 34s11.4-4.6 13.7-8.2a3.5 3.5 0 0 0 0-3.6C35.4 18.6 30.6 14 24 14Z"
@@ -24,21 +24,21 @@ export function Logo({ light = false }: { light?: boolean }) {
             strokeLinejoin="round"
           />
           <circle cx="24" cy="24" r="5" fill="#fff" />
-          <circle cx="24" cy="24" r="2.1" fill="#3B2447" />
+          <circle cx="24" cy="24" r="2.1" fill="#123C35" />
           <circle cx="26.2" cy="21.8" r="0.9" fill="#fff" />
         </svg>
       </span>
       <span className="leading-tight">
         <span
           className={`block whitespace-nowrap text-lg font-extrabold tracking-tight ${
-            light ? "text-white" : "text-plum-900"
+            light ? "text-white" : "text-brand-900"
           }`}
         >
           Shiv Netralay
         </span>
         <span
           className={`block whitespace-nowrap text-[0.65rem] font-bold uppercase tracking-[0.22em] ${
-            light ? "text-orchid-200" : "text-orchid-600"
+            light ? "text-jade-200" : "text-jade-600"
           }`}
         >
           {CLINIC.tagline}
@@ -89,8 +89,8 @@ export function Header() {
   return (
     <>
       {/* ── utility strip ─────────────────────────────────── */}
-      <div className="hidden bg-plum-900 text-white lg:block">
-        <div className="container-x flex h-9 items-center justify-between text-xs font-medium text-orchid-100/90">
+      <div className="hidden bg-brand-900 text-white lg:block">
+        <div className="container-x flex h-9 items-center justify-between text-xs font-medium text-jade-100/90">
           <p>Mon – Sat · 9:00 AM – 7:00 PM · Comprehensive eye care for the whole family</p>
           <div className="flex items-center gap-5">
             <a href={CLINIC.phoneHref} className="inline-flex items-center gap-1.5 transition hover:text-white">
@@ -132,8 +132,8 @@ export function Header() {
                   onClick={() => handleLink(link)}
                   className={`whitespace-nowrap rounded-full px-2.5 py-2 text-[0.84rem] font-semibold transition ${
                     active
-                      ? "bg-orchid-50 text-orchid-700"
-                      : "text-ink-600 hover:bg-orchid-50 hover:text-plum-900"
+                      ? "bg-jade-50 text-jade-700"
+                      : "text-ink-600 hover:bg-jade-50 hover:text-brand-900"
                   }`}
                 >
                   {link.label}
@@ -145,7 +145,7 @@ export function Header() {
           <div className="flex items-center gap-2.5">
             <a
               href={CLINIC.phoneHref}
-              className="hidden items-center gap-2 whitespace-nowrap rounded-full border border-orchid-200 bg-orchid-50/60 px-4 py-2.5 text-sm font-bold text-orchid-700 transition hover:border-orchid-300 hover:bg-orchid-50 sm:inline-flex"
+              className="hidden items-center gap-2 whitespace-nowrap rounded-full border border-jade-200 bg-jade-50/60 px-4 py-2.5 text-sm font-bold text-jade-700 transition hover:border-jade-300 hover:bg-jade-50 sm:inline-flex"
             >
               <Phone className="h-4 w-4" />
               <span className="hidden md:inline">Call Now</span>
@@ -153,14 +153,14 @@ export function Header() {
             </a>
             <button
               onClick={() => nav.navigate({ view: "appointment" })}
-              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-orchid-600 px-4 py-2.5 text-sm font-bold text-white shadow-soft transition hover:bg-orchid-700 hover:shadow-lift md:px-5"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-jade-600 px-4 py-2.5 text-sm font-bold text-white shadow-soft transition hover:bg-jade-700 hover:shadow-lift md:px-5"
             >
               <CalendarCheck className="h-4 w-4" />
               <span className="hidden sm:inline">Book Appointment</span>
               <span className="sm:hidden">Book</span>
             </button>
             <button
-              className="grid h-11 w-11 place-items-center rounded-full border border-border bg-white text-plum-900 transition hover:bg-orchid-50 xl:hidden"
+              className="grid h-11 w-11 place-items-center rounded-full border border-border bg-white text-brand-900 transition hover:bg-jade-50 xl:hidden"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
             >
@@ -175,7 +175,7 @@ export function Header() {
         {open && (
           <>
             <motion.div
-              className="fixed inset-0 z-[60] bg-plum-950/50 backdrop-blur-sm"
+              className="fixed inset-0 z-[60] bg-brand-950/50 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -193,7 +193,7 @@ export function Header() {
                 <Logo />
                 <button
                   onClick={() => setOpen(false)}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-orchid-50 text-plum-900"
+                  className="grid h-10 w-10 place-items-center rounded-full bg-jade-50 text-brand-900"
                   aria-label="Close menu"
                 >
                   <X className="h-5 w-5" />
@@ -204,7 +204,7 @@ export function Header() {
                   <button
                     key={link.label}
                     onClick={() => handleLink(link)}
-                    className="flex w-full items-center justify-between rounded-2xl px-4 py-3.5 text-left text-base font-semibold text-plum-900 transition hover:bg-orchid-50"
+                    className="flex w-full items-center justify-between rounded-2xl px-4 py-3.5 text-left text-base font-semibold text-brand-900 transition hover:bg-jade-50"
                   >
                     {link.label}
                     <ChevronRight className="h-4 w-4 text-ink-400" />
@@ -214,7 +214,7 @@ export function Header() {
               <div className="space-y-3 border-t border-border p-5">
                 <a
                   href={CLINIC.phoneHref}
-                  className="flex w-full items-center justify-center gap-2 rounded-full border border-orchid-200 bg-orchid-50 px-4 py-3 text-sm font-bold text-orchid-700"
+                  className="flex w-full items-center justify-center gap-2 rounded-full border border-jade-200 bg-jade-50 px-4 py-3 text-sm font-bold text-jade-700"
                 >
                   <Phone className="h-4 w-4" /> Call {CLINIC.phoneDisplay}
                 </a>
@@ -223,7 +223,7 @@ export function Header() {
                     setOpen(false);
                     nav.navigate({ view: "appointment" });
                   }}
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-orchid-600 px-4 py-3 text-sm font-bold text-white shadow-soft"
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-jade-600 px-4 py-3 text-sm font-bold text-white shadow-soft"
                 >
                   <CalendarCheck className="h-4 w-4" /> Book Appointment
                 </button>

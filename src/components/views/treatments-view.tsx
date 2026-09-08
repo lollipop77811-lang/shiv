@@ -12,17 +12,17 @@ export function TreatmentsView() {
   return (
     <>
       {/* hero band */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-plum-950 via-plum-900 to-orchid-800 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-jade-800 py-16 sm:py-20">
         <svg className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 opacity-15" viewBox="0 0 200 200" aria-hidden="true">
           {[30, 60, 90].map((r) => (
-            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#C9B1D5" strokeWidth="0.8" strokeDasharray="2 8" />
+            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7CC5B2" strokeWidth="0.8" strokeDasharray="2 8" />
           ))}
         </svg>
         <div className="container-x relative">
           <motion.nav
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-orchid-300"
+            className="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-jade-300"
             aria-label="Breadcrumb"
           >
             <button onClick={() => nav.navigate({ view: "home" })} className="transition hover:text-white">
@@ -43,7 +43,7 @@ export function TreatmentsView() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.12 }}
-            className="mt-4 max-w-2xl text-lg leading-relaxed text-orchid-100/85"
+            className="mt-4 max-w-2xl text-lg leading-relaxed text-jade-100/85"
           >
             Specialised ophthalmology services designed around your individual
             eye-care needs — every treatment begins with precise diagnosis and
@@ -59,9 +59,9 @@ export function TreatmentsView() {
               <button
                 key={t.id}
                 onClick={() => nav.navigate({ view: "treatment", treatmentId: t.id })}
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-orchid-50 transition hover:border-orchid-300/50 hover:bg-white/15"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-jade-50 transition hover:border-jade-300/50 hover:bg-white/15"
               >
-                <t.icon className="h-4 w-4 text-orchid-300" />
+                <t.icon className="h-4 w-4 text-jade-300" />
                 {t.shortName}
               </button>
             ))}
@@ -92,14 +92,14 @@ export function TreatmentsView() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <h2 className="text-lg font-extrabold tracking-tight text-plum-900">{t.name}</h2>
-                  <p className="mt-1.5 text-sm font-semibold text-orchid-700">{t.tagline}</p>
+                  <h2 className="text-lg font-extrabold tracking-tight text-brand-900">{t.name}</h2>
+                  <p className="mt-1.5 text-sm font-semibold text-jade-700">{t.tagline}</p>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-500">{t.cardDescription}</p>
 
                   <ul className="mt-4 space-y-1.5">
                     {t.symptoms.items.slice(0, 3).map((s) => (
                       <li key={s} className="flex items-start gap-2 text-xs font-semibold text-ink-500">
-                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-orchid-500" />
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-jade-500" />
                         {s}
                       </li>
                     ))}
@@ -107,7 +107,7 @@ export function TreatmentsView() {
 
                   <button
                     onClick={() => nav.navigate({ view: "treatment", treatmentId: t.id })}
-                    className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-plum-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-plum-800"
+                    className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-brand-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-800"
                   >
                     Learn More
                     <ArrowUpRight className="h-4 w-4" />
@@ -123,7 +123,7 @@ export function TreatmentsView() {
           <Reveal>
             <div className="flex flex-col items-center justify-between gap-6 rounded-[2rem] bg-white p-8 shadow-soft sm:p-10 lg:flex-row">
               <div>
-                <h2 className="text-2xl font-extrabold tracking-tight text-plum-900">
+                <h2 className="text-2xl font-extrabold tracking-tight text-brand-900">
                   Not sure which treatment you need?
                 </h2>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-500 sm:text-base">
@@ -134,7 +134,7 @@ export function TreatmentsView() {
               </div>
               <button
                 onClick={() => nav.navigate({ view: "appointment" })}
-                className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-orchid-600 px-8 py-4 text-base font-extrabold text-white shadow-lift transition hover:bg-orchid-700"
+                className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-jade-600 px-8 py-4 text-base font-extrabold text-white shadow-lift transition hover:bg-jade-700"
               >
                 Book an Eye Exam
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

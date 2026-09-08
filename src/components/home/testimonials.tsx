@@ -14,7 +14,7 @@ import {
 
 function Stars({ n }: { n: number }) {
   return (
-    <span className="inline-flex gap-0.5 text-amber-400" aria-label={`${n} star rating`}>
+    <span className="inline-flex gap-0.5 text-gold-500" aria-label={`${n} star rating`}>
       {Array.from({ length: n }).map((_, i) => (
         <Star key={i} className="h-4 w-4 fill-current" />
       ))}
@@ -56,7 +56,7 @@ export function Testimonials() {
           {/* slider */}
           <Reveal className="relative">
             <div className="relative h-full overflow-hidden rounded-[2rem] border border-border/70 bg-white p-8 shadow-soft sm:p-12">
-              <Quote className="absolute right-8 top-8 h-16 w-16 text-orchid-100" aria-hidden="true" />
+              <Quote className="absolute right-8 top-8 h-16 w-16 text-jade-100" aria-hidden="true" />
               <AnimatePresence mode="wait" custom={dir}>
                 <motion.figure
                   key={index}
@@ -68,16 +68,16 @@ export function Testimonials() {
                   className="relative flex h-full flex-col"
                 >
                   <Stars n={item.rating} />
-                  <blockquote className="mt-5 flex-1 text-xl font-semibold leading-relaxed text-plum-800 sm:text-2xl">
+                  <blockquote className="mt-5 flex-1 text-xl font-semibold leading-relaxed text-brand-800 sm:text-2xl">
                     &ldquo;{item.quote}&rdquo;
                   </blockquote>
                   <figcaption className="mt-7 flex items-center gap-4">
-                    <span className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-orchid-500 to-plum-800 text-base font-extrabold text-white">
+                    <span className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-jade-500 to-brand-800 text-base font-extrabold text-white">
                       {item.name.split(" ").map((w) => w[0]).join("")}
                     </span>
                     <span>
-                      <span className="block text-sm font-extrabold text-plum-900">{item.name}</span>
-                      <span className="block text-xs font-semibold text-orchid-700">{item.treatment}</span>
+                      <span className="block text-sm font-extrabold text-brand-900">{item.name}</span>
+                      <span className="block text-xs font-semibold text-jade-700">{item.treatment}</span>
                     </span>
                   </figcaption>
                 </motion.figure>
@@ -92,7 +92,7 @@ export function Testimonials() {
                     key={i}
                     onClick={() => go(i, i > index ? 1 : -1)}
                     className={`h-2 rounded-full transition-all ${
-                      i === index ? "w-8 bg-orchid-600" : "w-2 bg-orchid-200 hover:bg-orchid-300"
+                      i === index ? "w-8 bg-jade-600" : "w-2 bg-jade-200 hover:bg-jade-300"
                     }`}
                     aria-label={`Go to testimonial ${i + 1}`}
                   />
@@ -101,14 +101,14 @@ export function Testimonials() {
               <div className="flex gap-2.5">
                 <button
                   onClick={() => go(index - 1, -1)}
-                  className="grid h-11 w-11 place-items-center rounded-full border border-border bg-white text-plum-900 shadow-soft transition hover:bg-orchid-50"
+                  className="grid h-11 w-11 place-items-center rounded-full border border-border bg-white text-brand-900 shadow-soft transition hover:bg-jade-50"
                   aria-label="Previous testimonial"
                 >
                   <ArrowLeft className="h-4.5 w-4.5" />
                 </button>
                 <button
                   onClick={() => go(index + 1, 1)}
-                  className="grid h-11 w-11 place-items-center rounded-full bg-plum-900 text-white shadow-soft transition hover:bg-plum-800"
+                  className="grid h-11 w-11 place-items-center rounded-full bg-brand-900 text-white shadow-soft transition hover:bg-brand-800"
                   aria-label="Next testimonial"
                 >
                   <ArrowRight className="h-4.5 w-4.5" />
@@ -119,26 +119,26 @@ export function Testimonials() {
 
           {/* google rating card */}
           <Reveal delay={0.1} className="h-full">
-            <div className="flex h-full flex-col justify-between rounded-[2rem] bg-gradient-to-br from-plum-900 to-orchid-800 p-8 text-white shadow-lift sm:p-10">
+            <div className="flex h-full flex-col justify-between rounded-[2rem] bg-gradient-to-br from-brand-900 to-jade-800 p-8 text-white shadow-lift sm:p-10">
               <div>
-                <p className="text-[0.7rem] font-extrabold uppercase tracking-[0.18em] text-orchid-300">
+                <p className="text-[0.7rem] font-extrabold uppercase tracking-[0.18em] text-jade-300">
                   Google Rating
                 </p>
                 <div className="mt-5 flex items-end gap-3">
                   <span className="text-6xl font-extrabold tracking-tight">4.8</span>
-                  <span className="pb-2 text-sm font-bold text-orchid-100/80">/ 5</span>
+                  <span className="pb-2 text-sm font-bold text-jade-100/80">/ 5</span>
                 </div>
                 <div className="mt-3">
                   <Stars n={5} />
                 </div>
-                <p className="mt-4 text-sm font-semibold leading-relaxed text-orchid-100/85">
+                <p className="mt-4 text-sm font-semibold leading-relaxed text-jade-100/85">
                   500+ patient reviews — reflecting the trust our patients place
                   in our care every day.
                 </p>
               </div>
               <div className="mt-8 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
-                <BadgeCheck className="h-8 w-8 shrink-0 text-orchid-300" />
-                <p className="text-xs font-semibold leading-relaxed text-orchid-100/80">
+                <BadgeCheck className="h-8 w-8 shrink-0 text-jade-300" />
+                <p className="text-xs font-semibold leading-relaxed text-jade-100/80">
                   Placeholder figures for the prototype. Live rating will be
                   connected once the clinic confirms its listing details.
                 </p>
@@ -161,10 +161,10 @@ const BLOG_ICONS = {
 export function Blog() {
   const nav = useNav();
   const gradients = [
-    "from-orchid-500 to-plum-800",
-    "from-orchid-400 to-plum-700",
-    "from-orchid-300 to-orchid-600",
-    "from-orchid-600 to-plum-900",
+    "from-jade-500 to-brand-800",
+    "from-jade-400 to-brand-700",
+    "from-jade-300 to-jade-600",
+    "from-jade-600 to-brand-900",
   ];
 
   return (
@@ -195,19 +195,19 @@ export function Blog() {
                   <svg viewBox="0 0 24 24" className="absolute right-4 top-4 h-12 w-12 text-white/25" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
                     <path d={BLOG_ICONS[post.icon as keyof typeof BLOG_ICONS] ?? BLOG_ICONS.eye} strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  <span className="rounded-full bg-white/90 px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.12em] text-plum-900 backdrop-blur">
+                  <span className="rounded-full bg-white/90 px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.12em] text-brand-900 backdrop-blur">
                     {post.category}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <p className="text-xs font-bold text-ink-400">{post.readTime}</p>
-                  <h3 className="mt-2 text-base font-extrabold leading-snug tracking-tight text-plum-900 transition group-hover:text-orchid-700">
+                  <h3 className="mt-2 text-base font-extrabold leading-snug tracking-tight text-brand-900 transition group-hover:text-jade-700">
                     {post.title}
                   </h3>
                   <p className="mt-2.5 flex-1 text-sm leading-relaxed text-ink-500">
                     {post.excerpt}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-orchid-700">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-jade-700">
                     Read Article
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>

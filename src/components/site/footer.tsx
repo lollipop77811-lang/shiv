@@ -28,7 +28,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-plum-950 pb-24 pt-16 text-orchid-100/80 lg:pb-0">
+    <footer className="bg-brand-950 pb-24 pt-16 text-jade-100/80 lg:pb-0">
       <div className="container-x">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-10">
           {/* brand */}
@@ -41,13 +41,13 @@ export function Footer() {
             </p>
             <div className="mt-6 space-y-3 text-sm">
               <a href={CLINIC.phoneHref} className="flex items-center gap-3 transition hover:text-white">
-                <Phone className="h-4 w-4 shrink-0 text-orchid-400" /> {CLINIC.phoneDisplay}
+                <Phone className="h-4 w-4 shrink-0 text-jade-400" /> {CLINIC.phoneDisplay}
               </a>
               <a href={`mailto:${CLINIC.email}`} className="flex items-center gap-3 transition hover:text-white">
-                <Mail className="h-4 w-4 shrink-0 text-orchid-400" /> {CLINIC.email}
+                <Mail className="h-4 w-4 shrink-0 text-jade-400" /> {CLINIC.email}
               </a>
               <p className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orchid-400" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-jade-400" />
                 <span>
                   {CLINIC.addressLines.map((l) => (
                     <span key={l} className="block">{l}</span>
@@ -64,7 +64,7 @@ export function Footer() {
               {quickLinks.map((l) => (
                 <li key={l.label}>
                   <button onClick={l.action} className="group inline-flex items-center gap-1.5 transition hover:text-white">
-                    <span className="h-px w-3 bg-orchid-500/60 transition-all group-hover:w-5 group-hover:bg-orchid-300" aria-hidden="true" />
+                    <span className="h-px w-3 bg-jade-500/60 transition-all group-hover:w-5 group-hover:bg-jade-300" aria-hidden="true" />
                     {l.label}
                   </button>
                 </li>
@@ -82,7 +82,7 @@ export function Footer() {
                     onClick={() => nav.navigate({ view: "treatment", treatmentId: t.id })}
                     className="group inline-flex items-center gap-1.5 transition hover:text-white"
                   >
-                    <span className="h-px w-3 bg-orchid-500/60 transition-all group-hover:w-5 group-hover:bg-orchid-300" aria-hidden="true" />
+                    <span className="h-px w-3 bg-jade-500/60 transition-all group-hover:w-5 group-hover:bg-jade-300" aria-hidden="true" />
                     {t.shortName}
                   </button>
                 </li>
@@ -97,7 +97,7 @@ export function Footer() {
               {resources.map((l) => (
                 <li key={l.label}>
                   <button onClick={l.action} className="group inline-flex items-center gap-1.5 transition hover:text-white">
-                    <span className="h-px w-3 bg-orchid-500/60 transition-all group-hover:w-5 group-hover:bg-orchid-300" aria-hidden="true" />
+                    <span className="h-px w-3 bg-jade-500/60 transition-all group-hover:w-5 group-hover:bg-jade-300" aria-hidden="true" />
                     {l.label}
                   </button>
                 </li>
@@ -107,7 +107,7 @@ export function Footer() {
         </div>
 
         {/* bottom bar */}
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 py-7 text-xs font-medium text-orchid-100/60 sm:flex-row">
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 py-7 text-xs font-medium text-jade-100/60 sm:flex-row">
           <p>© {year} {CLINIC.name} — {CLINIC.tagline}. All rights reserved.</p>
           <p className="text-center sm:text-right">
             Prototype for client review · Images &amp; content are placeholders pending clinic confirmation.
@@ -116,7 +116,7 @@ export function Footer() {
       </div>
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="container-x group mb-8 flex items-center gap-1 text-xs font-bold text-orchid-300 transition hover:text-white"
+        className="container-x group mb-8 flex items-center gap-1 text-xs font-bold text-jade-300 transition hover:text-white"
       >
         Back to top <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5" />
       </button>

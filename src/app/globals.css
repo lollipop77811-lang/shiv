@@ -43,84 +43,90 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ── Shiv Netralay brand palette — Midnight Plum ───────────────
-   Main brand  #3B2447  plum-900   headings / buttons / footer
-   Deep depth  #1F1229  plum-950   hero & footer depth
-   Secondary   #765A82  orchid-600 soft plum
-   Accent      #B89BC6  orchid-400 lavender highlights
-   Background  #F7F4F8  ivory-50   soft ivory page base
-   Text        #29232D  charcoal   body text
-   Cards       #FFFFFF  white      subtle shadows                */
+/* ── Shiv Netralay brand palette — Emerald & Cream ─────────────
+   Primary     #087A68  jade-600    emerald CTA buttons / links
+   Deep brand  #123C35  brand-900   forest charcoal headings & dark sections
+   Depth       #0A2B25  brand-950   footer / hero depth
+   Secondary   #D8EEE7  jade-100    pale green chips & tints
+   Background  #FAF8F2  ivory-50    warm cream page base
+   Accent      #D6A84F  gold-500    champagne gold highlights & stars
+   Text        #21312B  charcoal    body text
+   Cards       #FFFFFF  white       warm subtle shadows                */
 @theme {
-  /* Deep plum */
-  --color-plum-950: #1f1229;
-  --color-plum-900: #3b2447;
-  --color-plum-800: #462c55;
-  --color-plum-700: #523563;
-  --color-plum-600: #5e3e71;
+  /* Deep forest charcoal */
+  --color-brand-950: #0a2b25;
+  --color-brand-900: #123c35;
+  --color-brand-800: #17453c;
+  --color-brand-700: #1b4e43;
+  --color-brand-600: #215a4c;
 
-  /* Soft plum -> lavender */
-  --color-orchid-700: #6b5378;
-  --color-orchid-600: #765a82;
-  --color-orchid-500: #8a6e96;
-  --color-orchid-400: #b89bc6;
-  --color-orchid-300: #c9b1d5;
-  --color-orchid-200: #dac8e3;
-  --color-orchid-100: #eae0f0;
-  --color-orchid-50: #f4eff7;
+  /* Emerald -> pale green */
+  --color-jade-700: #055f4f;
+  --color-jade-600: #087a68;
+  --color-jade-500: #219880;
+  --color-jade-400: #35a78f;
+  --color-jade-300: #7cc5b2;
+  --color-jade-200: #bce1d6;
+  --color-jade-100: #d8eee7;
+  --color-jade-50: #edf6f2;
 
-  /* Very light lavender-tinted ivory */
-  --color-ivory-100: #f0eaf4;
-  --color-ivory-50: #f7f4f8;
+  /* Warm cream tints */
+  --color-ivory-100: #f3efe4;
+  --color-ivory-50: #faf8f2;
 
-  /* Near-white whisper for alternating sections */
-  --color-mist: #fbf9fd;
+  /* Near-white warm whisper for alternating sections */
+  --color-mist: #fcfbf7;
+
+  /* Champagne gold accents */
+  --color-gold-500: #d6a84f;
+  --color-gold-600: #be9038;
+  --color-gold-50: #fbf3df;
 
   /* Raspberry (emergency accents only) */
   --color-coral-600: #c44a63;
   --color-coral-50: #fbf1f4;
 
-  --color-charcoal: #29232d;
+  --color-charcoal: #21312b;
 
-  /* Plum-tinted ink ramp (secondary text) — replaces cool slate */
-  --color-ink-400: #8d8394;
-  --color-ink-500: #6d6378;
-  --color-ink-600: #5c5364;
+  /* Warm ink ramp (secondary text) */
+  --color-ink-400: #8a8f87;
+  --color-ink-500: #6b7269;
+  --color-ink-600: #575e55;
 }
 
 :root {
   --radius: 1rem;
-  --background: #f7f4f8;
-  --foreground: #29232d;
+  --background: #faf8f2;
+  --foreground: #21312b;
   --card: #ffffff;
-  --card-foreground: #29232d;
+  --card-foreground: #21312b;
   --popover: #ffffff;
-  --popover-foreground: #29232d;
-  --primary: #3b2447;
-  --primary-foreground: #fdfcfe;
-  --secondary: #f4eff7;
-  --secondary-foreground: #3b2447;
-  --muted: #f4eff7;
-  --muted-foreground: #6d6378;
-  --accent: #eae0f0;
-  --accent-foreground: #3b2447;
+  --popover-foreground: #21312b;
+  --primary: #087a68;
+  --primary-foreground: #ffffff;
+  --secondary: #d8eee7;
+  --secondary-foreground: #123c35;
+  --muted: #f2efe6;
+  --muted-foreground: #6b7269;
+  --accent: #d8eee7;
+  --accent-foreground: #123c35;
   --destructive: #c44a63;
-  --border: #e6deeb;
-  --input: #e6deeb;
-  --ring: #b89bc6;
-  --chart-1: #3b2447;
-  --chart-2: #765a82;
-  --chart-3: #b89bc6;
-  --chart-4: #29232d;
-  --chart-5: #dac8e3;
-  --sidebar: #fbf9fd;
-  --sidebar-foreground: #29232d;
-  --sidebar-primary: #3b2447;
-  --sidebar-primary-foreground: #fdfcfe;
-  --sidebar-accent: #f4eff7;
-  --sidebar-accent-foreground: #3b2447;
-  --sidebar-border: #e6deeb;
-  --sidebar-ring: #b89bc6;
+  --border: #e5e0d3;
+  --input: #e5e0d3;
+  --ring: #087a68;
+  --chart-1: #123c35;
+  --chart-2: #087a68;
+  --chart-3: #d6a84f;
+  --chart-4: #35a78f;
+  --chart-5: #d8eee7;
+  --sidebar: #fcfbf7;
+  --sidebar-foreground: #21312b;
+  --sidebar-primary: #087a68;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d8eee7;
+  --sidebar-accent-foreground: #123c35;
+  --sidebar-border: #e5e0d3;
+  --sidebar-ring: #087a68;
 }
 
 @layer base {
@@ -135,8 +141,8 @@
     font-feature-settings: "ss01";
   }
   ::selection {
-    background: #dac8e3;
-    color: #29232d;
+    background: #c8e8de;
+    color: #21312b;
   }
 }
 
@@ -161,28 +167,28 @@
     width: 6px;
   }
   .thin-scrollbar::-webkit-scrollbar-thumb {
-    background: #dac8e3;
+    background: #bce1d6;
     border-radius: 999px;
   }
   .thin-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  /* soft premium shadows — plum-tinted, very subtle */
+  /* soft premium shadows — forest-tinted, very subtle */
   .shadow-soft {
     box-shadow:
-      0 1px 2px rgba(41, 35, 45, 0.04),
-      0 12px 32px -12px rgba(59, 36, 71, 0.14);
+      0 1px 2px rgba(33, 49, 43, 0.04),
+      0 12px 32px -12px rgba(18, 60, 53, 0.14);
   }
   .shadow-lift {
     box-shadow:
-      0 2px 4px rgba(41, 35, 45, 0.05),
-      0 24px 48px -16px rgba(59, 36, 71, 0.22);
+      0 2px 4px rgba(33, 49, 43, 0.05),
+      0 24px 48px -16px rgba(18, 60, 53, 0.22);
   }
 
-  /* brand gradient text — soft plum -> lavender (WCAG-large safe) */
+  /* brand gradient text — forest -> emerald (WCAG-large safe) */
   .text-gradient {
-    background: linear-gradient(100deg, #6b5378 10%, #8a6e96 55%, #9a7dab 90%);
+    background: linear-gradient(100deg, #0b4f41 10%, #087a68 55%, #2e9e85 90%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -242,7 +248,7 @@
     position: absolute;
     inset: 0;
     border-radius: 9999px;
-    background: rgba(184, 155, 198, 0.35);
+    background: rgba(8, 122, 104, 0.32);
     animation: pin-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
   @keyframes pin-ping {

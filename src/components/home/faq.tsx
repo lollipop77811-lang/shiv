@@ -35,8 +35,8 @@ export function Faq() {
             description="Clear answers to the questions patients ask most — so you can book with confidence."
           />
           <Reveal delay={0.12}>
-            <div className="mt-8 rounded-3xl border border-orchid-200/70 bg-white p-7 shadow-soft">
-              <h3 className="text-lg font-extrabold tracking-tight text-plum-900">
+            <div className="mt-8 rounded-3xl border border-jade-200/70 bg-white p-7 shadow-soft">
+              <h3 className="text-lg font-extrabold tracking-tight text-brand-900">
                 Still have a question?
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-500">
@@ -46,13 +46,13 @@ export function Faq() {
               <div className="mt-5 flex flex-wrap gap-3">
                 <a
                   href={CLINIC.phoneHref}
-                  className="inline-flex items-center gap-2 rounded-full bg-orchid-600 px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-orchid-700"
+                  className="inline-flex items-center gap-2 rounded-full bg-jade-600 px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-jade-700"
                 >
                   <Phone className="h-4 w-4" /> Contact Us
                 </a>
                 <a
                   href={`mailto:${CLINIC.email}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-orchid-200 bg-white px-5 py-3 text-sm font-bold text-orchid-700 transition hover:bg-orchid-50"
+                  className="inline-flex items-center gap-2 rounded-full border border-jade-200 bg-white px-5 py-3 text-sm font-bold text-jade-700 transition hover:bg-jade-50"
                 >
                   <Mail className="h-4 w-4" /> Email Us
                 </a>
@@ -67,9 +67,9 @@ export function Faq() {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="rounded-2xl border border-border/70 bg-white px-6 shadow-soft transition hover:border-orchid-200 data-[state=open]:border-orchid-200"
+                className="rounded-2xl border border-border/70 bg-white px-6 shadow-soft transition hover:border-jade-200 data-[state=open]:border-jade-200"
               >
-                <AccordionTrigger className="py-5 text-left text-base font-bold text-plum-900 hover:no-underline [&[data-state=open]>svg]:rotate-45">
+                <AccordionTrigger className="py-5 text-left text-base font-bold text-brand-900 hover:no-underline [&[data-state=open]>svg]:rotate-45">
                   {f.q}
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 text-[0.95rem] leading-relaxed text-ink-500">
@@ -97,7 +97,7 @@ export function Emergency() {
                   <AlertTriangle className="h-7 w-7" />
                 </span>
                 <div>
-                  <h2 id="emergency-heading" className="text-2xl font-extrabold tracking-tight text-plum-900 sm:text-3xl">
+                  <h2 id="emergency-heading" className="text-2xl font-extrabold tracking-tight text-brand-900 sm:text-3xl">
                     Experiencing an Eye Emergency?
                   </h2>
                   <p className="mt-2.5 text-sm leading-relaxed text-ink-600 sm:text-base">
@@ -129,24 +129,24 @@ export function FinalCta() {
     <section className="pb-16 sm:pb-20" aria-labelledby="cta-heading">
       <div className="container-x">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-plum-900 via-plum-800 to-orchid-700 px-8 py-16 text-center shadow-lift sm:px-16 sm:py-20">
+          <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-900 via-brand-800 to-jade-700 px-8 py-16 text-center shadow-lift sm:px-16 sm:py-20">
             <svg className="pointer-events-none absolute -left-20 -bottom-24 h-96 w-96 opacity-15" viewBox="0 0 200 200" aria-hidden="true">
               {[30, 60, 90].map((r) => (
-                <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#C9B1D5" strokeWidth="0.8" strokeDasharray="2 8" />
+                <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7CC5B2" strokeWidth="0.8" strokeDasharray="2 8" />
               ))}
             </svg>
             <div className="relative mx-auto max-w-2xl">
               <h2 id="cta-heading" className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Ready to See the World More Clearly?
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-orchid-100/85 sm:text-lg">
+              <p className="mt-4 text-base leading-relaxed text-jade-100/85 sm:text-lg">
                 Book your comprehensive eye examination today — a few minutes
                 with a specialist can protect a lifetime of vision.
               </p>
               <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
                 <button
                   onClick={() => nav.navigate({ view: "appointment" })}
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-base font-extrabold text-plum-900 shadow-lift transition hover:bg-orchid-50"
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-base font-extrabold text-brand-900 shadow-lift transition hover:bg-jade-50"
                 >
                   Book an Appointment
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -186,26 +186,26 @@ export function Location() {
           <Reveal delay={0.1}>
             <ul className="mt-8 space-y-5">
               <li className="flex items-start gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-orchid-50 text-orchid-600">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-jade-50 text-jade-600">
                   <MapPin className="h-5.5 w-5.5" />
                 </span>
                 <div>
-                  <p className="text-sm font-extrabold uppercase tracking-[0.1em] text-plum-900">Clinic Address</p>
+                  <p className="text-sm font-extrabold uppercase tracking-[0.1em] text-brand-900">Clinic Address</p>
                   {CLINIC.addressLines.map((line) => (
                     <p key={line} className="mt-0.5 text-sm text-ink-500">{line}</p>
                   ))}
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-orchid-50 text-orchid-600">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-jade-50 text-jade-600">
                   <Clock className="h-5.5 w-5.5" />
                 </span>
                 <div className="flex-1">
-                  <p className="text-sm font-extrabold uppercase tracking-[0.1em] text-plum-900">Opening Hours</p>
+                  <p className="text-sm font-extrabold uppercase tracking-[0.1em] text-brand-900">Opening Hours</p>
                   <div className="mt-1.5 space-y-1.5">
                     {CLINIC.hours.map((h) => (
                       <div key={h.days} className="flex flex-wrap items-center justify-between gap-2 text-sm">
-                        <span className="font-semibold text-plum-800">{h.days}</span>
+                        <span className="font-semibold text-brand-800">{h.days}</span>
                         <span className="text-ink-500">{h.time}</span>
                       </div>
                     ))}
@@ -213,11 +213,11 @@ export function Location() {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-orchid-50 text-orchid-600">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-jade-50 text-jade-600">
                   <Phone className="h-5.5 w-5.5" />
                 </span>
                 <div>
-                  <p className="text-sm font-extrabold uppercase tracking-[0.1em] text-plum-900">Contact Us</p>
+                  <p className="text-sm font-extrabold uppercase tracking-[0.1em] text-brand-900">Contact Us</p>
                   <p className="mt-0.5 text-sm text-ink-500">{CLINIC.phoneDisplay}</p>
                   <p className="text-sm text-ink-500">{CLINIC.email}</p>
                 </div>
@@ -227,9 +227,9 @@ export function Location() {
               href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-plum-900 px-7 py-3.5 text-sm font-bold text-white shadow-soft transition hover:bg-plum-800"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-900 px-7 py-3.5 text-sm font-bold text-white shadow-soft transition hover:bg-brand-800"
             >
-              <Navigation className="h-4 w-4 text-orchid-300" />
+              <Navigation className="h-4 w-4 text-jade-300" />
               Get Directions
             </a>
           </Reveal>
@@ -242,21 +242,21 @@ export function Location() {
             <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
               <defs>
                 <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
-                  <path d="M44 0H0V44" fill="none" stroke="#E4D9EC" strokeWidth="1" />
+                  <path d="M44 0H0V44" fill="none" stroke="#D8EEE7" strokeWidth="1" />
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#grid)" />
-              <path d="M-20 200 C 120 160, 260 260, 420 180" stroke="#D5C2E0" strokeWidth="14" fill="none" strokeLinecap="round" opacity="0.8" />
-              <path d="M60 -20 C 110 90, 240 120, 420 90" stroke="#D5C2E0" strokeWidth="10" fill="none" strokeLinecap="round" opacity="0.8" />
-              <path d="M-20 320 C 160 300, 300 380, 480 320" stroke="#EAE1F1" strokeWidth="8" fill="none" strokeLinecap="round" />
+              <path d="M-20 200 C 120 160, 260 260, 420 180" stroke="#BCE1D6" strokeWidth="14" fill="none" strokeLinecap="round" opacity="0.8" />
+              <path d="M60 -20 C 110 90, 240 120, 420 90" stroke="#BCE1D6" strokeWidth="10" fill="none" strokeLinecap="round" opacity="0.8" />
+              <path d="M-20 320 C 160 300, 300 380, 480 320" stroke="#E4F3EE" strokeWidth="8" fill="none" strokeLinecap="round" />
             </svg>
             {/* pin */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="pin-pulse relative grid h-14 w-14 place-items-center rounded-full bg-orchid-600 text-white shadow-lift">
+              <div className="pin-pulse relative grid h-14 w-14 place-items-center rounded-full bg-jade-600 text-white shadow-lift">
                 <MapPin className="h-7 w-7" />
               </div>
               <div className="mt-3 whitespace-nowrap rounded-xl border border-border/60 bg-white px-4 py-2.5 text-center shadow-lift">
-                <p className="text-sm font-extrabold text-plum-900">Shiv Netralay</p>
+                <p className="text-sm font-extrabold text-brand-900">Shiv Netralay</p>
                 <p className="text-xs font-semibold text-ink-500">Eye Care Clinic</p>
               </div>
             </div>
