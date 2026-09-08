@@ -102,3 +102,21 @@ Stage Summary:
 - Deliverable: the same content-complete 5-view prototype, visually aligned to the MediCare reference (steel blue + navy + yellow + cream on light-blue page); screenshots in download/shots/medi-*.png.
 - Content untouched: all copy, treatments, doctors, testimonials, FAQ and disclaimers identical; only colors, typography feel (Plus Jakarta retained — closest to reference geometric sans), button shapes and section backgrounds changed.
 - Palette remains single-file token-driven (globals.css); yellow = action color, navy = bands/headings, steel blue = feature cards, cream = warm zones, coral = emergency only.
+
+---
+Task ID: 6
+Agent: main (Super Z)
+Task: Match the hero card's margin / padding / size exactly to the client's second screenshot (cropped MediCare hero).
+
+Work Log:
+- Measured the uploaded 1622x891 crop with scripts/measure-hero-ref.py: card gutters ~56px each side (~3.8vw, fluid — not a fixed max-w container), top gap ~8px, bottom gap ~28px, card ~1422x853 (aspect ~5:3 → ~816px tall at 1440 viewport), inner left padding ~113px (7.9% of card), eyebrow ~221px from card top (includes in-card nav), stats inline at bottom-left ~192px above card bottom, photo flush to card bottom-right.
+- Rewrote hero section wrapper: px-4 sm:px-6 lg:px-14 (56px @lg) with max-w-[1600px] fluid card; pt-2 (8px) top gap; pb-6/pb-7 (24-28px) bottom gap.
+- Card: min-h lg:51rem (816px), made the card flex-col with grid flex-1 so content stretches full height (previous min-h grid did not stretch — photo left a gap and stats floated mid-card; fixed).
+- Inner padding: lg:px-[6.5rem] (104px), lg:pt-32 (128px), lg:pb-14 (56px).
+- Stats row moved out of the full-width border-t strip into the copy column with mt-auto + pt-12 — anchors at the bottom-left like the reference (25+ / 10,000+ / 4.8-5).
+- Photo column: lg:-mb-14 escapes grid padding so the image sits flush on the card's bottom edge (card overflow-hidden clips the rounded corner); rounded-t-[1.75rem] top only; steel duotone + bottom fade into jade-600 for blend; floating rating card kept.
+- Verified 1440px (hero-v3.png matches reference crop geometry) and 390px mobile (tight top gap, full-width card, stats inline). Lint clean, zero app console errors.
+
+Stage Summary:
+- Hero card now mirrors the reference's measured geometry: 56px gutters, 8px top gap, 28px bottom gap, ~816px tall card, 104px inner padding, inline bottom-left stats, bottom-flush photo.
+- No content changes; all copy, CTAs, trust chips, rating card and stats preserved.

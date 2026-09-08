@@ -81,23 +81,24 @@ export function Hero() {
   const nav = useNav();
 
   return (
-    <section id="top" className="pt-4 sm:pt-6">
-      <div className="container-x">
-        <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-jade-400 via-jade-500 to-jade-700 shadow-lift sm:rounded-[2.5rem]">
+    /* tight top gap + ~56px desktop gutters + ~28px bottom gap — measured from the reference */
+    <section id="top" className="px-4 pb-6 pt-2 sm:px-6 sm:pb-7 lg:px-14">
+      <div className="mx-auto w-full max-w-[1600px]">
+        <div className="relative flex flex-col overflow-hidden rounded-[2rem] bg-gradient-to-br from-jade-400 via-jade-500 to-jade-700 shadow-lift lg:min-h-[51rem]">
           {/* ambient glows + animated iris backdrop */}
           <IrisVisual className="pointer-events-none absolute -right-36 -top-44 h-[38rem] w-[38rem] opacity-80 lg:right-[-6rem] lg:top-[-8rem]" />
           <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-white/10 blur-3xl" aria-hidden="true" />
           <div className="pointer-events-none absolute right-1/3 top-0 h-56 w-56 rounded-full bg-gold-400/20 blur-3xl" aria-hidden="true" />
 
-          <div className="relative grid gap-10 px-6 pb-10 pt-10 sm:px-10 sm:pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-14 lg:pb-0 lg:pt-16">
+          <div className="relative grid flex-1 gap-10 px-6 pb-12 pt-12 sm:px-10 sm:pt-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-6 lg:px-[6.5rem] lg:pb-14 lg:pt-32">
             {/* ── copy ── */}
             <motion.div
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 max-w-xl"
+              className="relative z-10 flex max-w-xl flex-col lg:max-w-none"
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-gold-400" />
                 Advanced Ophthalmology Care
               </span>
@@ -107,7 +108,7 @@ export function Hero() {
                 <span className="text-gold-400">Clearer Tomorrow</span>
               </h1>
 
-              <p className="mt-5 text-lg leading-relaxed text-white/85">
+              <p className="mt-5 max-w-md text-lg leading-relaxed text-white/85">
                 Comprehensive ophthalmology care with experienced specialists, modern
                 diagnostic technology and patient-focused treatment — for every age,
                 from routine check-ups to advanced surgery.
@@ -140,27 +141,40 @@ export function Hero() {
                   </li>
                 ))}
               </ul>
+
+              {/* stats — inline at the bottom of the copy column, like the reference */}
+              <dl className="mt-auto grid grid-cols-3 gap-4 pt-12 lg:gap-8">
+                {STATS.map((s) => (
+                  <div key={s.label}>
+                    <dt className="sr-only">{s.label}</dt>
+                    <dd className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">{s.value}</dd>
+                    <dd className="mt-1 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white/70 sm:text-xs">
+                      {s.label}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             </motion.div>
 
-            {/* ── visual composition — photo flush to card bottom ── */}
+            {/* ── visual — photo flush to the card's bottom-right corner ── */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 mx-auto hidden w-full max-w-[26rem] sm:block lg:max-w-[30rem]"
+              className="relative z-10 mx-auto hidden w-full max-w-[26rem] sm:block lg:-mb-14 lg:max-w-none"
             >
-              <div className="relative mt-6 h-full min-h-[24rem] lg:min-h-[28rem]">
+              <div className="relative h-full min-h-[24rem] lg:min-h-0">
                 {/* ring decorations */}
                 <div className="ring-spin pointer-events-none absolute -left-10 top-6 h-28 w-28 rounded-full border border-dashed border-white/40" aria-hidden="true" />
-                <div className="pointer-events-none absolute -inset-3 rounded-[2.25rem] border border-white/25" aria-hidden="true" />
-                <div className="relative h-full overflow-hidden rounded-[1.75rem] shadow-lift">
+                <div className="absolute inset-x-4 bottom-0 top-0 overflow-hidden rounded-t-[1.75rem] shadow-lift sm:inset-x-0">
                   <img
                     src="/images/hero-main.jpg"
                     alt="Ophthalmologist examining a patient's eyes with a slit lamp at Shiv Netralay"
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-jade-700/55 via-jade-700/10 to-transparent" aria-hidden="true" />
+                  {/* steel duotone + fade into the card colour at the bottom edge */}
                   <div className="absolute inset-0 bg-jade-700/15 mix-blend-multiply" aria-hidden="true" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-jade-600/95 via-jade-600/20 to-transparent" aria-hidden="true" />
                 </div>
 
                 {/* floating rating card */}
@@ -177,21 +191,6 @@ export function Hero() {
                 </div>
               </div>
             </motion.div>
-          </div>
-
-          {/* ── stats row — flush to card bottom ── */}
-          <div className="relative border-t border-white/15 bg-white/5 px-6 py-6 backdrop-blur-sm sm:px-10 lg:px-14">
-            <dl className="mx-auto grid max-w-2xl grid-cols-3 gap-4 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-              {STATS.map((s) => (
-                <div key={s.label} className="text-center lg:text-left">
-                  <dt className="sr-only">{s.label}</dt>
-                  <dd className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">{s.value}</dd>
-                  <dd className="mt-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white/70 sm:text-xs">
-                    {s.label}
-                  </dd>
-                </div>
-              ))}
-            </dl>
           </div>
         </div>
       </div>
