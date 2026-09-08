@@ -26,3 +26,22 @@ Stage Summary:
 - Key files: src/app/page.tsx, src/app/globals.css, src/lib/site-data.ts, src/lib/nav.tsx, src/components/site/*, src/components/home/*, src/components/views/*.
 - All images local under public/images/ (AI-generated doctors/clinic + searched equipment/surgery photos).
 - Placeholder policy respected: sample names, phone 98XXX, ratings/testimonials marked as prototype placeholders in UI and footer note.
+
+---
+Task ID: 2
+Agent: main (Super Z)
+Task: Re-theme the verified Shiv Netralay 5-screen prototype from Navy/Azure palette to the client-approved Midnight Plum + Soft Lavender + Soft Ivory palette (#3B2447 / #765A82 / #B89BC6 / #F7F4F8 / #29232D).
+
+Work Log:
+- Wrote idempotent re-theme script scripts/retheme-plum.sh: token family renames navy-*→plum-*, azure-*→orchid-*, ice-*→ivory-* (with \b anchors so "service-" was not corrupted), plus hardcoded blue hex swaps in SVG decorations (hero iris, logo pupil, FAQ/services/views deco strokes).
+- Rewrote src/app/globals.css @theme ramp: plum-950 #1F1229..600, orchid-700 #6B5378..orchid-50 (orchid-400 = lavender #B89BC6), ivory-50 = #F7F4F8 page base, mist #FBF9FD, coral→muted raspberry #C44A63 (emergency only), charcoal #29232D; new plum-tinted ink-400/500/600 ramp replacing cool slate for secondary text; plum-tinted shadow-soft/lift, selection, scrollbar, pin-pulse rgba; text-gradient re-tuned to #6B5378→#9A7DAB (WCAG-large ≥3:1 on ivory).
+- Updated :root shadcn tokens: primary #3B2447, background #F7F4F8, foreground #29232D, ring #B89BC6, border #E6DEEB, charts/sidebar aligned.
+- Replaced 7 leftover raw sky/cyan gradient strings: 5 treatment card gradients in src/lib/site-data.ts (LASIK, Retina, Dry Eye, Pediatric, General Exam) + 2 blog gradients in testimonials.tsx — now varied plum/orchid ramps (deep plum for Retina, light orchid for Dry Eye etc.).
+- Verified via agent-browser at 1440px: home all sections reveal correctly after scroll (scroll-reveal is whileInView), treatments grid fully on-palette, cataract hero (plum overlay + breadcrumb + CTAs) and body, doctor profile (plum hero, glass stats, schedule), full appointment golden path (Cataract → Dr. Rajesh Mehta → Sep 10 → 10:00 AM → Aarti/9876543210 → success screen with demo disclaimer). Calendar correctly disables Sep 1–7 (past) and deterministic booked slots (11:00 AM, 02:30 PM, 05:30 PM).
+- Verified mobile 390px: cataract hero, home hero, sticky glass header, hamburger drawer, bottom action bar (Call/Appointment/Directions) with safe-area, footer + prototype disclaimer.
+- Zero page errors, zero console errors, bun run lint clean.
+
+Stage Summary:
+- Deliverable: the same verified 5-view prototype, now fully in the Midnight Plum + Lavender + Ivory premium-eye-institute palette; before/after screenshots in download/shots/.
+- Palette is token-driven from globals.css only — future color tweaks are single-file edits; token names now semantically match the brand (plum/orchid/ivory/ink).
+- Kept intentionally: amber-400 rating stars (gold×plum = premium), natural blue tones inside photography (e.g. surgeon scrubs, clinic signage), coral reserved for emergency accents only.

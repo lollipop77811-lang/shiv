@@ -70,7 +70,7 @@ export const TREATMENTS: Treatment[] = [
     cardDescription:
       "Diagnosis and treatment of cataract with modern surgical options and premium intraocular lenses.",
     heroImage: "/images/surgery-microscope.jpg",
-    gradient: "from-azure-500 to-navy-800",
+    gradient: "from-orchid-500 to-plum-800",
     overview: [
       "A cataract is the natural clouding of the eye's lens — a part of normal ageing, but one that can quietly blur the world around you. Everyday tasks such as reading, driving at night or recognising faces gradually become harder.",
       "Cataract develops slowly and painlessly, which is why many people delay treatment until vision significantly interferes with daily life. The good news: cataract is highly treatable, and modern micro-incision surgery restores crisp, clear vision in a matter of minutes.",
@@ -186,7 +186,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Freedom from glasses, engineered for your eyes.",
     cardDescription:
       "Vision correction solutions for eligible patients, with detailed screening and modern laser platforms.",
-    gradient: "from-sky-400 to-azure-700",
+    gradient: "from-orchid-400 to-plum-700",
     overview: [
       "LASIK reshapes the cornea with a cool, ultra-precise laser so light focuses correctly on the retina — reducing or eliminating the need for glasses and contact lenses.",
       "Suitability matters more than anything in refractive surgery. A thorough evaluation of corneal thickness, shape, prescription stability and eye health determines whether LASIK, PRK or an ICL is the safest choice for you.",
@@ -261,7 +261,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Protecting your sight before symptoms ever appear.",
     cardDescription:
       "Diagnosis, monitoring and management of glaucoma to safeguard the optic nerve and preserve vision.",
-    gradient: "from-azure-600 to-navy-900",
+    gradient: "from-orchid-600 to-plum-900",
     overview: [
       "Glaucoma is a group of conditions that damage the optic nerve, most often related to raised pressure inside the eye. It is called the silent thief of sight because peripheral vision fades gradually and painlessly.",
       "Vision lost to glaucoma cannot be recovered — but with early detection, pressure control and regular monitoring, sight can be protected for a lifetime.",
@@ -338,7 +338,7 @@ export const TREATMENTS: Treatment[] = [
     cardDescription:
       "Diagnosis and treatment of retinal conditions including diabetic retinopathy, tears and macular disorders.",
     heroImage: "/images/equip-oct-consult.jpg",
-    gradient: "from-cyan-500 to-azure-700",
+    gradient: "from-plum-600 to-plum-900",
     overview: [
       "The retina is the light-sensing lining at the back of the eye — the retina is to the eye what film is to a camera. Its health determines the quality of everything you see.",
       "Conditions such as diabetic retinopathy, retinal tears, age-related macular degeneration and vein occlusions can quietly damage this tissue. Timely detection makes the difference between monitoring and emergency treatment.",
@@ -414,7 +414,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Clarity starts at the surface — expert care for the eye's clear window.",
     cardDescription:
       "Specialised care for corneal infections, injuries, dystrophies and surface disorders.",
-    gradient: "from-azure-400 to-navy-700",
+    gradient: "from-orchid-400 to-plum-700",
     overview: [
       "The cornea is the transparent front window of the eye. Even a small scar, infection or swelling here can blur vision dramatically — the rest of the eye may be perfectly healthy.",
       "Corneal care demands precision: infections need culture-guided treatment, dryness and allergy need structured therapy, and dystrophies need long-term planning that may include advanced transplants.",
@@ -490,7 +490,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "Lasting relief for tired, gritty, watery eyes.",
     cardDescription:
       "Diagnosis and structured management of dry-eye disease, from lifestyle therapy to advanced treatments.",
-    gradient: "from-cyan-400 to-sky-600",
+    gradient: "from-orchid-300 to-orchid-600",
     overview: [
       "Dry eye is one of the most common — and most dismissed — eye conditions. Burning, grittiness, fluctuating blur and even watery eyes are all part of the same disrupted tear film.",
       "Screens, air-conditioning, contact lenses and certain medications steadily aggravate it. The result is eyes that feel tired by afternoon and unpredictable vision that interferes with work and reading.",
@@ -567,7 +567,7 @@ export const TREATMENTS: Treatment[] = [
     cardDescription:
       "Specialised eye care for children — vision screening, squint, lazy eye and developmental eye health.",
     heroImage: "/images/hero-pediatric.jpg",
-    gradient: "from-sky-400 to-azure-600",
+    gradient: "from-orchid-400 to-orchid-700",
     overview: [
       "Childhood eye problems are different from adult ones — many conditions, like lazy eye (amblyopia), can only be treated successfully while the visual system is still developing.",
       "Squint, refractive errors, congenital cataract and watering in infants all benefit from early recognition. Regular screening turns small corrections into lifelong good vision.",
@@ -643,7 +643,7 @@ export const TREATMENTS: Treatment[] = [
     tagline: "A complete picture of your eye health — not just a number for glasses.",
     cardDescription:
       "Comprehensive vision and eye-health evaluation for the whole family, with detailed counselling.",
-    gradient: "from-azure-500 to-cyan-600",
+    gradient: "from-orchid-500 to-plum-700",
     overview: [
       "A comprehensive examination answers three questions: How well do you see? How healthy are your eyes? What should we watch in the future?",
       "We measure vision and refraction, check eye pressure, examine the front of the eye on the slit lamp and dilate to view the retina and optic nerve where needed.",

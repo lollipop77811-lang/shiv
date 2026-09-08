@@ -9,13 +9,13 @@ export function MobileActionBar() {
   const nav = useNav();
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 lg:hidden">
-      <div className="pb-safe border-t border-navy-800/60 bg-navy-900/95 text-white shadow-lift backdrop-blur-md">
+      <div className="pb-safe border-t border-plum-800/60 bg-plum-900/95 text-white shadow-lift backdrop-blur-md">
         <div className="mx-auto grid max-w-lg grid-cols-3">
           <a
             href={CLINIC.phoneHref}
-            className="flex flex-col items-center gap-1 py-2.5 text-[0.7rem] font-bold text-azure-100 transition active:bg-navy-800"
+            className="flex flex-col items-center gap-1 py-2.5 text-[0.7rem] font-bold text-orchid-100 transition active:bg-plum-800"
           >
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-azure-600/90">
+            <span className="grid h-8 w-8 place-items-center rounded-full bg-orchid-600/90">
               <Phone className="h-4 w-4" />
             </span>
             Call
@@ -24,16 +24,16 @@ export function MobileActionBar() {
             onClick={() => nav.navigate({ view: "appointment" })}
             className="relative -top-2 flex flex-col items-center gap-1 text-[0.7rem] font-bold"
           >
-            <span className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-azure-400 to-azure-600 text-white shadow-lift ring-4 ring-navy-900">
+            <span className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-orchid-400 to-orchid-600 text-white shadow-lift ring-4 ring-plum-900">
               <CalendarCheck className="h-5 w-5" />
             </span>
             Appointment
           </button>
           <button
             onClick={() => nav.goHomeSection("location")}
-            className="flex flex-col items-center gap-1 py-2.5 text-[0.7rem] font-bold text-azure-100 transition active:bg-navy-800"
+            className="flex flex-col items-center gap-1 py-2.5 text-[0.7rem] font-bold text-orchid-100 transition active:bg-plum-800"
           >
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-azure-600/90">
+            <span className="grid h-8 w-8 place-items-center rounded-full bg-orchid-600/90">
               <MapPin className="h-4 w-4" />
             </span>
             Directions

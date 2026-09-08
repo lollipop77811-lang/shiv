@@ -56,19 +56,19 @@ export function Technology() {
   };
 
   return (
-    <section id="technology" className="scroll-mt-24 bg-navy-950 py-16 sm:py-20 lg:py-24" aria-labelledby="tech-heading">
+    <section id="technology" className="scroll-mt-24 bg-plum-950 py-16 sm:py-20 lg:py-24" aria-labelledby="tech-heading">
       <div className="container-x">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <Reveal className="flex flex-col gap-4">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-azure-700/60 bg-azure-900/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-azure-300">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-orchid-700/60 bg-orchid-900/40 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-orchid-300">
                 Facilities & Technology
               </span>
               <h2 id="tech-heading" className="text-3xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
                 Technology That Supports{" "}
                 <span className="text-gradient">Better Eye Care</span>
               </h2>
-              <p className="text-base leading-relaxed text-azure-100/75 sm:text-lg">
+              <p className="text-base leading-relaxed text-orchid-100/75 sm:text-lg">
                 Precise diagnosis is the first act of good treatment. Our
                 diagnostic suite is designed to measure carefully and explain
                 clearly.
@@ -108,7 +108,7 @@ export function Technology() {
                 role="listitem"
                 className="group w-[19rem] shrink-0 snap-start overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] sm:w-[21.5rem]"
               >
-                <div className="relative h-52 overflow-hidden bg-ice-50">
+                <div className="relative h-52 overflow-hidden bg-ivory-50">
                   <img
                     src={t.image}
                     alt={t.subtitle}
@@ -117,13 +117,13 @@ export function Technology() {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-azure-300">
+                  <p className="text-[0.68rem] font-extrabold uppercase tracking-[0.16em] text-orchid-300">
                     {t.name}
                   </p>
                   <h3 className="mt-1.5 text-lg font-extrabold tracking-tight text-white">
                     {t.subtitle}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-azure-100/70">
+                  <p className="mt-2.5 text-sm leading-relaxed text-orchid-100/70">
                     {t.description}
                   </p>
                 </div>
@@ -135,10 +135,10 @@ export function Technology() {
         {/* dots indicator */}
         <div className="mt-6 flex justify-center gap-2" aria-hidden="true">
           {[0, 1, 2].map((i) => (
-            <span key={i} className={`h-1.5 rounded-full transition-all ${i === 0 ? "w-8 bg-azure-400" : "w-1.5 bg-white/20"}`} />
+            <span key={i} className={`h-1.5 rounded-full transition-all ${i === 0 ? "w-8 bg-orchid-400" : "w-1.5 bg-white/20"}`} />
           ))}
         </div>
-        <p className="mt-6 text-center text-xs font-medium text-azure-100/50">
+        <p className="mt-6 text-center text-xs font-medium text-orchid-100/50">
           Representative facility previews — final equipment list will be confirmed with the clinic.
         </p>
       </div>
@@ -163,21 +163,21 @@ export function Journey() {
         <div className="relative mt-14">
           {/* connecting line (desktop) */}
           <div className="absolute left-0 right-0 top-9 hidden lg:block" aria-hidden="true">
-            <div className="mx-auto h-px w-[72%] bg-gradient-to-r from-transparent via-azure-300 to-transparent" />
+            <div className="mx-auto h-px w-[72%] bg-gradient-to-r from-transparent via-orchid-300 to-transparent" />
           </div>
           <StaggerGrid className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             {JOURNEY.map((step) => {
               const Icon = STEP_ICONS[step.icon];
               return (
                 <StaggerItem key={step.step} className="relative text-center">
-                  <div className="relative mx-auto grid h-[4.5rem] w-[4.5rem] place-items-center rounded-3xl border border-azure-200 bg-white shadow-soft">
-                    <Icon className="h-8 w-8 text-azure-600" strokeWidth={1.7} />
-                    <span className="absolute -right-2 -top-2 grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-azure-500 to-navy-800 text-[0.65rem] font-extrabold text-white shadow-soft">
+                  <div className="relative mx-auto grid h-[4.5rem] w-[4.5rem] place-items-center rounded-3xl border border-orchid-200 bg-white shadow-soft">
+                    <Icon className="h-8 w-8 text-orchid-600" strokeWidth={1.7} />
+                    <span className="absolute -right-2 -top-2 grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-orchid-500 to-plum-800 text-[0.65rem] font-extrabold text-white shadow-soft">
                       {step.step}
                     </span>
                   </div>
-                  <h3 className="mt-5 text-lg font-extrabold tracking-tight text-navy-900">{step.title}</h3>
-                  <p className="mx-auto mt-2 max-w-[16rem] text-sm leading-relaxed text-slate-500">
+                  <h3 className="mt-5 text-lg font-extrabold tracking-tight text-plum-900">{step.title}</h3>
+                  <p className="mx-auto mt-2 max-w-[16rem] text-sm leading-relaxed text-ink-500">
                     {step.description}
                   </p>
                 </StaggerItem>

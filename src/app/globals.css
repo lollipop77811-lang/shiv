@@ -43,70 +43,84 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ── Shiv Netralay brand palette ─────────────────────────────── */
+/* ── Shiv Netralay brand palette — Midnight Plum ───────────────
+   Main brand  #3B2447  plum-900   headings / buttons / footer
+   Deep depth  #1F1229  plum-950   hero & footer depth
+   Secondary   #765A82  orchid-600 soft plum
+   Accent      #B89BC6  orchid-400 lavender highlights
+   Background  #F7F4F8  ivory-50   soft ivory page base
+   Text        #29232D  charcoal   body text
+   Cards       #FFFFFF  white      subtle shadows                */
 @theme {
-  /* Deep navy */
-  --color-navy-950: #061627;
-  --color-navy-900: #0a2540;
-  --color-navy-800: #103353;
-  --color-navy-700: #17456d;
-  --color-navy-600: #1f5787;
+  /* Deep plum */
+  --color-plum-950: #1f1229;
+  --color-plum-900: #3b2447;
+  --color-plum-800: #462c55;
+  --color-plum-700: #523563;
+  --color-plum-600: #5e3e71;
 
-  /* Soft azure blue */
-  --color-azure-700: #17699f;
-  --color-azure-600: #1e7fbf;
-  --color-azure-500: #2e97d8;
-  --color-azure-400: #55aee2;
-  --color-azure-300: #8cc8ec;
-  --color-azure-200: #bcdef4;
-  --color-azure-100: #ddeffa;
-  --color-azure-50: #eef7fc;
+  /* Soft plum -> lavender */
+  --color-orchid-700: #6b5378;
+  --color-orchid-600: #765a82;
+  --color-orchid-500: #8a6e96;
+  --color-orchid-400: #b89bc6;
+  --color-orchid-300: #c9b1d5;
+  --color-orchid-200: #dac8e3;
+  --color-orchid-100: #eae0f0;
+  --color-orchid-50: #f4eff7;
 
-  /* Very light cyan / ice */
-  --color-ice-100: #dff4f8;
-  --color-ice-50: #ecf9fb;
+  /* Very light lavender-tinted ivory */
+  --color-ivory-100: #f0eaf4;
+  --color-ivory-50: #f7f4f8;
 
-  /* Mist background */
-  --color-mist: #f7fafd;
+  /* Near-white whisper for alternating sections */
+  --color-mist: #fbf9fd;
 
-  /* Coral (emergency accents) */
-  --color-coral-600: #e05252;
-  --color-coral-50: #fdf1f1;
+  /* Raspberry (emergency accents only) */
+  --color-coral-600: #c44a63;
+  --color-coral-50: #fbf1f4;
+
+  --color-charcoal: #29232d;
+
+  /* Plum-tinted ink ramp (secondary text) — replaces cool slate */
+  --color-ink-400: #8d8394;
+  --color-ink-500: #6d6378;
+  --color-ink-600: #5c5364;
 }
 
 :root {
   --radius: 1rem;
-  --background: #ffffff;
-  --foreground: #0a2540;
+  --background: #f7f4f8;
+  --foreground: #29232d;
   --card: #ffffff;
-  --card-foreground: #0a2540;
+  --card-foreground: #29232d;
   --popover: #ffffff;
-  --popover-foreground: #0a2540;
-  --primary: #1e7fbf;
-  --primary-foreground: #ffffff;
-  --secondary: #eef7fc;
-  --secondary-foreground: #103353;
-  --muted: #f1f6fa;
-  --muted-foreground: #54708c;
-  --accent: #ddeffa;
-  --accent-foreground: #103353;
-  --destructive: #e05252;
-  --border: #e3ecf3;
-  --input: #e3ecf3;
-  --ring: #55aee2;
-  --chart-1: #1e7fbf;
-  --chart-2: #2e97d8;
-  --chart-3: #55aee2;
-  --chart-4: #0a2540;
-  --chart-5: #8cc8ec;
-  --sidebar: #f7fafd;
-  --sidebar-foreground: #0a2540;
-  --sidebar-primary: #1e7fbf;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #eef7fc;
-  --sidebar-accent-foreground: #103353;
-  --sidebar-border: #e3ecf3;
-  --sidebar-ring: #55aee2;
+  --popover-foreground: #29232d;
+  --primary: #3b2447;
+  --primary-foreground: #fdfcfe;
+  --secondary: #f4eff7;
+  --secondary-foreground: #3b2447;
+  --muted: #f4eff7;
+  --muted-foreground: #6d6378;
+  --accent: #eae0f0;
+  --accent-foreground: #3b2447;
+  --destructive: #c44a63;
+  --border: #e6deeb;
+  --input: #e6deeb;
+  --ring: #b89bc6;
+  --chart-1: #3b2447;
+  --chart-2: #765a82;
+  --chart-3: #b89bc6;
+  --chart-4: #29232d;
+  --chart-5: #dac8e3;
+  --sidebar: #fbf9fd;
+  --sidebar-foreground: #29232d;
+  --sidebar-primary: #3b2447;
+  --sidebar-primary-foreground: #fdfcfe;
+  --sidebar-accent: #f4eff7;
+  --sidebar-accent-foreground: #3b2447;
+  --sidebar-border: #e6deeb;
+  --sidebar-ring: #b89bc6;
 }
 
 @layer base {
@@ -121,8 +135,8 @@
     font-feature-settings: "ss01";
   }
   ::selection {
-    background: #bcdef4;
-    color: #0a2540;
+    background: #dac8e3;
+    color: #29232d;
   }
 }
 
@@ -147,28 +161,28 @@
     width: 6px;
   }
   .thin-scrollbar::-webkit-scrollbar-thumb {
-    background: #bcdef4;
+    background: #dac8e3;
     border-radius: 999px;
   }
   .thin-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  /* soft premium shadows */
+  /* soft premium shadows — plum-tinted, very subtle */
   .shadow-soft {
     box-shadow:
-      0 1px 2px rgba(10, 37, 64, 0.04),
-      0 12px 32px -12px rgba(10, 37, 64, 0.14);
+      0 1px 2px rgba(41, 35, 45, 0.04),
+      0 12px 32px -12px rgba(59, 36, 71, 0.14);
   }
   .shadow-lift {
     box-shadow:
-      0 2px 4px rgba(10, 37, 64, 0.05),
-      0 24px 48px -16px rgba(10, 37, 64, 0.22);
+      0 2px 4px rgba(41, 35, 45, 0.05),
+      0 24px 48px -16px rgba(59, 36, 71, 0.22);
   }
 
-  /* brand gradient text */
+  /* brand gradient text — soft plum -> lavender (WCAG-large safe) */
   .text-gradient {
-    background: linear-gradient(100deg, #1e7fbf 10%, #2e97d8 55%, #55aee2 90%);
+    background: linear-gradient(100deg, #6b5378 10%, #8a6e96 55%, #9a7dab 90%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -176,10 +190,10 @@
 
   /* glass chip used sparingly */
   .glass {
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.7);
   }
 
   /* mobile bottom-bar safe-area padding */
@@ -228,7 +242,7 @@
     position: absolute;
     inset: 0;
     border-radius: 9999px;
-    background: rgba(30, 127, 191, 0.35);
+    background: rgba(184, 155, 198, 0.35);
     animation: pin-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
   @keyframes pin-ping {

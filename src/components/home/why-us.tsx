@@ -40,14 +40,14 @@ export function WhyUs() {
             const Icon = ICONS[item.icon];
             return (
               <StaggerItem key={item.title}>
-                <article className="group h-full rounded-3xl border border-border/70 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-azure-200 hover:shadow-lift">
-                  <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-azure-50 to-azure-100 text-azure-600 transition-all duration-300 group-hover:from-azure-500 group-hover:to-azure-700 group-hover:text-white group-hover:shadow-soft">
+                <article className="group h-full rounded-3xl border border-border/70 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-orchid-200 hover:shadow-lift">
+                  <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-orchid-50 to-orchid-100 text-orchid-600 transition-all duration-300 group-hover:from-orchid-500 group-hover:to-orchid-700 group-hover:text-white group-hover:shadow-soft">
                     <Icon className="h-7 w-7" strokeWidth={1.8} />
                   </span>
-                  <h3 className="mt-5 text-lg font-extrabold tracking-tight text-navy-900">
+                  <h3 className="mt-5 text-lg font-extrabold tracking-tight text-plum-900">
                     {item.title}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-slate-500">
+                  <p className="mt-2.5 text-sm leading-relaxed text-ink-500">
                     {item.description}
                   </p>
                 </article>
