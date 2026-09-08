@@ -1,0 +1,54 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "bright modern eye clinic interior reception and examination room"
+✅ Got 6 images
+{
+  "success": true,
+  "query": "bright modern eye clinic interior reception and examination room",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b3e132c7432e.png",
+      "caption": "",
+      "source": "Review of Optometry",
+      "original_width": "1800px",
+      "original_height": "1134px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8e34d8ce9634.jpg",
+      "caption": "",
+      "source": "www.lj2interiors.com",
+      "original_width": "2500px",
+      "original_height": "2235px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c49220ac5e18.jpg",
+      "caption": "",
+      "source": "Yelp",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/96ed9f40ebc2.jpg",
+      "caption": "",
+      "source": "www.bayviewoptometry.com",
+      "original_width": "1522px",
+      "original_height": "1141px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7cd380ba9b3c.jpg",
+      "caption": "",
+      "source": "Texas Vision",
+      "original_width": "1600px",
+      "original_height": "2400px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5cc2fefb84c5.jpg",
+      "caption": "",
+      "source": "Interior Design Magazine",
+      "original_width": "1500px",
+      "original_height": "1029px"
+    }
+  ]
+}

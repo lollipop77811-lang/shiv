@@ -1,0 +1,54 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "eye surgery cataract operation under surgical microscope in operating theatre"
+✅ Got 6 images
+{
+  "success": true,
+  "query": "eye surgery cataract operation under surgical microscope in operating theatre",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a085bcfe8c4c.jpg",
+      "caption": "",
+      "source": "Leica Microsystems",
+      "original_width": "1600px",
+      "original_height": "1067px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/64e2f1ecb1d1.jpg",
+      "caption": "",
+      "source": "Midwest Eye Care",
+      "original_width": "2000px",
+      "original_height": "1333px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5108e43d4cd4.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "961px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1747c0efca63.jpg",
+      "caption": "",
+      "source": "Retinal Physician",
+      "original_width": "1280px",
+      "original_height": "796px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/abc6428cc558.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/706af00a2641.jpg",
+      "caption": "",
+      "source": "Review of Ophthalmology",
+      "original_width": "1284px",
+      "original_height": "1147px"
+    }
+  ]
+}

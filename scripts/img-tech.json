@@ -1,0 +1,54 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "modern ophthalmology equipment OCT optical coherence tomography eye scan machine"
+✅ Got 6 images
+{
+  "success": true,
+  "query": "modern ophthalmology equipment OCT optical coherence tomography eye scan machine",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1072e52ca346.png",
+      "caption": "",
+      "source": "AIST OPTICS",
+      "original_width": "1600px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/be03cc7a0ecd.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "955px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cc8f1aef97b3.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "975px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b9980abef5c8.jpg",
+      "caption": "",
+      "source": "BOC Instruments",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1cdb7b0835c5.jpg",
+      "caption": "",
+      "source": "Windsor - ReFocus Eye Health",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/87c08fe4ca19.jpg",
+      "caption": "",
+      "source": "100% Optical",
+      "original_width": "1274px",
+      "original_height": "1911px"
+    }
+  ]
+}

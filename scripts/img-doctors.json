@@ -1,0 +1,68 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "professional portrait of Indian doctor in white coat smiling at hospital"
+✅ Got 8 images
+{
+  "success": true,
+  "query": "professional portrait of Indian doctor in white coat smiling at hospital",
+  "count": 8,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eb1ea970d1eb.jpg",
+      "caption": "",
+      "source": "Yale School of Medicine - Yale University",
+      "original_width": "1950px",
+      "original_height": "1955px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/94364a89ac14.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "957px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d83579881313.jpg",
+      "caption": "",
+      "source": "Bangalore Gastro Centre",
+      "original_width": "1600px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/023684301726.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "957px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0d795d3ef6be.jpg",
+      "caption": "",
+      "source": "Fort Worth Renal Group",
+      "original_width": "1000px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4267ed423a46.webp",
+      "caption": "",
+      "source": "www.usbiotek.com",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8f7876577a39.jpg",
+      "caption": "",
+      "source": "UT Southwestern Medical Center",
+      "original_width": "1600px",
+      "original_height": "732px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/69e5fe19cacb.jpg",
+      "caption": "",
+      "source": "Renova Hospitals",
+      "original_width": "1600px",
+      "original_height": "1550px"
+    }
+  ]
+}

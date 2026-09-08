@@ -1,0 +1,54 @@
+🚀 Initializing Z-AI SDK...
+🔎 Searching images: "ophthalmologist doctor examining patient eyes with slit lamp in modern eye clinic"
+✅ Got 6 images
+{
+  "success": true,
+  "query": "ophthalmologist doctor examining patient eyes with slit lamp in modern eye clinic",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3227840372ac.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1500px",
+      "original_height": "1101px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7f51541cc3be.jpeg",
+      "caption": "",
+      "source": "Accent Vision Specialists",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ce17bbd795cc.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1500px",
+      "original_height": "1101px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0800feecab70.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1167px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0a59b5336df6.jpg",
+      "caption": "",
+      "source": "GW Eye Associates",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/076becc15eaf.jpg",
+      "caption": "",
+      "source": "Ophthalmology Times",
+      "original_width": "1200px",
+      "original_height": "801px"
+    }
+  ]
+}
