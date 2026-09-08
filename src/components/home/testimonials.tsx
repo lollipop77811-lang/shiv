@@ -40,7 +40,7 @@ export function Testimonials() {
   const item = TESTIMONIALS[index];
 
   return (
-    <section className="bg-mist py-16 sm:py-20 lg:py-24" aria-labelledby="testimonials-heading">
+    <section className="bg-cream py-16 sm:py-20 lg:py-24" aria-labelledby="testimonials-heading">
       <div className="container-x">
         <SectionHeading
           eyebrow="Patient Voices"
@@ -56,7 +56,7 @@ export function Testimonials() {
           {/* slider */}
           <Reveal className="relative">
             <div className="relative h-full overflow-hidden rounded-[2rem] border border-border/70 bg-white p-8 shadow-soft sm:p-12">
-              <Quote className="absolute right-8 top-8 h-16 w-16 text-jade-100" aria-hidden="true" />
+              <Quote className="absolute right-8 top-8 h-16 w-16 text-gold-500/25" aria-hidden="true" />
               <AnimatePresence mode="wait" custom={dir}>
                 <motion.figure
                   key={index}
@@ -125,7 +125,7 @@ export function Testimonials() {
                   Google Rating
                 </p>
                 <div className="mt-5 flex items-end gap-3">
-                  <span className="text-6xl font-extrabold tracking-tight">4.8</span>
+                  <span className="bg-gradient-to-br from-gold-400 to-gold-600 bg-clip-text text-6xl font-extrabold tracking-tight text-transparent">4.8</span>
                   <span className="pb-2 text-sm font-bold text-jade-100/80">/ 5</span>
                 </div>
                 <div className="mt-3">

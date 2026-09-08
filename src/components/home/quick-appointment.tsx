@@ -37,6 +37,10 @@ export function QuickAppointment() {
               className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-jade-400/20 blur-3xl"
               aria-hidden="true"
             />
+            <div
+              className="pointer-events-none absolute -bottom-28 -left-24 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl"
+              aria-hidden="true"
+            />
             <div className="relative grid gap-6 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.4fr] lg:items-center lg:gap-10 lg:p-10">
               <div>
                 <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">

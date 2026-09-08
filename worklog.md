@@ -63,3 +63,22 @@ Stage Summary:
 - Deliverable: same verified 5-view prototype in Emerald + Cream + Champagne Gold; screenshots in download/shots/emerald-*.png.
 - Architecture note: token names are now palette-neutral (brand/jade/ivory/ink/gold/coral) — the next palette experiment only needs new hex values in globals.css @theme + :root, no renames.
 - Gold strategy: champagne reserved for stars, rating chip, small premium accents; emerald owns CTAs; forest owns headings/dark bands; raspberry still emergency-only.
+
+---
+Task ID: 4
+Agent: main (Super Z)
+Task: Re-theme to the client's chosen "Teal + Cream + Charcoal + Gold" palette (#087F8C / #35B8A6 / #F4FBF9 / #163B3D / #F4B942) AND implement the section-by-section color rhythm + premium design polish (glassmorphism, optical rings, editorial type, asymmetric layouts, restrained gold).
+
+Work Log:
+- Values-only re-skin (token names stayed palette-neutral): rewrote globals.css @theme — brand-950 #0A2226..brand-600 (dark charcoal-teal ramp, brand-900 = user's #163B3D), jade-700 #0A5C60..jade-50 (jade-600 = teal #087F8C primary, jade-400 = mint #35B8A6 secondary), ivory-50 = #F4FBF9 light-mint page base, mist #FBFAF4 warm white, NEW cream #F7F4EA (testimonials), gold-400/500 #F4B942/600 champagne, teal-tinted ink ramp + charcoal #0F2A2C + coral #C2483F (emergency only).
+- :root shadcn tokens re-tuned (primary #087F8C, ring, border #DCEBE6, background #F4FBF9, charts teal/mint/gold); text-gradient re-tuned #0A5459→#087F8C→#17A094 (WCAG-large ≥3:1 on mint); teal-tinted shadows/selection/scrollbar/pin-pulse.
+- scripts/retheme-teal.sh: idempotent hex swap in decorative SVGs (7 files: hero iris, header logo pupil, services/faq/treatments/doctor/detail rings & map) — verified zero old hexes remain.
+- Section rhythm per user spec: navbar = light-mint utility strip + white glass header; hero = soft mint gradient + gold ambient blob; quick-appointment + find-care + final CTA = deep teal bands (mint glow + gold glow); services = warm-white + glass cards + teal icons; doctors = light-mint band with staggered (lg:mt-10 odd) rounded glass cards; technology = dark charcoal-teal + mint/gold glow blobs + large slow-spinning optical rings svg + hover glow on cards; testimonials = cream band + gold quote mark + gold-gradient 4.8 numeral; footer = dark charcoal teal.
+- Premium polish: glass-card utility (white/78 + backdrop-blur + white border) applied to why-us/services/doctors cards; animated optical rings (new .ring-spin 75s / .ring-spin-rev 105s, reduced-motion safe) around hero image + gold dashed ring; 3D cornea sheen ellipse in hero iris SVG; editorial type scale (h1 → xl:4.2rem leading 1.08, section h2 → 2.9rem); gold dot added to every section eyebrow; gold "More Clearly" phrase in final CTA; quick-appointment gold glow blob.
+- Agent Browser verified 1440px: home full rhythm (14 teal-* screenshots), treatments listing (varied teal/mint card gradients) + dark hero, cataract detail (teal overlay hero), doctor profile (dark teal hero, glass stats), full golden path booking (Cataract prefilled → Dr. Rajesh Mehta → Sep 10 → 10:00 AM → Aarti/9876543210 → success summary + demo disclaimer; past dates 1–7 + Sundays 13/20/27 disabled, deterministic booked slots 11:00 AM/02:30 PM disabled). Mobile 390px: hero, glass header, bottom action bar, footer.
+- Zero console errors, zero page errors, bun run lint clean.
+
+Stage Summary:
+- Deliverable: the verified 5-view prototype in Teal + Cream + Charcoal + Gold with the requested band-by-band rhythm and premium polish; screenshots in download/shots/teal-*.png (14).
+- Palette remains token-driven (globals.css only for future value tweaks); token names unchanged (brand/jade/ivory/mist/cream/gold/ink/coral).
+- Gold strategy: #F4B942 reserved for stars, rating numeral, eyebrow dots, CTA phrase, dashed hero ring — restrained per user request; teal owns CTAs/bands; dark teal owns technology + footer.

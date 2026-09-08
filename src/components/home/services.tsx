@@ -14,7 +14,17 @@ import {
 export function Services() {
   const nav = useNav();
   return (
-    <section className="bg-mist py-16 sm:py-20 lg:py-24" aria-labelledby="services-heading">
+    <section className="relative overflow-hidden bg-mist py-16 sm:py-20 lg:py-24" aria-labelledby="services-heading">
+      {/* faint optical rings backdrop */}
+      <svg
+        className="ring-spin pointer-events-none absolute -right-28 top-8 h-[26rem] w-[26rem] text-jade-300 opacity-40"
+        viewBox="0 0 200 200"
+        aria-hidden="true"
+      >
+        {[55, 80, 105].map((r) => (
+          <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="currentColor" strokeWidth="0.7" strokeDasharray="2 9" />
+        ))}
+      </svg>
       <div className="container-x">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
@@ -43,7 +53,7 @@ export function Services() {
             <StaggerItem key={t.id}>
               <button
                 onClick={() => nav.navigate({ view: "treatment", treatmentId: t.id })}
-                className="group flex h-full w-full flex-col rounded-3xl border border-border/70 bg-white p-6 text-left shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-jade-200 hover:shadow-lift"
+                className="group flex h-full w-full flex-col rounded-3xl glass-card p-6 text-left shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-jade-200 hover:shadow-lift"
                 aria-label={`Learn about ${t.name}`}
               >
                 <span
@@ -85,7 +95,7 @@ export function FindCare() {
             aria-hidden="true"
           >
             {[40, 70, 100].map((r) => (
-              <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7CC5B2" strokeWidth="0.8" strokeDasharray="2 8" />
+              <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7BD0C4" strokeWidth="0.8" strokeDasharray="2 8" />
             ))}
           </svg>
           <div className="relative p-8 sm:p-12 lg:p-16">

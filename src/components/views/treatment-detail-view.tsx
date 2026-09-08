@@ -36,7 +36,7 @@ export function TreatmentDetailView({ id }: { id?: string }) {
         ) : (
           <svg className="pointer-events-none absolute -right-24 -top-28 h-[28rem] w-[28rem] opacity-15" viewBox="0 0 200 200" aria-hidden="true">
             {[30, 60, 90, 120].map((r) => (
-              <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7CC5B2" strokeWidth="0.8" strokeDasharray="2 8" />
+              <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7BD0C4" strokeWidth="0.8" strokeDasharray="2 8" />
             ))}
           </svg>
         )}

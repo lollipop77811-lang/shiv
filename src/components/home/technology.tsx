@@ -56,7 +56,19 @@ export function Technology() {
   };
 
   return (
-    <section id="technology" className="scroll-mt-24 bg-brand-950 py-16 sm:py-20 lg:py-24" aria-labelledby="tech-heading">
+    <section id="technology" className="relative overflow-hidden scroll-mt-24 bg-brand-950 py-16 sm:py-20 lg:py-24" aria-labelledby="tech-heading">
+      {/* cyan/mint glow + slow optical rings */}
+      <div className="pointer-events-none absolute -left-32 top-4 h-[26rem] w-[26rem] rounded-full bg-jade-500/15 blur-3xl" aria-hidden="true" />
+      <div className="pointer-events-none absolute -bottom-24 -right-20 h-80 w-80 rounded-full bg-gold-500/10 blur-3xl" aria-hidden="true" />
+      <svg
+        className="ring-spin pointer-events-none absolute -right-44 -top-44 h-[34rem] w-[34rem] text-jade-400 opacity-20"
+        viewBox="0 0 200 200"
+        aria-hidden="true"
+      >
+        {[35, 62, 89].map((r) => (
+          <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="currentColor" strokeWidth="0.7" strokeDasharray="2 7" />
+        ))}
+      </svg>
       <div className="container-x">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
@@ -106,7 +118,7 @@ export function Technology() {
               <article
                 key={t.name}
                 role="listitem"
-                className="group w-[19rem] shrink-0 snap-start overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] sm:w-[21.5rem]"
+                className="group w-[19rem] shrink-0 snap-start overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition-all duration-300 hover:border-jade-400/40 hover:shadow-[0_0_44px_rgba(53,184,166,0.16)] sm:w-[21.5rem]"
               >
                 <div className="relative h-52 overflow-hidden bg-ivory-50">
                   <img

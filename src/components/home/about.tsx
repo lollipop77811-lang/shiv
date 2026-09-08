@@ -96,7 +96,7 @@ export function About() {
 export function DoctorsSection() {
   const nav = useNav();
   return (
-    <section id="doctors" className="scroll-mt-24 py-16 sm:py-20 lg:py-24" aria-labelledby="doctors-heading">
+    <section id="doctors" className="scroll-mt-24 bg-jade-50 py-16 sm:py-20 lg:py-24" aria-labelledby="doctors-heading">
       <div className="container-x">
         <SectionHeading
           eyebrow="Our Team"
@@ -109,9 +109,13 @@ export function DoctorsSection() {
         />
 
         <StaggerGrid className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {DOCTORS.map((d) => (
+          {DOCTORS.map((d, i) => (
             <StaggerItem key={d.id}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border/70 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">
+              <article
+                className={`group flex h-full flex-col overflow-hidden rounded-3xl glass-card shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift ${
+                  i % 2 === 1 ? "lg:mt-10" : ""
+                }`}
+              >
                 <div className="relative overflow-hidden">
                   <img
                     src={d.image}

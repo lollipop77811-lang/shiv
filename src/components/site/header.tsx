@@ -24,7 +24,7 @@ export function Logo({ light = false }: { light?: boolean }) {
             strokeLinejoin="round"
           />
           <circle cx="24" cy="24" r="5" fill="#fff" />
-          <circle cx="24" cy="24" r="2.1" fill="#123C35" />
+          <circle cx="24" cy="24" r="2.1" fill="#163B3D" />
           <circle cx="26.2" cy="21.8" r="0.9" fill="#fff" />
         </svg>
       </span>
@@ -89,16 +89,16 @@ export function Header() {
   return (
     <>
       {/* ── utility strip ─────────────────────────────────── */}
-      <div className="hidden bg-brand-900 text-white lg:block">
-        <div className="container-x flex h-9 items-center justify-between text-xs font-medium text-jade-100/90">
+      <div className="hidden border-b border-jade-100 bg-jade-50 text-brand-900 lg:block">
+        <div className="container-x flex h-9 items-center justify-between text-xs font-medium text-ink-600">
           <p>Mon – Sat · 9:00 AM – 7:00 PM · Comprehensive eye care for the whole family</p>
           <div className="flex items-center gap-5">
-            <a href={CLINIC.phoneHref} className="inline-flex items-center gap-1.5 transition hover:text-white">
+            <a href={CLINIC.phoneHref} className="inline-flex items-center gap-1.5 transition hover:text-jade-700">
               <Phone className="h-3.5 w-3.5" /> {CLINIC.phoneDisplay}
             </a>
             <button
               onClick={() => nav.goHomeSection("location")}
-              className="inline-flex items-center gap-1.5 transition hover:text-white"
+              className="inline-flex items-center gap-1.5 transition hover:text-jade-700"
             >
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11Z" />

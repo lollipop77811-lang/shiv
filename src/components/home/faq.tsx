@@ -132,12 +132,13 @@ export function FinalCta() {
           <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-900 via-brand-800 to-jade-700 px-8 py-16 text-center shadow-lift sm:px-16 sm:py-20">
             <svg className="pointer-events-none absolute -left-20 -bottom-24 h-96 w-96 opacity-15" viewBox="0 0 200 200" aria-hidden="true">
               {[30, 60, 90].map((r) => (
-                <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7CC5B2" strokeWidth="0.8" strokeDasharray="2 8" />
+                <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7BD0C4" strokeWidth="0.8" strokeDasharray="2 8" />
               ))}
             </svg>
+            <div className="pointer-events-none absolute -right-24 -top-28 h-80 w-80 rounded-full bg-jade-400/15 blur-3xl" aria-hidden="true" />
             <div className="relative mx-auto max-w-2xl">
               <h2 id="cta-heading" className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                Ready to See the World More Clearly?
+                Ready to See the World <span className="text-gold-400">More Clearly</span>?
               </h2>
               <p className="mt-4 text-base leading-relaxed text-jade-100/85 sm:text-lg">
                 Book your comprehensive eye examination today — a few minutes
@@ -242,13 +243,13 @@ export function Location() {
             <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
               <defs>
                 <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
-                  <path d="M44 0H0V44" fill="none" stroke="#D8EEE7" strokeWidth="1" />
+                  <path d="M44 0H0V44" fill="none" stroke="#D9F2EC" strokeWidth="1" />
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#grid)" />
-              <path d="M-20 200 C 120 160, 260 260, 420 180" stroke="#BCE1D6" strokeWidth="14" fill="none" strokeLinecap="round" opacity="0.8" />
-              <path d="M60 -20 C 110 90, 240 120, 420 90" stroke="#BCE1D6" strokeWidth="10" fill="none" strokeLinecap="round" opacity="0.8" />
-              <path d="M-20 320 C 160 300, 300 380, 480 320" stroke="#E4F3EE" strokeWidth="8" fill="none" strokeLinecap="round" />
+              <path d="M-20 200 C 120 160, 260 260, 420 180" stroke="#B7E6DD" strokeWidth="14" fill="none" strokeLinecap="round" opacity="0.8" />
+              <path d="M60 -20 C 110 90, 240 120, 420 90" stroke="#B7E6DD" strokeWidth="10" fill="none" strokeLinecap="round" opacity="0.8" />
+              <path d="M-20 320 C 160 300, 300 380, 480 320" stroke="#E6F5F0" strokeWidth="8" fill="none" strokeLinecap="round" />
             </svg>
             {/* pin */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

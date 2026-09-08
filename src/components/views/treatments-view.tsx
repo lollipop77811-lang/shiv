@@ -15,7 +15,7 @@ export function TreatmentsView() {
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-jade-800 py-16 sm:py-20">
         <svg className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 opacity-15" viewBox="0 0 200 200" aria-hidden="true">
           {[30, 60, 90].map((r) => (
-            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7CC5B2" strokeWidth="0.8" strokeDasharray="2 8" />
+            <circle key={r} cx="100" cy="100" r={r} fill="none" stroke="#7BD0C4" strokeWidth="0.8" strokeDasharray="2 8" />
           ))}
         </svg>
         <div className="container-x relative">

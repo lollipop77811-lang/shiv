@@ -43,90 +43,92 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ── Shiv Netralay brand palette — Emerald & Cream ─────────────
-   Primary     #087A68  jade-600    emerald CTA buttons / links
-   Deep brand  #123C35  brand-900   forest charcoal headings & dark sections
-   Depth       #0A2B25  brand-950   footer / hero depth
-   Secondary   #D8EEE7  jade-100    pale green chips & tints
-   Background  #FAF8F2  ivory-50    warm cream page base
-   Accent      #D6A84F  gold-500    champagne gold highlights & stars
-   Text        #21312B  charcoal    body text
-   Cards       #FFFFFF  white       warm subtle shadows                */
+/* ── Shiv Netralay brand palette — Teal & Cream ────────────────
+   Primary     #087F8C  jade-600    teal CTA buttons / links
+   Deep brand  #163B3D  brand-900   dark charcoal-teal headings & bands
+   Depth       #0A2226  brand-950   footer / technology depth
+   Secondary   #35B8A6  jade-400    mint accents & glows
+   Background  #F4FBF9  ivory-50    very light mint page base
+   Warm white  #FBFAF4  mist        alternating warm bands
+   Cream       #F7F4EA  cream       testimonials / warm editorial band
+   Accent      #F4B942  gold-500    restrained champagne-gold highlights
+   Text        #0F2A2C  charcoal    near-black teal body text
+   Cards       #FFFFFF  white       soft teal-tinted shadows          */
 @theme {
-  /* Deep forest charcoal */
-  --color-brand-950: #0a2b25;
-  --color-brand-900: #123c35;
-  --color-brand-800: #17453c;
-  --color-brand-700: #1b4e43;
-  --color-brand-600: #215a4c;
+  /* Deep teal charcoal */
+  --color-brand-950: #0a2226;
+  --color-brand-900: #163b3d;
+  --color-brand-800: #1a4a4f;
+  --color-brand-700: #125a62;
+  --color-brand-600: #0d6b74;
 
-  /* Emerald -> pale green */
-  --color-jade-700: #055f4f;
-  --color-jade-600: #087a68;
-  --color-jade-500: #219880;
-  --color-jade-400: #35a78f;
-  --color-jade-300: #7cc5b2;
-  --color-jade-200: #bce1d6;
-  --color-jade-100: #d8eee7;
-  --color-jade-50: #edf6f2;
+  /* Teal -> mint/aqua */
+  --color-jade-700: #0a5c60;
+  --color-jade-600: #087f8c;
+  --color-jade-500: #1e9e9e;
+  --color-jade-400: #35b8a6;
+  --color-jade-300: #7bd0c4;
+  --color-jade-200: #b7e6dd;
+  --color-jade-100: #d9f2ec;
+  --color-jade-50: #eaf6f1;
 
-  /* Warm cream tints */
-  --color-ivory-100: #f3efe4;
-  --color-ivory-50: #faf8f2;
-
-  /* Near-white warm whisper for alternating sections */
-  --color-mist: #fcfbf7;
+  /* Light mint & warm white tints */
+  --color-ivory-100: #e3f2ed;
+  --color-ivory-50: #f4fbf9;
+  --color-mist: #fbfaf4;
+  --color-cream: #f7f4ea;
 
   /* Champagne gold accents */
-  --color-gold-500: #d6a84f;
-  --color-gold-600: #be9038;
-  --color-gold-50: #fbf3df;
+  --color-gold-400: #f8cb6b;
+  --color-gold-500: #f4b942;
+  --color-gold-600: #dda32b;
+  --color-gold-50: #fdf6e0;
 
-  /* Raspberry (emergency accents only) */
-  --color-coral-600: #c44a63;
-  --color-coral-50: #fbf1f4;
+  /* Red (emergency accents only) */
+  --color-coral-600: #c2483f;
+  --color-coral-50: #fdf1ef;
 
-  --color-charcoal: #21312b;
+  --color-charcoal: #0f2a2c;
 
-  /* Warm ink ramp (secondary text) */
-  --color-ink-400: #8a8f87;
-  --color-ink-500: #6b7269;
-  --color-ink-600: #575e55;
+  /* Teal-tinted ink ramp (secondary text) */
+  --color-ink-400: #7fa09b;
+  --color-ink-500: #537a74;
+  --color-ink-600: #385b56;
 }
 
 :root {
   --radius: 1rem;
-  --background: #faf8f2;
-  --foreground: #21312b;
+  --background: #f4fbf9;
+  --foreground: #12383a;
   --card: #ffffff;
-  --card-foreground: #21312b;
+  --card-foreground: #12383a;
   --popover: #ffffff;
-  --popover-foreground: #21312b;
-  --primary: #087a68;
+  --popover-foreground: #12383a;
+  --primary: #087f8c;
   --primary-foreground: #ffffff;
-  --secondary: #d8eee7;
-  --secondary-foreground: #123c35;
-  --muted: #f2efe6;
-  --muted-foreground: #6b7269;
-  --accent: #d8eee7;
-  --accent-foreground: #123c35;
-  --destructive: #c44a63;
-  --border: #e5e0d3;
-  --input: #e5e0d3;
-  --ring: #087a68;
-  --chart-1: #123c35;
-  --chart-2: #087a68;
-  --chart-3: #d6a84f;
-  --chart-4: #35a78f;
-  --chart-5: #d8eee7;
-  --sidebar: #fcfbf7;
-  --sidebar-foreground: #21312b;
-  --sidebar-primary: #087a68;
+  --secondary: #d9f2ec;
+  --secondary-foreground: #163b3d;
+  --muted: #ecf6f1;
+  --muted-foreground: #4f7370;
+  --accent: #d9f2ec;
+  --accent-foreground: #163b3d;
+  --destructive: #c2483f;
+  --border: #dcebe6;
+  --input: #dcebe6;
+  --ring: #087f8c;
+  --chart-1: #163b3d;
+  --chart-2: #087f8c;
+  --chart-3: #f4b942;
+  --chart-4: #35b8a6;
+  --chart-5: #d9f2ec;
+  --sidebar: #fbfaf4;
+  --sidebar-foreground: #12383a;
+  --sidebar-primary: #087f8c;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #d8eee7;
-  --sidebar-accent-foreground: #123c35;
-  --sidebar-border: #e5e0d3;
-  --sidebar-ring: #087a68;
+  --sidebar-accent: #d9f2ec;
+  --sidebar-accent-foreground: #163b3d;
+  --sidebar-border: #dcebe6;
+  --sidebar-ring: #087f8c;
 }
 
 @layer base {
@@ -141,8 +143,8 @@
     font-feature-settings: "ss01";
   }
   ::selection {
-    background: #c8e8de;
-    color: #21312b;
+    background: #c5e9e1;
+    color: #0f2a2c;
   }
 }
 
@@ -167,39 +169,45 @@
     width: 6px;
   }
   .thin-scrollbar::-webkit-scrollbar-thumb {
-    background: #bce1d6;
+    background: #b7e6dd;
     border-radius: 999px;
   }
   .thin-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  /* soft premium shadows — forest-tinted, very subtle */
+  /* soft premium shadows — teal-tinted, very subtle */
   .shadow-soft {
     box-shadow:
-      0 1px 2px rgba(33, 49, 43, 0.04),
-      0 12px 32px -12px rgba(18, 60, 53, 0.14);
+      0 1px 2px rgba(15, 42, 44, 0.04),
+      0 12px 32px -12px rgba(22, 59, 61, 0.15);
   }
   .shadow-lift {
     box-shadow:
-      0 2px 4px rgba(33, 49, 43, 0.05),
-      0 24px 48px -16px rgba(18, 60, 53, 0.22);
+      0 2px 4px rgba(15, 42, 44, 0.05),
+      0 24px 48px -16px rgba(22, 59, 61, 0.24);
   }
 
-  /* brand gradient text — forest -> emerald (WCAG-large safe) */
+  /* brand gradient text — deep teal -> aqua (WCAG-large safe on mint) */
   .text-gradient {
-    background: linear-gradient(100deg, #0b4f41 10%, #087a68 55%, #2e9e85 90%);
+    background: linear-gradient(100deg, #0a5459 10%, #087f8c 55%, #17a094 90%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* glass chip used sparingly */
+  /* glass chip / glass cards */
   .glass {
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
   }
 
   /* mobile bottom-bar safe-area padding */
@@ -207,12 +215,18 @@
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 
-  /* animated iris rotation */
+  /* slow-rotating iris / optical rings */
   .iris-spin {
     animation: iris-rotate 60s linear infinite;
   }
   .iris-spin-rev {
     animation: iris-rotate-rev 90s linear infinite;
+  }
+  .ring-spin {
+    animation: iris-rotate 75s linear infinite;
+  }
+  .ring-spin-rev {
+    animation: iris-rotate-rev 105s linear infinite;
   }
   @keyframes iris-rotate {
     to {
@@ -248,7 +262,7 @@
     position: absolute;
     inset: 0;
     border-radius: 9999px;
-    background: rgba(8, 122, 104, 0.32);
+    background: rgba(8, 127, 140, 0.32);
     animation: pin-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
   @keyframes pin-ping {
@@ -268,6 +282,8 @@
 @media (prefers-reduced-motion: reduce) {
   .iris-spin,
   .iris-spin-rev,
+  .ring-spin,
+  .ring-spin-rev,
   .float-slow,
   .float-slower {
     animation: none;

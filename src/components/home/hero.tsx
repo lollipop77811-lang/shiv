@@ -25,13 +25,19 @@ function IrisVisual({ className }: { className?: string }) {
     <svg viewBox="0 0 600 600" className={className} aria-hidden="true">
       <defs>
         <radialGradient id="irisG" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#35A78F" stopOpacity="0.55" />
-          <stop offset="45%" stopColor="#219880" stopOpacity="0.28" />
-          <stop offset="78%" stopColor="#123C35" stopOpacity="0.16" />
-          <stop offset="100%" stopColor="#123C35" stopOpacity="0" />
+          <stop offset="0%" stopColor="#35B8A6" stopOpacity="0.55" />
+          <stop offset="45%" stopColor="#1E9E9E" stopOpacity="0.28" />
+          <stop offset="78%" stopColor="#163B3D" stopOpacity="0.16" />
+          <stop offset="100%" stopColor="#163B3D" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="irisSheen" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
         </radialGradient>
       </defs>
       <circle cx="300" cy="300" r="290" fill="url(#irisG)" />
+      {/* 3D cornea sheen highlight */}
+      <ellipse cx="232" cy="200" rx="180" ry="128" fill="url(#irisSheen)" opacity="0.35" transform="rotate(-16 232 200)" />
       <g className="iris-spin" style={{ transformOrigin: "300px 300px" }}>
         {spokes.map((s, i) => (
           <line
@@ -40,20 +46,20 @@ function IrisVisual({ className }: { className?: string }) {
             y1="300"
             x2={r2(300 + s.x)}
             y2={r2(300 + s.y)}
-            stroke="#219880"
+            stroke="#1E9E9E"
             strokeOpacity="0.10"
             strokeWidth={s.w}
           />
         ))}
         {ticks.map((t, i) => (
-          <circle key={i} cx={r2(300 + t.cx)} cy={r2(300 + t.cy)} r={t.r} fill="#35A78F" fillOpacity="0.35" />
+          <circle key={i} cx={r2(300 + t.cx)} cy={r2(300 + t.cy)} r={t.r} fill="#35B8A6" fillOpacity="0.35" />
         ))}
-        <circle cx="300" cy="300" r="120" fill="none" stroke="#219880" strokeOpacity="0.22" strokeWidth="1.4" />
-        <circle cx="300" cy="300" r="200" fill="none" stroke="#219880" strokeOpacity="0.14" strokeWidth="1.2" strokeDasharray="3 10" />
+        <circle cx="300" cy="300" r="120" fill="none" stroke="#1E9E9E" strokeOpacity="0.22" strokeWidth="1.4" />
+        <circle cx="300" cy="300" r="200" fill="none" stroke="#1E9E9E" strokeOpacity="0.14" strokeWidth="1.2" strokeDasharray="3 10" />
       </g>
       <g className="iris-spin-rev" style={{ transformOrigin: "300px 300px" }}>
-        <circle cx="300" cy="300" r="260" fill="none" stroke="#7CC5B2" strokeOpacity="0.25" strokeWidth="1" strokeDasharray="1 14" />
-        <circle cx="300" cy="300" r="82" fill="none" stroke="#123C35" strokeOpacity="0.14" strokeWidth="1.2" />
+        <circle cx="300" cy="300" r="260" fill="none" stroke="#7BD0C4" strokeOpacity="0.25" strokeWidth="1" strokeDasharray="1 14" />
+        <circle cx="300" cy="300" r="82" fill="none" stroke="#163B3D" strokeOpacity="0.14" strokeWidth="1.2" />
       </g>
     </svg>
   );
@@ -73,7 +79,7 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden bg-gradient-to-b from-jade-50 via-mist to-white">
       {/* ambient blobs */}
       <div className="pointer-events-none absolute -left-40 top-10 h-[28rem] w-[28rem] rounded-full bg-jade-200/40 blur-3xl" />
-      <div className="pointer-events-none absolute -right-32 bottom-0 h-[26rem] w-[26rem] rounded-full bg-ivory-100/70 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-0 h-[26rem] w-[26rem] rounded-full bg-gold-50/80 blur-3xl" />
       {/* animated iris backdrop */}
       <IrisVisual className="pointer-events-none absolute -right-40 -top-40 h-[42rem] w-[42rem] opacity-70 lg:right-[-8rem] lg:top-[-6rem]" />
 
@@ -90,7 +96,7 @@ export function Hero() {
             Advanced Ophthalmology Care
           </span>
 
-          <h1 className="mt-6 text-4xl font-extrabold leading-[1.12] tracking-tight text-brand-900 sm:text-5xl lg:text-[3.6rem]">
+          <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-brand-900 sm:text-5xl lg:text-[3.8rem] xl:text-[4.2rem]">
             Advanced Eye Care for a{" "}
             <span className="text-gradient">Clearer Tomorrow</span>
           </h1>
@@ -138,6 +144,9 @@ export function Hero() {
           className="relative z-10 mx-auto w-full max-w-[30rem] lg:max-w-none"
         >
           <div className="relative">
+            {/* animated optical rings — slow, decorative */}
+            <div className="ring-spin pointer-events-none absolute -right-9 -top-11 h-36 w-36 rounded-full border border-dashed border-gold-500/50" aria-hidden="true" />
+            <div className="ring-spin-rev pointer-events-none absolute -left-12 bottom-20 h-24 w-24 rounded-full border-2 border-jade-300/60" aria-hidden="true" />
             {/* ring frame */}
             <div className="absolute -inset-4 rounded-[2.5rem] border border-jade-200/70" aria-hidden="true" />
             <div className="relative overflow-hidden rounded-[2.25rem] shadow-lift">

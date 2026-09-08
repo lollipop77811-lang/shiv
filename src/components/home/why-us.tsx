@@ -40,7 +40,7 @@ export function WhyUs() {
             const Icon = ICONS[item.icon];
             return (
               <StaggerItem key={item.title}>
-                <article className="group h-full rounded-3xl border border-border/70 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-jade-200 hover:shadow-lift">
+                <article className="group h-full rounded-3xl glass-card p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-jade-200 hover:shadow-lift">
                   <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-jade-50 to-jade-100 text-jade-600 transition-all duration-300 group-hover:from-jade-500 group-hover:to-jade-700 group-hover:text-white group-hover:shadow-soft">
                     <Icon className="h-7 w-7" strokeWidth={1.8} />
                   </span>
