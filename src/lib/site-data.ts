@@ -1,12 +1,15 @@
 import {
+  Activity,
   Baby,
   CircleDot,
   Droplets,
   Eye,
   Gauge,
   Glasses,
-  ScanEye,
+  Layers,
+  ScanFace,
   Sparkles,
+  Target,
   type LucideIcon,
 } from "lucide-react";
 
@@ -74,12 +77,12 @@ export interface Treatment {
 export const TREATMENTS: Treatment[] = [
   {
     id: "cataract",
-    name: "Cataract Care",
+    name: "Cataract Surgery",
     shortName: "Cataract",
     icon: CircleDot,
     tagline: "Clearer vision begins with the right diagnosis and care.",
     cardDescription:
-      "Diagnosis and treatment of cataract with modern surgical options and premium intraocular lenses.",
+      "Micro-incision cataract surgery with premium intraocular lenses — from first diagnosis to guided recovery.",
     image: "/images/treatments/cataract.jpg",
     heroImage: "/images/surgery-microscope.jpg",
     gradient: "from-jade-500 to-brand-800",
@@ -344,86 +347,163 @@ export const TREATMENTS: Treatment[] = [
     ],
   },
   {
-    id: "retina",
-    name: "Retina Care",
-    shortName: "Retina",
-    icon: ScanEye,
-    tagline: "Specialised care for the delicate tissue that makes sight possible.",
+    id: "diabetic-retinopathy",
+    name: "Diabetic Retinopathy",
+    shortName: "Diabetic Eye",
+    icon: Activity,
+    tagline: "Protecting your sight against diabetes' quietest complication.",
     cardDescription:
-      "Diagnosis and treatment of retinal conditions including diabetic retinopathy, tears and macular disorders.",
+      "Detection, laser and injection treatment of diabetic eye disease — timed before vision is ever threatened.",
     image: "/images/treatments/retina.jpg",
     heroImage: "/images/equip-oct-consult.jpg",
     gradient: "from-brand-600 to-brand-900",
     overview: [
-      "The retina is the light-sensing lining at the back of the eye — the retina is to the eye what film is to a camera. Its health determines the quality of everything you see.",
-      "Conditions such as diabetic retinopathy, retinal tears, age-related macular degeneration and vein occlusions can quietly damage this tissue. Timely detection makes the difference between monitoring and emergency treatment.",
-      "Shiv Netralay offers retinal imaging, OCT scanning, laser therapy and coordinated care for medical retina conditions, with clear referral pathways for complex surgical needs.",
+      "Diabetic retinopathy is damage to the retina's fine blood vessels caused by years of raised blood sugar. It develops silently — vision stays normal while the damage quietly progresses in the background.",
+      "The condition moves through stages: from mild background changes, to leaking and swelling at the macula, to proliferative retinopathy where fragile new vessels grow and bleed. Each stage has a different treatment threshold.",
+      "The good news is that most vision loss from diabetes is preventable. With yearly dilated screening, timely laser or injection treatment and good sugar control, the overwhelming majority of patients keep useful sight for life.",
     ],
     symptoms: {
-      title: "Symptoms that need prompt attention",
+      title: "Warning signs of diabetic eye disease",
       items: [
-        "Sudden floaters or a shower of black dots",
-        "Flashes of light in the corner of vision",
-        "A curtain or shadow moving across vision",
-        "Straight lines appearing wavy",
-        "Distorted or grey patch in central vision",
-        "Sudden drop of vision in diabetics",
+        "Gradual or sudden blurred vision",
+        "Vision that fluctuates as sugar levels swing",
+        "Sudden floaters or a shower of black dots (bleeding)",
+        "A dark curtain or shadow in the field of vision",
+        "Distortion or a grey patch in central vision",
+        "Difficulty seeing at night or reading in dim light",
       ],
     },
     candidates: {
-      title: "Who benefits from retinal evaluation?",
+      title: "Who needs regular retinal screening?",
       items: [
-        "Diabetes — a yearly dilated fundus exam is essential",
-        "High myopia",
-        "Family history of retinal detachment or AMD",
-        "Recent flashes or floaters",
-        "Post-cataract surgery patients with blur",
-        "Hypertension and kidney disease",
+        "Type 1 diabetes — yearly from five years after diagnosis",
+        "Type 2 diabetes — yearly from the time of diagnosis",
+        "Diabetic women planning pregnancy or already pregnant",
+        "Uncontrolled sugar or blood pressure",
+        "Diabetes lasting more than 10 years",
+        "Kidney disease or already mild retinopathy",
       ],
     },
     options: [
       {
         title: "Intravitreal Injections",
         description:
-          "Anti-VEGF medicines delivered into the eye control swelling and abnormal vessels in diabetic retinopathy, AMD and vein occlusions.",
+          "Anti-VEGF medicines delivered into the eye reduce macular swelling and shrink abnormal new vessels — the mainstay for sight-threatening retinopathy.",
       },
       {
-        title: "Retinal Laser",
+        title: "Retinal Laser (PRP & Focal)",
         description:
-          "Focal and pan-retinal laser seals tears and stabilises proliferative disease in the clinic itself.",
+          "Pan-retinal and focal laser stabilise proliferative disease and seal leaking vessels — done in the clinic, usually painless.",
       },
       {
         title: "OCT & Fundus Imaging",
         description:
-          "Cross-sectional and colour imaging that documents retinal health in microscopic detail for precise tracking.",
+          "Cross-sectional scans and retinal photographs document every stage objectively, so treatment is timed on facts, not feelings.",
       },
       {
         title: "Vitreoretinal Referral",
         description:
-          "When retinal detachment or complex macular surgery is needed, we coordinate directly with trusted vitreoretinal centres.",
+          "Advanced bleeding or detachment needing vitrectomy is coordinated directly with trusted vitreoretinal surgeons.",
       },
     ],
     approach: [
-      { title: "Dilated examination", description: "A careful look at the entire retina, not just the centre." },
-      { title: "Objective imaging", description: "OCT and fundus photos turn 'feeling fine' into measurable facts." },
-      { title: "Treat early", description: "Laser or injections timed before vision is threatened." },
-      { title: "Systemic teamwork", description: "We work with your physician to control sugar and blood pressure — retina health is whole-body health." },
+      { title: "Dilated examination", description: "A careful look at the entire retina, not just the centre — the only way to stage retinopathy accurately." },
+      { title: "Objective staging", description: "OCT and fundus imaging grade your retinopathy against international scales for a clear treatment threshold." },
+      { title: "Treat early", description: "Laser or injections timed before vision is ever threatened — early treatment is easy treatment." },
+      { title: "Sugar & BP teamwork", description: "We work with your physician, because the most powerful retinopathy treatment happens outside the eye." },
     ],
     aftercare: [
       { title: "After injections", description: "Mild grittiness for a day is normal; report pain, redness or worsening vision immediately." },
-      { title: "After laser", description: "Brief blur is expected; normal activities usually resume next day." },
-      { title: "Ongoing reviews", description: "Retina conditions are marathons — scheduled imaging keeps treatment ahead of damage." },
-      { title: "Sugar & BP control", description: "The single most powerful retina treatment happens outside the eye." },
+      { title: "After laser", description: "Brief blur and dimmer side vision are expected; most activities resume the next day." },
+      { title: "Review rhythm", description: "Every 3–6 months once stable, more often during active treatment — retinopathy is a marathon." },
+      { title: "Daily control", description: "Sugar, blood pressure and cholesterol control, plus no-smoking — the treatment that protects both eyes." },
     ],
     faqs: [
-      { q: "Are floaters dangerous?", a: "Most are harmless ageing changes. A sudden shower of new floaters or flashes needs same-day examination to rule out a retinal tear." },
-      { q: "Do injections hurt?", a: "Numbing drops and a short, precise technique make the process quick; most patients tolerate it very comfortably." },
-      { q: "How often should diabetics get checked?", a: "At least once a year with dilated examination — more frequently if retinopathy is already present." },
+      { q: "Will every diabetic get retinopathy?", a: "No. Good sugar and blood-pressure control dramatically lowers the risk — and yearly screening catches any change at its most treatable stage." },
+      { q: "Can diabetic retinopathy be reversed?", a: "Early changes can stabilise and swelling can resolve with treatment, but lost vision is rarely recovered — which is why treatment is timed early." },
+      { q: "My vision is fine — do I still need yearly exams?", a: "Yes. Retinopathy causes no symptoms until it is advanced. Screening finds the disease while it is still easy to halt." },
+    ],
+  },
+  {
+    id: "macular-degeneration",
+    name: "Macular Degeneration",
+    shortName: "Macular Care",
+    icon: Target,
+    tagline: "Early detection keeps the centre of your vision in your life.",
+    cardDescription:
+      "Diagnosis and treatment of age-related macular degeneration — from protective nutrition to injection therapy for wet AMD.",
+    image: "/images/equip-oct-consult.jpg",
+    gradient: "from-jade-600 to-brand-800",
+    overview: [
+      "Age-related macular degeneration (AMD) affects the macula — the small central zone of the retina responsible for reading, faces and fine detail. Peripheral vision is never affected, which is why it never causes total blindness but can take away independence.",
+      "Dry AMD progresses slowly with waste build-up under the macula; wet AMD appears suddenly when abnormal vessels leak fluid and can destroy central vision within weeks. Roughly one in ten dry cases converts to wet — which is why monitoring matters.",
+      "Shiv Netralay combines OCT scanning, fundus imaging and simple home Amsler-grid monitoring to catch conversion early, when anti-VEGF injections are most effective at protecting your central vision.",
+    ],
+    symptoms: {
+      title: "Symptoms of macular degeneration",
+      items: [
+        "Straight lines appearing wavy or bent",
+        "A blurred or grey patch in the centre of vision",
+        "Words missing or fading when reading",
+        "Faces harder to recognise",
+        "Colours appearing less bright",
+        "A dark or empty area in central vision (urgent)",
+      ],
+    },
+    candidates: {
+      title: "Who should be monitored for AMD?",
+      items: [
+        "Everyone above 50 — baseline macular check",
+        "Smokers (the single biggest modifiable risk)",
+        "Family history of macular degeneration",
+        "Obesity, hypertension and heart disease",
+        "Already diagnosed dry AMD in either eye",
+        "Any sudden wavy lines or central blur — same week",
+      ],
+    },
+    options: [
+      {
+        title: "Anti-VEGF Injection Therapy",
+        description:
+          "The gold standard for wet AMD — medicines injected into the eye block the leaking vessels and preserve central vision when started early.",
+      },
+      {
+        title: "AREDS2 Nutritional Therapy",
+        description:
+          "Evidence-based vitamin and mineral formulations proven to slow the progression of intermediate dry AMD.",
+      },
+      {
+        title: "OCT Macular Monitoring",
+        description:
+          "High-resolution cross-sectional scans detect fluid conversion weeks before symptoms would — the key to timely treatment.",
+      },
+      {
+        title: "Low-Vision Support",
+        description:
+          "Magnifiers, lighting advice and referral pathways that keep reading and independence possible even in advanced stages.",
+      },
+    ],
+    approach: [
+      { title: "Baseline imaging", description: "OCT and fundus photography map your macula and grade the AMD stage." },
+      { title: "Dry or wet classification", description: "The two forms behave differently — the plan depends on getting this right." },
+      { title: "Rapid wet-AMD pathway", description: "Suspicious fluid gets same-week injection treatment — every week counts." },
+      { title: "Home monitoring training", description: "We teach Amsler-grid self-checks so conversion is caught between visits." },
+    ],
+    aftercare: [
+      { title: "After injections", description: "Mild grittiness for a day is expected; report any sharp pain, redness or further blur at once." },
+      { title: "Between visits", description: "Amsler-grid checks twice weekly per eye — new waviness means call us, don't wait." },
+      { title: "Lifestyle protection", description: "Stop smoking, leafy-green diet, UV protection, blood pressure and exercise — all slow progression." },
+      { title: "Review rhythm", description: "Wet AMD: 4–8 weekly during treatment cycles. Dry AMD: every 3–6 months with OCT." },
+    ],
+    faqs: [
+      { q: "What is the difference between dry and wet AMD?", a: "Dry AMD progresses slowly with thinning and waste deposits. Wet AMD leaks fluid from new vessels and can damage vision in weeks — but it now responds very well to injections." },
+      { q: "Do injections cure macular degeneration?", a: "They control it rather than cure it. Most patients need repeat injections at intervals, but the majority keep useful central vision long-term." },
+      { q: "Can AMD be prevented?", a: "It cannot be fully prevented, but not smoking, a green-leafy diet, UV protection and AREDS2 supplements (at the right stage) measurably lower the risk and slow progression." },
     ],
   },
   {
     id: "cornea",
-    name: "Cornea Services",
+    name: "Corneal Conditions",
     shortName: "Cornea",
     icon: Glasses,
     tagline: "Clarity starts at the surface — expert care for the eye's clear window.",
@@ -660,7 +740,7 @@ export const TREATMENTS: Treatment[] = [
     icon: Eye,
     tagline: "A complete picture of your eye health — not just a number for glasses.",
     cardDescription:
-      "Comprehensive vision and eye-health evaluation for the whole family, with detailed counselling.",
+      "Routine eye exams and complete eye-health check-ups for the whole family — vision, pressure, retina and counselling in one visit.",
     image: "/images/treatments/general.jpg",
     gradient: "from-jade-500 to-brand-700",
     overview: [
@@ -728,6 +808,160 @@ export const TREATMENTS: Treatment[] = [
       { q: "How long does an exam take?", a: "Plan for 45–60 minutes. Dilation adds waiting time for drops to act, and we use it to examine the retina properly." },
       { q: "Can I drive after dilation?", a: "Many patients drive comfortably; if you are unsure, bring someone along or we will help you plan." },
       { q: "Do I need an exam if my vision is fine?", a: "Yes — glaucoma, early retina disease and slow prescription changes have no symptoms. Screening finds what silence hides." },
+    ],
+  },
+  {
+    id: "oculoplastics",
+    name: "Oculoplastics",
+    shortName: "Oculoplasty",
+    icon: ScanFace,
+    tagline: "Restoring comfort, protection and confidence around the eyes.",
+    cardDescription:
+      "Eyelid, tear-duct and orbital care — functional and cosmetic procedures around the eye, planned with precision.",
+    image: "/images/surgery-suite.jpg",
+    gradient: "from-jade-500 to-brand-900",
+    overview: [
+      "Oculoplastics covers the structures around the eye — eyelids, tear-drainage system and the orbit (eye socket). When eyelids droop, turn inward or drain poorly, they threaten comfort, clarity and the eye's surface itself.",
+      "Many oculoplastic problems are functional, not just cosmetic: a droopy lid blocking the pupil, lashes rubbing the cornea, constant watering from a blocked duct or a lump that keeps returning. Fixing them protects sight as much as appearance.",
+      "Every procedure starts with a function-first assessment and photography, so the surgical plan restores protection, comfort and a natural look — with scars hidden in the lid's natural creases wherever possible.",
+    ],
+    symptoms: {
+      title: "Signs you may need oculoplastic care",
+      items: [
+        "A droopy upper lid covering the pupil",
+        "Lid turning inward or outward with constant irritation",
+        "Persistent watering or recurrent stickiness",
+        "A lid lump or chalazion lasting over a month",
+        "Bulging or retracted eyes, especially with thyroid disease",
+        "Lid lesions, cysts or concerns about skin cancer",
+      ],
+    },
+    candidates: {
+      title: "Who benefits from an oculoplastic review?",
+      items: [
+        "Adults with ptosis affecting the visual axis",
+        "Elderly lids turning in (entropion) or out (ectropion)",
+        "Chronic watering from suspected duct blockage",
+        "Recurrent or resistant chalazia",
+        "Thyroid eye disease needing monitoring",
+        "Cosmetic lid concerns — after honest counselling",
+      ],
+    },
+    options: [
+      {
+        title: "Ptosis & Lid-Position Surgery",
+        description:
+          "Precise tightening and repositioning that lifts the visual axis, protects the cornea and restores a natural lid crease.",
+      },
+      {
+        title: "Watering (Lacrimal) Treatment",
+        description:
+          "From probing and syringing to dacryocystorhinostomy (DCR) planning — restoring proper tear drainage step by step.",
+      },
+      {
+        title: "Chalazion & Lid-Lump Care",
+        description:
+          "Conservative heat-and-massage protocols first; quick incision-and-curettage or steroid injection when a lump persists.",
+      },
+      {
+        title: "Blepharoplasty (Functional & Cosmetic)",
+        description:
+          "Removal of excess lid skin and fat bags — performed for vision relief, appearance, or both, with conservative planning.",
+      },
+    ],
+    approach: [
+      { title: "Function-first assessment", description: "Lid measurements, surface health and photography decide what truly needs correcting." },
+      { title: "Conservative planning", description: "We operate only when surgery clearly serves comfort, protection or vision — never on pressure." },
+      { title: "Precise day-care surgery", description: "Most procedures take under an hour with local anaesthesia and meticulous, scar-conscious technique." },
+      { title: "Guided aftercare", description: "Ointment schedules, suture review and staged return to normal routines." },
+    ],
+    aftercare: [
+      { title: "After lid surgery", description: "Cold compresses and ointment for the first week; mild bruising settles in 7–10 days." },
+      { title: "Sutures & healing", description: "Stitches usually come out at 5–7 days; the final lid contour settles over several weeks." },
+      { title: "After chalazion removal", description: "A 24-hour patch, then drops — with lid-hygiene coaching to prevent recurrence." },
+      { title: "Watering procedures", description: "Salty tears or a trace of bleeding is normal early; drainage improves progressively over weeks." },
+    ],
+    faqs: [
+      { q: "Is eyelid surgery only cosmetic?", a: "No. Ptosis correction, entropion repair and watering procedures are functional — they restore vision, protect the cornea and stop chronic irritation." },
+      { q: "Will eyelid surgery leave a visible scar?", a: "Eyelid skin heals remarkably well. Incisions are placed in natural creases, and any residual redness fades over weeks to months." },
+      { q: "Does constant watering always mean surgery?", a: "Not always. Many blockages respond to probing, massage or drops; surgery such as DCR is reserved for ducts that truly need a new drainage pathway." },
+    ],
+  },
+  {
+    id: "contact-lenses",
+    name: "Contact Lens Fittings",
+    shortName: "Contact Lenses",
+    icon: Layers,
+    tagline: "Clear, comfortable lens wear built on precise fitting and safe habits.",
+    cardDescription:
+      "Professional contact-lens fitting, wearing training and aftercare — from daily disposables to specialty lenses.",
+    image: "/images/equip-slitlamp.png",
+    gradient: "from-jade-300 to-brand-700",
+    overview: [
+      "A contact lens is a medical device that sits directly on the cornea — which is why a proper fit matters more than a brand name. Lens shape, material and wearing pattern must match your corneal curves, tear film and daily routine.",
+      "A poorly fitted lens can quietly starve the cornea of oxygen or scratch its surface, while a well-fitted one disappears on the eye and delivers vision glasses cannot always match — wider fields, no fogging, full freedom to move.",
+      "Every fitting at Shiv Netralay includes corneal measurement, a supervised trial on the eye, insertion-and-removal training and a written wear-and-care plan — because safe lens wear is a habit, not a purchase.",
+    ],
+    symptoms: {
+      title: "Signs your current lenses need review",
+      items: [
+        "Redness or irritation when lenses go in",
+        "Blurred or fluctuating vision late in the day",
+        "Eyes that feel dry after a few hours of wear",
+        "Lens awareness, movement or foreign-body feeling",
+        "Halos around lights or rising glare at night",
+        "Repeated styes, allergies or deposits on lenses",
+      ],
+    },
+    candidates: {
+      title: "Contact lenses may suit you if",
+      items: [
+        "Glasses interfere with sport, work or comfort",
+        "High prescriptions make spectacle lenses heavy or distorted",
+        "Astigmatism needs toric lenses fitted properly",
+        "Reading vision needs multifocal options after 40",
+        "Keratoconus or corneal scars need specialty lenses",
+        "You want occasional wear — events, travel, photos",
+      ],
+    },
+    options: [
+      {
+        title: "Daily Disposable Lenses",
+        description:
+          "Fresh lenses every day — the healthiest, lowest-infection option, ideal for occasional wearers and sensitive eyes.",
+      },
+      {
+        title: "Monthly Soft & Toric Lenses",
+        description:
+          "Economical regular wear with rotational-stability designs that keep astigmatism correction locked in place.",
+      },
+      {
+        title: "Multifocal Lenses",
+        description:
+          "Distance and reading in the same lens, with fitting techniques that preserve clear intermediate vision for screens.",
+      },
+      {
+        title: "Specialty & Therapeutic Fitting",
+        description:
+          "RGP, scleral and bandage lenses for keratoconus, post-graft corneas and surface disease — measured and fitted on the slit lamp.",
+      },
+    ],
+    approach: [
+      { title: "Measure, don't guess", description: "Corneal curvature, power and tear-film assessment define your ideal lens parameters." },
+      { title: "Supervised trial", description: "The lens goes on your eye the same day — centration, movement and comfort checked under the slit lamp." },
+      { title: "Hands-on training", description: "Insertion, removal and case hygiene practised with our team until you are fully confident." },
+      { title: "Aftercare discipline", description: "A written wear schedule plus a mandatory annual review before every repeat prescription." },
+    ],
+    aftercare: [
+      { title: "First week", description: "Build wearing hours gradually (4 → 8 per day); mild awareness settles as the eyes adapt." },
+      { title: "Daily habits", description: "No tap water on lenses, case replaced every 3 months, solutions never topped up — only renewed." },
+      { title: "Red eye rule", description: "A red, painful or light-sensitive eye means remove the lens and call us the same day — never wait it out." },
+      { title: "Annual review", description: "Corneal health is checked under the slit lamp every year before prescriptions are renewed." },
+    ],
+    faqs: [
+      { q: "Are contact lenses safe for long-term use?", a: "Yes — with correct fitting, disciplined hygiene and yearly check-ups. Most complications come from over-wear, sleeping in lenses or poor case hygiene, all of which are preventable habits." },
+      { q: "Can I sleep in my contact lenses?", a: "Only lenses specifically certified for extended wear, and even then only as advised. Regular lenses starve the cornea of oxygen overnight and sharply raise infection risk." },
+      { q: "Daily or monthly — which should I choose?", a: "It depends on how often you wear lenses. Daily disposables are the healthiest for occasional use; monthlies suit regular all-day wearers. We recommend based on your pattern, not the shelf." },
     ],
   },
 ];
@@ -833,7 +1067,7 @@ export const DOCTORS: Doctor[] = [
       },
     ],
     image: "/images/doctor-ananya.png",
-    departments: ["glaucoma", "retina", "general"],
+    departments: ["glaucoma", "diabetic-retinopathy", "macular-degeneration", "general"],
   },
   {
     id: "dr-verma",
@@ -1033,8 +1267,10 @@ export const SYMPTOMS: SymptomChip[] = [
   { label: "Eye Pain / Redness", treatmentId: "cornea" },
   { label: "Gritty, Burning Eyes", treatmentId: "dry-eye" },
   { label: "Loss of Side Vision", treatmentId: "glaucoma" },
-  { label: "Floaters / Flashes", treatmentId: "retina" },
-  { label: "Diabetes & Eyes", treatmentId: "retina" },
+  { label: "Floaters / Flashes", treatmentId: "diabetic-retinopathy" },
+  { label: "Diabetes & Eyes", treatmentId: "diabetic-retinopathy" },
+  { label: "Wavy or Distorted Lines", treatmentId: "macular-degeneration" },
+  { label: "Droopy Lid / Watering Eyes", treatmentId: "oculoplastics" },
   { label: "Squint / Eye Deviation", treatmentId: "pediatric" },
   { label: "Child Eye Problems", treatmentId: "pediatric" },
   { label: "Routine Full Check-up", treatmentId: "general" },

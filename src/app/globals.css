@@ -302,3 +302,99 @@
     scroll-behavior: auto;
   }
 }
+
+/* ── Lens & Focus — vision veil overlays ─────────────────────────────
+   The blur itself is applied as an INLINE style from hero.tsx (the CSS
+   pipeline minifier strips the standard backdrop-filter property from
+   globals.css, which this Chromium build then ignores — inline styles
+   bypass that pipeline entirely). Only the tinted overlays live here. */
+.vision-veil__streaks,
+.vision-veil__warmth,
+.vision-veil__vignette,
+.vision-veil__smear {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* astigmatism — diagonal streak lines that stretch lights and edges */
+.vision-veil__streaks {
+  background:
+    repeating-linear-gradient(
+      65deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 26px
+    ),
+    repeating-linear-gradient(
+      115deg,
+      rgba(253, 225, 116, 0.035) 0px,
+      rgba(253, 225, 116, 0.035) 2px,
+      transparent 2px,
+      transparent 34px
+    );
+  filter: blur(1.5px);
+}
+.vision-veil--astigmatism .vision-veil__streaks,
+.vision-veil--myopia .vision-veil__streaks,
+.vision-veil--hyperopia .vision-veil__streaks,
+.vision-veil--presbyopia .vision-veil__streaks {
+  opacity: 0.55;
+}
+
+/* hyperopia & presbyopia — a warm, tired-eye cast toward the near zone */
+.vision-veil__warmth {
+  background: radial-gradient(
+    120% 90% at 50% 78%,
+    rgba(247, 213, 84, 0.14) 0%,
+    rgba(247, 213, 84, 0.05) 45%,
+    transparent 75%
+  );
+  mix-blend-mode: soft-light;
+}
+.vision-veil--hyperopia .vision-veil__warmth,
+.vision-veil--presbyopia .vision-veil__warmth {
+  opacity: 1;
+}
+
+/* soft navy edges while any blur is up — lifts focus to the centre */
+.vision-veil__vignette {
+  background: radial-gradient(
+    100% 100% at 50% 50%,
+    transparent 55%,
+    rgba(19, 23, 64, 0.32) 100%
+  );
+  opacity: 1;
+}
+
+/* myopia & presbyopia — faint horizontal smear, like unfocused contrast */
+.vision-veil__smear {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.035) 0%,
+    transparent 30%,
+    rgba(19, 23, 64, 0.045) 62%,
+    transparent 100%
+  );
+}
+.vision-veil--myopia .vision-veil__smear,
+.vision-veil--presbyopia .vision-veil__smear {
+  opacity: 1;
+}
+
+/* corrected state — every overlay fades away with the blur */
+.vision-clear .vision-veil__vignette,
+.vision-clear .vision-veil__streaks,
+.vision-clear .vision-veil__warmth,
+.vision-clear .vision-veil__smear {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vision-veil__streaks,
+  .vision-veil__warmth,
+  .vision-veil__vignette,
+  .vision-veil__smear {
+    transition-duration: 0.2s;
+  }
+}

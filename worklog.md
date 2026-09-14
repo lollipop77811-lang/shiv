@@ -174,3 +174,18 @@ Stage Summary:
 - Home is now a focused 6-section landing (5,688px tall) — all detailed content lives on dedicated pages; nav = real multi-page URLs.
 - Treatment cards (home + /treatments) are image-first with a single user-POV line each (uses existing tagline field), matching the MediCare white-card + photo language.
 - Screenshots in download/shots/lean-*.png; search scripts + candidate JSONs kept in scripts/ for future image swaps.
+
+---
+Task ID: 19
+Agent: main (Super Z)
+Task: (a) Treatment cards — ensure all 11 requested services exist with what-to-expect / procedure steps / recovery / FAQs. (b) Recover hero work after a platform rollback restored the repo to its last auto-commit (pre-Task-13 state), wiping hero.tsx, the veil CSS and the exam cutout image.
+
+Work Log:
+- site-data.ts (survived the rollback, verified live): Cataract Care -> "Cataract Surgery" (surgery-first description); Cornea Services -> "Corneal Conditions"; Comprehensive Eye Exam description now leads with "Routine eye exams". Retina Care card SPLIT into "Diabetic Retinopathy" (Activity icon, retina.jpg + OCT-consult hero) and "Macular Degeneration" (Target icon, OCT-consult image after fixing a near-duplicate fundus-machine photo) — both fully written (overview/symptoms/candidates/options/approach/aftercare/faqs). ADDED "Oculoplastics" (ScanFace, surgery-suite.jpg) and "Contact Lens Fittings" (Layers, equip-slitlamp.png), equally complete. Fixed dangling refs: Dr. Sharma departments now [glaucoma, diabetic-retinopathy, macular-degeneration, general]; quick-reasons Floaters/Diabetes -> diabetic-retinopathy; NEW reasons "Wavy or Distorted Lines" -> macular-degeneration, "Droopy Lid / Watering Eyes" -> oculoplastics. 11 cards flow automatically to home grid, /treatments, footer, appointment DEPARTMENTS and static routes.
+- Rollback recovery: rewrote hero.tsx to the post-Task-18 state (Lens & Focus state machine, 4s simulation, viewport-fit card 100dvh-9rem, lg:justify-center copy, no trust chips/stats/rating card, exam cutout with -translate-x-4, lens stack at right-3/xl:right-4).
+- Discovered lightningcss (Turbopack CSS pipeline) strips the standard backdrop-filter and keeps only -webkit- (browserslist targets did not help); this Chromium ignores the prefixed alias from external sheets -> veil never blurred. FIX: blur + per-lens dissolve timing (900/1200/1300/1600ms) now applied as INLINE style on the veil div (veilBlur/veilClearMs props through LensFocusLayer); globals.css veil block reduced to overlay layers (streaks/warmth/vignette/smear) which parse fine.
+- Regenerated public/images/hero-exam-people.png: scripts/cutout-exam.ts (z-ai images.generations.edit, images:[{url:dataURL}], 1344x768 green plate — API wants images array, not `image`) + scripts/key-green.py (border-connected 2-tier green flood, feather, despill, trim; fixed read-only numpy array). 30% transparent / 68% opaque verified.
+- Verified: unselected full-page 12px blur; Myopia simulate (15px + progress pill) -> corrected sharp; Hyperopia/Myopia pills; reset; tablet 768 + mobile 390 intact; 11 treatment cards + AMD detail page sections render; console clean; biome + tsc (src) clean.
+
+Stage Summary:
+- All 11 requested treatment cards live with full clinical content; hero + Lens & Focus demo fully rebuilt after rollback, now pipeline-proof (inline backdrop-filter). package.json gained modern browserslist. Screenshots: download/shots/treatments-11-*.png, treatment-amd-*.png, hero-restored-*.png, hero-final-*.png, home-services-11.png.

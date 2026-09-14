@@ -1,0 +1,742 @@
+    40→  email: "care@shivnetralay.com",
+    41→  addressLines: ["Shiv Netralay, Main Road", "Your City, State — 000 000"],
+    42→  hours: [
+    43→    { days: "Monday — Saturday", time: "9:00 AM – 7:00 PM" },
+    44→    { days: "Sunday", time: "Closed (Emergency on call)" },
+    45→  ],
+    46→  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Shiv+Netralay",
+    47→};
+    48→
+    49→/* ── Treatments ─────────────────────────────────────────────── */
+    50→export interface TreatmentOption {
+    51→  title: string;
+    52→  description: string;
+    53→}
+    54→
+    55→export interface Treatment {
+    56→  id: string;
+    57→  name: string;
+    58→  shortName: string;
+    59→  icon: LucideIcon;
+    60→  tagline: string;
+    61→  cardDescription: string;
+    62→  heroImage?: string;
+    63→  image?: string; // stock photo shown on treatment cards
+    64→  gradient: string; // tailwind gradient classes for icon covers
+    65→  overview: string[];
+    66→  symptoms: { title: string; items: string[] };
+    67→  candidates: { title: string; items: string[] };
+    68→  options: TreatmentOption[];
+    69→  approach: { title: string; description: string }[];
+    70→  aftercare: { title: string; description: string }[];
+    71→  faqs: { q: string; a: string }[];
+    72→}
+    73→
+    74→export const TREATMENTS: Treatment[] = [
+    75→  {
+    76→    id: "cataract",
+    77→    name: "Cataract Care",
+    78→    shortName: "Cataract",
+    79→    icon: CircleDot,
+    80→    tagline: "Clearer vision begins with the right diagnosis and care.",
+    81→    cardDescription:
+    82→      "Diagnosis and treatment of cataract with modern surgical options and premium intraocular lenses.",
+    83→    image: "/images/treatments/cataract.jpg",
+    84→    heroImage: "/images/surgery-microscope.jpg",
+    85→    gradient: "from-jade-500 to-brand-800",
+    86→    overview: [
+    87→      "A cataract is the natural clouding of the eye's lens — a part of normal ageing, but one that can quietly blur the world around you. Everyday tasks such as reading, driving at night or recognising faces gradually become harder.",
+    88→      "Cataract develops slowly and painlessly, which is why many people delay treatment until vision significantly interferes with daily life. The good news: cataract is highly treatable, and modern micro-incision surgery restores crisp, clear vision in a matter of minutes.",
+    89→      "At Shiv Netralay, every cataract journey begins with a detailed evaluation of your lens, retina and overall eye health so the surgical plan is tailored precisely to your eyes and lifestyle.",
+    90→    ],
+    91→    symptoms: {
+    92→      title: "Common signs of cataract",
+    93→      items: [
+    94→        "Cloudy, blurred or dim vision",
+    95→        "Increased sensitivity to light and glare",
+    96→        "Difficulty seeing at night",
+    97→        "Frequent changes in spectacle number",
+    98→        "Fading or yellowing of colours",
+    99→        "Halos around lights, especially while driving",
+   100→      ],
+   101→    },
+   102→    candidates: {
+   103→      title: "When should treatment be considered?",
+   104→      items: [
+   105→        "Vision interferes with reading, cooking or working",
+   106→        "Night driving has become difficult or unsafe",
+   107→        "Glare from lights or sunshine is troublesome",
+   108→        "Glasses no longer correct vision adequately",
+   109→        "Your doctor advises surgery for eye-health reasons",
+   110→      ],
+   111→    },
+   112→    options: [
+   113→      {
+   114→        title: "Micro-incision Phaco Surgery",
+   115→        description:
+   116→          "The standard of care — a 2–3 mm incision, ultrasound emulsification of the cloudy lens and implantation of a foldable IOL. Fast, sutureless and comfortable.",
+   117→      },
+   118→      {
+   119→        title: "Monofocal Lenses",
+   120→        description:
+   121→          "Reliable, proven lenses that give excellent distance vision. Most patients need light reading glasses afterwards.",
+   122→      },
+   123→      {
+   124→        title: "Toric Lenses (Astigmatism)",
+   125→        description:
+   126→          "Correct corneal astigmatism at the time of cataract surgery, reducing dependence on cylindrical glasses.",
+   127→      },
+   128→      {
+   129→        title: "Premium Multifocal / EDOF Lenses",
+   130→        description:
+   131→          "Designed to extend the range of clear vision — distance, intermediate and near — for greater freedom from spectacles.",
+   132→      },
+   133→    ],
+   134→    approach: [
+   135→      {
+   136→        title: "Precise measurement",
+   137→        description:
+   138→          "Biometry and corneal assessment calculate the ideal lens power for your eye.",
+   139→      },
+   140→      {
+   141→        title: "Tailored lens planning",
+   142→        description:
+   143→          "We match the IOL to your lifestyle — reading, driving, screens or outdoor work.",
+   144→      },
+   145→      {
+   146→        title: "Gentle micro-surgery",
+   147→        description:
+   148→          "Topical anaesthesia, micro-incision technique and careful tissue handling.",
+   149→      },
+   150→      {
+   151→        title: "Guided recovery",
+   152→        description:
+   153→          "Clear medication schedules and structured follow-ups protect your new vision.",
+   154→      },
+   155→    ],
+   156→    aftercare: [
+   157→      {
+   158→        title: "First 24 hours",
+   159→        description:
+   160→          "Rest, avoid rubbing the eye, and use drops exactly as prescribed. A protective shield is worn while sleeping.",
+   161→      },
+   162→      {
+   163→        title: "First week",
+   164→        description:
+   165→          "Keep water, dust and sweat out of the eye. Avoid heavy lifting and strenuous activity.",
+   166→      },
+   167→      {
+   168→        title: "Weeks 2–4",
+   169→        description:
+   170→          "Most patients resume normal routines including walking, office work and television. Swimming and make-up stay paused.",
+   171→      },
+   172→      {
+   173→        title: "Follow-ups",
+   174→        description:
+   175→          "Day 1, week 1 and week 4 reviews confirm healing. Final glasses, if needed, are prescribed after stabilisation.",
+   176→      },
+   177→    ],
+   178→    faqs: [
+   179→      {
+   180→        q: "Is cataract surgery painful?",
+   181→        a: "No. Numbing drops (topical anaesthesia) keep you comfortable, and the procedure typically takes 15–20 minutes. Most patients describe it as far easier than expected.",
+   182→      },
+   183→      {
+   184→        q: "How soon will I see clearly?",
+   185→        a: "Many patients notice brighter vision within 24–48 hours, with continued improvement over the first week as the eye settles.",
+   186→      },
+   187→      {
+   188→        q: "Can a cataract come back?",
+   189→        a: "No — the cloudy lens is removed permanently. Some patients develop a natural haze on the lens capsule months later, which is treated painlessly in the clinic with a laser.",
+   190→      },
+   191→    ],
+   192→  },
+   193→  {
+   194→    id: "lasik",
+   195→    name: "LASIK & Refractive Surgery",
+   196→    shortName: "LASIK",
+   197→    icon: Sparkles,
+   198→    tagline: "Freedom from glasses, engineered for your eyes.",
+   199→    cardDescription:
+   200→      "Vision correction solutions for eligible patients, with detailed screening and modern laser platforms.",
+   201→    image: "/images/treatments/lasik.jpg",
+   202→    gradient: "from-jade-400 to-brand-700",
+   203→    overview: [
+   204→      "LASIK reshapes the cornea with a cool, ultra-precise laser so light focuses correctly on the retina — reducing or eliminating the need for glasses and contact lenses.",
+   205→      "Suitability matters more than anything in refractive surgery. A thorough evaluation of corneal thickness, shape, prescription stability and eye health determines whether LASIK, PRK or an ICL is the safest choice for you.",
+   206→      "Our counselling is deliberately conservative: we recommend treatment only when we would choose it for our own family.",
+   207→    ],
+   208→    symptoms: {
+   209→      title: "You may be a candidate if you have",
+   210→      items: [
+   211→        "Myopia (near-sightedness)",
+   212→        "Hyperopia (far-sightedness)",
+   213→        "Astigmatism",
+   214→        "Dependence on glasses or contact lenses",
+   215→        "Prescription stable for 12+ months",
+   216→        "Age 18 years or above",
+   217→      ],
+   218→    },
+   219→    candidates: {
+   220→      title: "Who should consider evaluation?",
+   221→      items: [
+   222→        "Active lifestyles where glasses are a hindrance",
+   223→        "Sports, swimming or travel enthusiasts",
+   224→        "Contact-lens intolerance or discomfort",
+   225→        "Professions with vision requirements",
+   226→        "Realistic expectations discussed at counselling",
+   227→      ],
+   228→    },
+   229→    options: [
+   230→      {
+   231→        title: "Contoura / Topo-guided LASIK",
+   232→        description:
+   233→          "Corneal-mapping-guided treatment planned for your eye's unique topography, aiming for sharper quality of vision.",
+   234→      },
+   235→      {
+   236→        title: "Blade-free LASIK",
+   237→        description:
+   238→          "Femtosecond laser creates the corneal flap with micron precision — no blades involved.",
+   239→      },
+   240→      {
+   241→        title: "PRK / Surface Ablation",
+   242→        description:
+   243→          "A flap-free option ideal for thinner corneas or certain professional requirements.",
+   244→      },
+   245→      {
+   246→        title: "ICL (Implantable Collamer Lens)",
+   247→        description:
+   248→          "For high prescriptions or thin corneas, a biocompatible lens is placed inside the eye — reversible and UV-blocking.",
+   249→      },
+   250→    ],
+   251→    approach: [
+   252→      { title: "Deep screening", description: "Corneal topography, pachymetry, pupil and tear-film assessment across 20+ parameters." },
+   253→      { title: "Honest counselling", description: "A clear explanation of expected outcomes — and equally clear reasons to say no when needed." },
+   254→      { title: "Day-of-care", description: "The laser portion itself takes only minutes; the same-day protocol keeps you relaxed throughout." },
+   255→      { title: "Protected healing", description: "Structured drops, wrap-around shields and staged reviews through the first month." },
+   256→    ],
+   257→    aftercare: [
+   258→      { title: "First 24 hours", description: "Eyes may feel gritty or watery — rest with eyes closed as much as possible. Most read a phone screen the same evening." },
+   259→      { title: "Days 2–7", description: "Avoid rubbing, dust and splashing water. Screens in moderation with lubricating drops." },
+   260→      { title: "Weeks 2–4", description: "Light gym and outdoor activities resume with protective eyewear; swimming waits a month." },
+   261→      { title: "Reviews", description: "Day 1, week 1, month 1 and month 3 visits track your unaided vision and corneal healing." },
+   262→    ],
+   263→    faqs: [
+   264→      { q: "Is LASIK permanent?", a: "The corneal correction is permanent. Normal age-related reading changes (presbyopia) can still occur in the 40s and are discussed during counselling." },
+   265→      { q: "Does the laser hurt?", a: "Numbing drops make the treatment painless. You may feel brief pressure; the laser itself is sensation-free." },
+   266→      { q: "How quickly can I return to work?", a: "Most desk-work patients resume within 2–3 days once the first review confirms smooth healing." },
+   267→    ],
+   268→  },
+   269→  {
+   270→    id: "glaucoma",
+   271→    name: "Glaucoma Management",
+   272→    shortName: "Glaucoma",
+   273→    icon: Gauge,
+   274→    tagline: "Protecting your sight before symptoms ever appear.",
+   275→    cardDescription:
+   276→      "Diagnosis, monitoring and management of glaucoma to safeguard the optic nerve and preserve vision.",
+   277→    image: "/images/treatments/glaucoma.jpg",
+   278→    gradient: "from-jade-600 to-brand-900",
+   279→    overview: [
+   280→      "Glaucoma is a group of conditions that damage the optic nerve, most often related to raised pressure inside the eye. It is called the silent thief of sight because peripheral vision fades gradually and painlessly.",
+   281→      "Vision lost to glaucoma cannot be recovered — but with early detection, pressure control and regular monitoring, sight can be protected for a lifetime.",
+   282→      "Our glaucoma protocol combines pressure measurement, optic-nerve imaging and visual-field testing to detect change at its earliest, most treatable stage.",
+   283→    ],
+   284→    symptoms: {
+   285→      title: "Warning signs to watch for",
+   286→      items: [
+   287→        "Gradual loss of side (peripheral) vision",
+   288→        "Frequent change of glasses without benefit",
+   289→        "Halos around lights",
+   290→        "Eye ache with blurred vision and headache",
+   291→        "Family history of glaucoma",
+   292→        "Long-term steroid usage",
+   293→      ],
+   294→    },
+   295→    candidates: {
+   296→      title: "Who should be screened regularly?",
+   297→      items: [
+   298→        "Everyone above 40, at least once a year",
+   299→        "Blood relatives of glaucoma patients",
+   300→        "Diabetics and hypertensives",
+   301→        "Long-term steroid users",
+   302→        "Previous eye injury or surgery",
+   303→        "High myopia",
+   304→      ],
+   305→    },
+   306→    options: [
+   307→      {
+   308→        title: "Medical Therapy",
+   309→        description:
+   310→          "Daily pressure-lowering eye drops — the mainstay of treatment, tailored to effectiveness and tolerance.",
+   311→      },
+   312→      {
+   313→        title: "Laser Treatment",
+   314→        description:
+   315→          "Selective laser trabeculoplasty (SLT) improves fluid drainage and can reduce drop burden.",
+   316→      },
+   317→      {
+   318→        title: "Minimally Invasive Surgery",
+   319→        description:
+   320→          "MIGS procedures combine safety with effective pressure control for suitable candidates.",
+   321→      },
+   322→      {
+   323→        title: "Trabeculectomy",
+   324→        description:
+   325→          "The established filtration surgery for advanced or resistant glaucoma, performed with meticulous technique.",
+   326→      },
+   327→    ],
+   328→    approach: [
+   329→      { title: "Baseline mapping", description: "Pressure, gonioscopy, OCT nerve imaging and field tests create your personal reference." },
+   330→      { title: "Target pressure", description: "A treatment goal set for your nerve, tracked at every visit." },
+   331→      { title: "Structured monitoring", description: "Scheduled field tests and scans detect progression before you would notice it." },
+   332→      { title: "Escalation ladder", description: "Drops → laser → surgery, stepping up only when needed." },
+   333→    ],
+   334→    aftercare: [
+   335→      { title: "Drop discipline", description: "Correct technique and timing matter — we coach you until it is effortless." },
+   336→      { title: "Never stop silently", description: "Glaucoma medicines are long-term; any change happens with your doctor." },
+   337→      { title: "Life habits", description: "Normal exercise, hydration and sleep help pressure control; head-down yoga poses may need modification." },
+   338→      { title: "Family screening", description: "First-degree relatives are advised periodic screening." },
+   339→    ],
+   340→    faqs: [
+   341→      { q: "Can glaucoma be cured?", a: "Damage cannot be reversed, but progression can usually be halted. The goal of treatment is to preserve the vision you have for life." },
+   342→      { q: "I see fine — do I still need drops?", a: "Yes. Glaucoma has no symptoms until advanced. Drops work silently to keep pressure at a safe level." },
+   343→      { q: "Is surgery required for everyone?", a: "No. Most patients are controlled with drops or laser alone; surgery is reserved for specific situations." },
+   344→    ],
+   345→  },
+   346→  {
+   347→    id: "retina",
+   348→    name: "Retina Care",
+   349→    shortName: "Retina",
+   350→    icon: ScanEye,
+   351→    tagline: "Specialised care for the delicate tissue that makes sight possible.",
+   352→    cardDescription:
+   353→      "Diagnosis and treatment of retinal conditions including diabetic retinopathy, tears and macular disorders.",
+   354→    image: "/images/treatments/retina.jpg",
+   355→    heroImage: "/images/equip-oct-consult.jpg",
+   356→    gradient: "from-brand-600 to-brand-900",
+   357→    overview: [
+   358→      "The retina is the light-sensing lining at the back of the eye — the retina is to the eye what film is to a camera. Its health determines the quality of everything you see.",
+   359→      "Conditions such as diabetic retinopathy, retinal tears, age-related macular degeneration and vein occlusions can quietly damage this tissue. Timely detection makes the difference between monitoring and emergency treatment.",
+   360→      "Shiv Netralay offers retinal imaging, OCT scanning, laser therapy and coordinated care for medical retina conditions, with clear referral pathways for complex surgical needs.",
+   361→    ],
+   362→    symptoms: {
+   363→      title: "Symptoms that need prompt attention",
+   364→      items: [
+   365→        "Sudden floaters or a shower of black dots",
+   366→        "Flashes of light in the corner of vision",
+   367→        "A curtain or shadow moving across vision",
+   368→        "Straight lines appearing wavy",
+   369→        "Distorted or grey patch in central vision",
+   370→        "Sudden drop of vision in diabetics",
+   371→      ],
+   372→    },
+   373→    candidates: {
+   374→      title: "Who benefits from retinal evaluation?",
+   375→      items: [
+   376→        "Diabetes — a yearly dilated fundus exam is essential",
+   377→        "High myopia",
+   378→        "Family history of retinal detachment or AMD",
+   379→        "Recent flashes or floaters",
+   380→        "Post-cataract surgery patients with blur",
+   381→        "Hypertension and kidney disease",
+   382→      ],
+   383→    },
+   384→    options: [
+   385→      {
+   386→        title: "Intravitreal Injections",
+   387→        description:
+   388→          "Anti-VEGF medicines delivered into the eye control swelling and abnormal vessels in diabetic retinopathy, AMD and vein occlusions.",
+   389→      },
+   390→      {
+   391→        title: "Retinal Laser",
+   392→        description:
+   393→          "Focal and pan-retinal laser seals tears and stabilises proliferative disease in the clinic itself.",
+   394→      },
+   395→      {
+   396→        title: "OCT & Fundus Imaging",
+   397→        description:
+   398→          "Cross-sectional and colour imaging that documents retinal health in microscopic detail for precise tracking.",
+   399→      },
+   400→      {
+   401→        title: "Vitreoretinal Referral",
+   402→        description:
+   403→          "When retinal detachment or complex macular surgery is needed, we coordinate directly with trusted vitreoretinal centres.",
+   404→      },
+   405→    ],
+   406→    approach: [
+   407→      { title: "Dilated examination", description: "A careful look at the entire retina, not just the centre." },
+   408→      { title: "Objective imaging", description: "OCT and fundus photos turn 'feeling fine' into measurable facts." },
+   409→      { title: "Treat early", description: "Laser or injections timed before vision is threatened." },
+   410→      { title: "Systemic teamwork", description: "We work with your physician to control sugar and blood pressure — retina health is whole-body health." },
+   411→    ],
+   412→    aftercare: [
+   413→      { title: "After injections", description: "Mild grittiness for a day is normal; report pain, redness or worsening vision immediately." },
+   414→      { title: "After laser", description: "Brief blur is expected; normal activities usually resume next day." },
+   415→      { title: "Ongoing reviews", description: "Retina conditions are marathons — scheduled imaging keeps treatment ahead of damage." },
+   416→      { title: "Sugar & BP control", description: "The single most powerful retina treatment happens outside the eye." },
+   417→    ],
+   418→    faqs: [
+   419→      { q: "Are floaters dangerous?", a: "Most are harmless ageing changes. A sudden shower of new floaters or flashes needs same-day examination to rule out a retinal tear." },
+   420→      { q: "Do injections hurt?", a: "Numbing drops and a short, precise technique make the process quick; most patients tolerate it very comfortably." },
+   421→      { q: "How often should diabetics get checked?", a: "At least once a year with dilated examination — more frequently if retinopathy is already present." },
+   422→    ],
+   423→  },
+   424→  {
+   425→    id: "cornea",
+   426→    name: "Cornea Services",
+   427→    shortName: "Cornea",
+   428→    icon: Glasses,
+   429→    tagline: "Clarity starts at the surface — expert care for the eye's clear window.",
+   430→    cardDescription:
+   431→      "Specialised care for corneal infections, injuries, dystrophies and surface disorders.",
+   432→    image: "/images/treatments/cornea.jpg",
+   433→    gradient: "from-jade-400 to-brand-700",
+   434→    overview: [
+   435→      "The cornea is the transparent front window of the eye. Even a small scar, infection or swelling here can blur vision dramatically — the rest of the eye may be perfectly healthy.",
+   436→      "Corneal care demands precision: infections need culture-guided treatment, dryness and allergy need structured therapy, and dystrophies need long-term planning that may include advanced transplants.",
+   437→      "From a red painful eye after a foreign body to complex keratoconus management, we provide focused corneal evaluation and treatment under one roof.",
+   438→    ],
+   439→    symptoms: {
+   440→      title: "Cornea-related warning signs",
+   441→      items: [
+   442→        "Pain, redness and watering",
+   443→        "White spot or opacity on the cornea",
+   444→        "Light intolerance with blurred vision",
+   445→        "Repeated corneal erosions",
+   446→        "Progressive astigmatism (keratoconus)",
+   447→        "Foreign body sensation that persists",
+   448→      ],
+   449→    },
+   450→    candidates: {
+   451→      title: "Who should seek corneal care?",
+   452→      items: [
+   453→        "Contact-lens wearers with red or painful eyes",
+   454→        "Eye injury or chemical splash (emergency)",
+   455→        "Recurrent corneal infections",
+   456→        "Known keratoconus or family history",
+   457→        "Chronic severe dry eye",
+   458→        "Previous transplant needing follow-up",
+   459→      ],
+   460→    },
+   461→    options: [
+   462→      {
+   463→        title: "Infection Management",
+   464→        description:
+   465→          "Culture-guided fortified drops and disciplined review protocols for ulcers — the difference between a scar and clear vision.",
+   466→      },
+   467→      {
+   468→        title: "Keratoconus Care",
+   469→        description:
+   470→          "Topography-guided diagnosis, cross-linking to halt progression and specialty contact lenses for vision.",
+   471→      },
+   472→      {
+   473→        title: "Pterygium & Surface Surgery",
+   474→        description:
+   475→          "Conjunctival autograft technique with low recurrence rates for pterygium and surface growths.",
+   476→      },
+   477→      {
+   478→        title: "Corneal Transplants",
+   479→        description:
+   480→          "Lamellar procedures (DALK/DSEK/DSAEK) planned and coordinated with transplant-ready centres when indicated.",
+   481→      },
+   482→    ],
+   483→    approach: [
+   484→      { title: "Microscope-level detail", description: "Slit-lamp photography documents every finding for comparison over time." },
+   485→      { title: "Cause-first treatment", description: "Cultures and stains before drops — targeted therapy beats guesswork." },
+   486→      { title: "Contact-lens safety", description: "Fitting, hygiene training and annual reviews keep lens wear safe." },
+   487→      { title: "Long-term partnership", description: "Dystrophies and transplants need years of stewardship — we plan for that." },
+   488→    ],
+   489→    aftercare: [
+   490→      { title: "For ulcers", description: "Hourly drops demand discipline — our team structures the schedule so it is manageable." },
+   491→      { title: "After surface surgery", description: "Protective shell, lubrication and staged return to work over 1–2 weeks." },
+   492→      { title: "Cross-linking", description: "Mild grittiness settles in days; the stabilising effect protects vision for years." },
+   493→      { title: "Transplant care", description: "Lifetime drop schedules and rejection-warning education protect the graft." },
+   494→    ],
+   495→    faqs: [
+   496→      { q: "Is a corneal ulcer an emergency?", a: "Yes — delay of even a day can turn a treatable infection into a permanent scar. See an ophthalmologist the same day." },
+   497→      { q: "Can keratoconus be stopped?", a: "Cross-linking is designed to halt progression, especially when done early. Vision is then optimised with glasses or specialty lenses." },
+   498→      { q: "Will a transplant restore normal vision?", a: "Transplants replace scarred tissue with clear tissue; glasses or lenses are usually still needed for the sharpest vision." },
+   499→    ],
+   500→  },
+   501→  {
+   502→    id: "dry-eye",
+   503→    name: "Dry Eye Clinic",
+   504→    shortName: "Dry Eye",
+   505→    icon: Droplets,
+   506→    tagline: "Lasting relief for tired, gritty, watery eyes.",
+   507→    cardDescription:
+   508→      "Diagnosis and structured management of dry-eye disease, from lifestyle therapy to advanced treatments.",
+   509→    image: "/images/treatments/dry-eye.jpg",
+   510→    gradient: "from-jade-300 to-jade-600",
+   511→    overview: [
+   512→      "Dry eye is one of the most common — and most dismissed — eye conditions. Burning, grittiness, fluctuating blur and even watery eyes are all part of the same disrupted tear film.",
+   513→      "Screens, air-conditioning, contact lenses and certain medications steadily aggravate it. The result is eyes that feel tired by afternoon and unpredictable vision that interferes with work and reading.",
+   514→      "Our dry-eye clinic identifies your type of dryness — evaporative, aqueous-deficient or mixed — and builds a stepwise plan instead of a one-drop-fits-all approach.",
+   515→    ],
+   516→    symptoms: {
+   517→      title: "Typical dry-eye complaints",
+   518→      items: [
+   519→        "Burning, stinging or gritty sensation",
+   520→        "Stringy mucus around the eyes",
+   521→        "Eyes that water paradoxically",
+   522→        "Blurred vision that clears with blinks",
+   523→        "Heavy, tired eyes by evening",
+   524→        "Contact-lens intolerance",
+   525→      ],
+   526→    },
+   527→    candidates: {
+   528→      title: "Who is more prone?",
+   529→      items: [
+   530→        "Screen-heavy work (6+ hours daily)",
+   531→        "Age above 40, especially women",
+   532→        "Air-conditioned environments",
+   533→        "Diabetes, thyroid or autoimmune conditions",
+   534→        "Long-term antihistamine or antidepressant use",
+   535→        "Previous LASIK or cataract surgery",
+   536→      ],
+   537→    },
+   538→    options: [
+   539→      {
+   540→        title: "Tear-substitute Therapy",
+   541→        description:
+   542→          "Preservative-free lubricants selected for your tear film type, scheduled properly rather than used randomly.",
+   543→      },
+   544→      {
+   545→        title: "Lid-margin Therapy",
+   546→        description:
+   547→          "Warm compresses, lid hygiene and massage protocols that restore the oil layer — the root cause for most evaporative dryness.",
+   548→      },
+   549→      {
+   550→        title: "Anti-inflammatory Drops",
+   551→        description:
+   552→          "Short, supervised courses of cyclosporine or similar agents when inflammation drives the disease.",
+   553→      },
+   554→      {
+   555→        title: "Punctal Occlusion",
+   556→        description:
+   557→          "Tiny plugs that conserve your own tears — reversible, quick and highly effective for moderate–severe cases.",
+   558→      },
+   559→    ],
+   560→    approach: [
+   561→      { title: "Type the dryness", description: "Tear-break-up time, staining patterns and gland assessment classify your condition." },
+   562→      { title: "Fix the environment", description: "Screen height, blink habits, humidity and hydration — small changes, big relief." },
+   563→      { title: "Treat in steps", description: "Lubricants → lid therapy → anti-inflammatories → punctal plugs, reviewed at each stage." },
+   564→      { title: "Measure improvement", description: "Symptom scores and tear-film tests track progress objectively." },
+   565→    ],
+   566→    aftercare: [
+   567→      { title: "Daily habits", description: "20-20-20 screen rule, conscious blinking and night-time lubrication form the base." },
+   568→      { title: "Warm compresses", description: "A few minutes daily keeps the oil glands flowing — the most underused dry-eye treatment." },
+   569→      { title: "Review cycle", description: "Every 4–8 weeks until stable, then maintenance visits." },
+   570→      { title: "Set expectations", description: "Dry eye is managed, not cured — our goal is comfort you stop noticing." },
+   571→    ],
+   572→    faqs: [
+   573→      { q: "Can dry eye damage vision?", a: "Mild dryness mainly affects comfort, but severe untreated dryness can scar the cornea and blur vision — another reason to treat it properly." },
+   574→      { q: "Are eye drops addictive?", a: "No. Preservative-free lubricants can be used safely as advised; they support the tear film rather than suppress it." },
+   575→      { q: "Why do my watery eyes mean dryness?", a: "A poor-quality tear film triggers reflex watering. Treating the underlying dryness usually calms the reflex." },
+   576→    ],
+   577→  },
+   578→  {
+   579→    id: "pediatric",
+   580→    name: "Pediatric Ophthalmology",
+   581→    shortName: "Pediatric Care",
+   582→    icon: Baby,
+   583→    tagline: "Giving every child the clear start they deserve.",
+   584→    cardDescription:
+   585→      "Specialised eye care for children — vision screening, squint, lazy eye and developmental eye health.",
+   586→    image: "/images/treatments/pediatric.jpg",
+   587→    heroImage: "/images/hero-pediatric.jpg",
+   588→    gradient: "from-jade-400 to-jade-700",
+   589→    overview: [
+   590→      "Childhood eye problems are different from adult ones — many conditions, like lazy eye (amblyopia), can only be treated successfully while the visual system is still developing.",
+   591→      "Squint, refractive errors, congenital cataract and watering in infants all benefit from early recognition. Regular screening turns small corrections into lifelong good vision.",
+   592→      "Our pediatric approach is gentle and play-based: children feel examined while they feel explored. Parents leave understanding exactly what their child can and cannot see — and the plan to make it better.",
+   593→    ],
+   594→    symptoms: {
+   595→      title: "Signs parents should watch for",
+   596→      items: [
+   597→        "Eyes that appear crossed or drift outward",
+   598→        "Head tilt or unusual head posture",
+   599→        "Sitting too close to TV or holding books very near",
+   600→        "Frequent eye rubbing or light closing",
+   601→        "White reflex in photos or a dull red reflex",
+   602→        "Clumsiness, poor catching or avoiding fine work",
+   603→      ],
+   604→    },
+   605→    candidates: {
+   606→      title: "Recommended screening milestones",
+   607→      items: [
+   608→        "First complete exam by age 3 (earlier if concerns)",
+   609→        "Before starting school — around age 5",
+   610→        "Yearly checks during school years",
+   611→        "Premature babies (ROP screening protocol)",
+   612→        "Family history of squint or lazy eye",
+   613→        "Any sudden squint or eye deviation",
+   614→      ],
+   615→    },
+   616→    options: [
+   617→      {
+   618→        title: "Refraction & Glasses",
+   619→        description:
+   620→          "Accurate child-friendly refraction — including cycloplegic testing — with durable, well-fitted frames children actually keep on.",
+   621→      },
+   622→      {
+   623→        title: "Amblyopia (Lazy Eye) Therapy",
+   624→        description:
+   625→          "Patching and atropine regimens with structured follow-up during the critical treatment window.",
+   626→      },
+   627→      {
+   628→        title: "Squint Evaluation & Surgery",
+   629→        description:
+   630→          "Measurement of deviation and alignment surgery coordinated with experienced pediatric surgeons.",
+   631→      },
+   632→      {
+   633→        title: "Watering & Congenital Block",
+   634→        description:
+   635→          "Lacrimal system assessment and probing procedures for persistent infantile watering.",
+   636→      },
+   637→    ],
+   638→    approach: [
+   639→      { title: "Play-based exam", description: "Charts, lights and games that extract accurate answers from every age." },
+   640→      { title: "Parent partnership", description: "You see what we see — photos and explanations of your child's eyes." },
+   641→      { title: "Window-aware planning", description: "Time-sensitive conditions like amblyopia are prioritised deliberately." },
+   642→      { title: "School coordination", description: "Reports and seating/vision advice that teachers can actually use." },
+   643→    ],
+   644→    aftercare: [
+   645→      { title: "Patching discipline", description: "Stickers, calendars and review charts make lazy-eye therapy a game, not a battle." },
+   646→      { title: "Glasses care", description: "Spring hinges and straps for toddlers; we refit as your child grows." },
+   647→      { title: "Review rhythm", description: "Every 3–6 months in active treatment — children's prescriptions change fast." },
+   648→      { title: "Screen habits", description: "Age-appropriate screen time and outdoor play advice that protects developing eyes." },
+   649→    ],
+   650→    faqs: [
+   651→      { q: "My child is just 3 — can vision be tested?", a: "Absolutely. Age-appropriate charts, retinoscopy and objective techniques measure vision without needing the child to read letters." },
+   652→      { q: "Will squint go away on its own?", a: "No. True squint needs evaluation. Occasionally children 'grow out of' looking crossed-eyed (pseudostrabismus), but only an exam can tell the difference." },
+   653→      { q: "Is patching cruel?", a: "Patching is time-limited and reward-based; done correctly it is well tolerated and can permanently improve vision during the treatable years." },
+   654→    ],
+   655→  },
+   656→  {
+   657→    id: "general",
+   658→    name: "Comprehensive Eye Exam",
+   659→    shortName: "General Exam",
+   660→    icon: Eye,
+   661→    tagline: "A complete picture of your eye health — not just a number for glasses.",
+   662→    cardDescription:
+   663→      "Comprehensive vision and eye-health evaluation for the whole family, with detailed counselling.",
+   664→    image: "/images/treatments/general.jpg",
+   665→    gradient: "from-jade-500 to-brand-700",
+   666→    overview: [
+   667→      "A comprehensive examination answers three questions: How well do you see? How healthy are your eyes? What should we watch in the future?",
+   668→      "We measure vision and refraction, check eye pressure, examine the front of the eye on the slit lamp and dilate to view the retina and optic nerve where needed.",
+   669→      "You leave with more than a prescription — a clear explanation, a glasses plan if needed, and a personalised screening schedule based on your age and risk factors.",
+   670→    ],
+   671→    symptoms: {
+   672→      title: "Reasons to book an exam",
+   673→      items: [
+   674→        "Blur at distance or near",
+   675→        "Headaches after reading or screens",
+   676→        "Difficulty changing focus between distances",
+   677→        "It has simply been over a year",
+   678→        "New floaters, redness or watering",
+   679→        "Before starting new work or driving licence",
+   680→      ],
+   681→    },
+   682→    candidates: {
+   683→      title: "How often should eyes be examined?",
+   684→      items: [
+   685→        "Children — every year during school",
+   686→        "Adults 20–39 — every 2 years",
+   687→        "Above 40 — yearly (glaucoma screening)",
+   688→        "Diabetics — yearly dilated exam",
+   689→        "Contact-lens users — yearly",
+   690→        "Any new eye symptom — without waiting",
+   691→      ],
+   692→    },
+   693→    options: [
+   694→      {
+   695→        title: "Vision & Refraction",
+   696→        description:
+   697→          "Subjective refraction plus cycloplegic testing when required — accurate numbers without overcorrection.",
+   698→      },
+   699→      {
+   700→        title: "Pressure & Glaucoma Screen",
+   701→        description:
+   702→          "Tonometry and optic-nerve assessment — quick, painless and potentially sight-saving after 40.",
+   703→      },
+   704→      {
+   705→        title: "Slit-lamp Examination",
+   706→        description:
+   707→          "Magnified evaluation of lids, tear film, cornea, lens and anterior chamber health.",
+   708→      },
+   709→      {
+   710→        title: "Dilated Fundus Exam",
+   711→        description:
+   712→          "A complete retinal check that catches diabetes, hypertension and retinal changes before symptoms begin.",
+   713→      },
+   714→    ],
+   715→    approach: [
+   716→      { title: "History first", description: "Your work, screens, driving and hobbies shape the exam and prescription." },
+   717→      { title: "Full evaluation", description: "Vision, pressure, anterior segment and retina — the complete circuit." },
+   718→      { title: "Explain everything", description: "Findings shown and explained; you see your own retina on screen." },
+   719→      { title: "Clear plan", description: "Glasses advice, treatment if needed and your next review date." },
+   720→    ],
+   721→    aftercare: [
+   722→      { title: "After dilation", description: "Blur and light sensitivity last 3–4 hours; sunglasses and a driver help." },
+   723→      { title: "Glasses adaptation", description: "New numbers may take a few days to feel natural — that is expected." },
+   724→      { title: "Record keeping", description: "Your pressures, numbers and retinal findings are archived for year-on-year comparison." },
+   725→      { title: "Stay on schedule", description: "We remind you when your next exam is due — healthy eyes are maintained, not assumed." },
+   726→    ],
+   727→    faqs: [
+   728→      { q: "How long does an exam take?", a: "Plan for 45–60 minutes. Dilation adds waiting time for drops to act, and we use it to examine the retina properly." },
+   729→      { q: "Can I drive after dilation?", a: "Many patients drive comfortably; if you are unsure, bring someone along or we will help you plan." },
+   730→      { q: "Do I need an exam if my vision is fine?", a: "Yes — glaucoma, early retina disease and slow prescription changes have no symptoms. Screening finds what silence hides." },
+   731→    ],
+   732→  },
+   733→];
+   734→
+   735→export const getTreatment = (id?: string) =>
+   736→  TREATMENTS.find((t) => t.id === id) ?? TREATMENTS[0];
+   737→
+   738→/* ── Doctors ────────────────────────────────────────────────── */
+   739→export interface Doctor {
+   740→  id: string;
+   741→  name: string;
+   742→  role: string;
+   743→  qualification: string;
+   744→  specialization: string;
+   745→  experience: string;
+   746→  experienceYears: number;
+   747→  expertise: string[];
+   748→  bio: string[];
+   749→  languages: string[];
+   750→  timings: { days: string; time: string }[];
+   751→  treatments: string[];
+   752→  reviews: { name: string; rating: number; text: string }[];
+   753→  image: string;
+   754→  departments: string[];
+   755→}
+   756→
+   757→export const DOCTORS: Doctor[] = [
+   758→  {
+   759→    id: "dr-mehta",
+   760→    name: "Dr. Rajesh Mehta",
+   761→    role: "Senior Ophthalmologist & Cataract Surgeon",
+   762→    qualification: "MBBS, MS (Ophthalmology), FICO",
+   763→    specialization: "Cataract & Refractive Surgery",
+   764→    experience: "25+ years experience",
+   765→    experienceYears: 25,
+   766→    expertise: [
+   767→      "Micro-incision Phaco Cataract Surgery",
+   768→      "Premium IOL Planning (Multifocal / Toric / EDOF)",
+   769→      "LASIK & Refractive Evaluation",
+   770→      "Complex Cataract & Secondary IOLs",
+   771→    ],
+   772→    bio: [
+   773→      "Dr. Rajesh Mehta has spent over two decades restoring sight, with more than 20,000 cataract procedures to his name. His practice is built on a simple philosophy: measure meticulously, operate gently, and explain everything clearly.",
+   774→      "He trained in ophthalmology at a leading medical college and has kept pace with every generation of cataract technology — from manual SICS to micro-incision phaco and premium lens platforms.",
+   775→      "Patients know him for unhurried consultations, honest counselling about lens choices, and calm, reassuring surgical care.",
+   776→    ],
+   777→    languages: ["English", "Hindi", "Marathi"],
+   778→    timings: [
+   779→      { days: "Monday — Friday", time: "10:00 AM – 1:00 PM · 5:00 PM – 7:00 PM" },
+
+[showing lines 40-779 of 1215; use offset=780 with limit to continue reading]
