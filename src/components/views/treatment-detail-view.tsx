@@ -178,6 +178,44 @@ export function TreatmentDetailView({ id }: { id?: string }) {
         </div>
       </section>
 
+      {/* ── what to expect ── */}
+      <section aria-labelledby="what-to-expect" className="pb-16 sm:pb-20">
+        <div className="container-x">
+          <Reveal>
+            <div className="overflow-hidden rounded-[2rem] border border-jade-200/70 bg-gradient-to-br from-jade-50/70 via-white to-white shadow-soft">
+              <div className="grid lg:grid-cols-[0.9fr_2.1fr]">
+                <div className="flex flex-col justify-center border-b border-jade-200/60 p-8 sm:p-10 lg:border-b-0 lg:border-r">
+                  <span className="text-xs font-extrabold uppercase tracking-[0.18em] text-jade-700">
+                    Your Visit
+                  </span>
+                  <h2
+                    id="what-to-expect"
+                    className="mt-2 text-2xl font-extrabold tracking-tight text-brand-900 sm:text-3xl"
+                  >
+                    {t.whatToExpect.title}
+                  </h2>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-500">
+                    Every appointment follows a calm, predictable sequence — you
+                    always know what happens next, and you leave with a written
+                    plan.
+                  </p>
+                </div>
+                <ol className="grid gap-5 p-8 sm:grid-cols-2 sm:p-10">
+                  {t.whatToExpect.items.map((item, i) => (
+                    <li key={i} className="flex gap-4">
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gradient-to-br from-jade-500 to-brand-800 text-sm font-extrabold text-white shadow-soft">
+                        {i + 1}
+                      </span>
+                      <p className="text-sm leading-relaxed text-ink-600">{item}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── treatment options ── */}
       <section className="bg-mist py-16 sm:py-20">
         <div className="container-x">

@@ -66,6 +66,7 @@ export interface Treatment {
   image?: string; // stock photo shown on treatment cards
   gradient: string; // tailwind gradient classes for icon covers
   overview: string[];
+  whatToExpect: { title: string; items: string[] }; // what happens at the visit
   symptoms: { title: string; items: string[] };
   candidates: { title: string; items: string[] };
   options: TreatmentOption[];
@@ -91,6 +92,15 @@ export const TREATMENTS: Treatment[] = [
       "Cataract develops slowly and painlessly, which is why many people delay treatment until vision significantly interferes with daily life. The good news: cataract is highly treatable, and modern micro-incision surgery restores crisp, clear vision in a matter of minutes.",
       "At Shiv Netralay, every cataract journey begins with a detailed evaluation of your lens, retina and overall eye health so the surgical plan is tailored precisely to your eyes and lifestyle.",
     ],
+    whatToExpect: {
+      title: "What to Expect at Your Cataract Visit",
+      items: [
+        "A 30–45 minute evaluation: vision testing, lens grading on the slit lamp, biometry for IOL power calculation and a retinal health check.",
+        "Pupil dilation is routine — near vision stays blurred for 4–6 hours, so sunglasses and a companion make the visit easier.",
+        "A lens discussion matched to your lifestyle and budget — monofocal, toric or multifocal — with transparent, itemised pricing before you commit.",
+        "Surgery is day-care: you arrive, are operated within a few hours and go home the same day with a written drop schedule.",
+      ],
+    },
     symptoms: {
       title: "Common signs of cataract",
       items: [
@@ -191,6 +201,14 @@ export const TREATMENTS: Treatment[] = [
         q: "Can a cataract come back?",
         a: "No — the cloudy lens is removed permanently. Some patients develop a natural haze on the lens capsule months later, which is treated painlessly in the clinic with a laser.",
       },
+      {
+        q: "When can I resume normal activities?",
+        a: "Walking and routine household activity from day one; most patients are back at office work in 3–5 days. Swimming, heavy lifting and vigorous exercise pause for 2–4 weeks while the incision seals.",
+      },
+      {
+        q: "Which lens should I choose — monofocal or multifocal?",
+        a: "It depends on your priorities. Monofocals give dependable distance clarity with reading glasses; multifocal or EDOF lenses trade some contrast and higher cost for greater spectacle freedom. We recommend based on your daily tasks, not a brochure.",
+      },
     ],
   },
   {
@@ -208,6 +226,15 @@ export const TREATMENTS: Treatment[] = [
       "Suitability matters more than anything in refractive surgery. A thorough evaluation of corneal thickness, shape, prescription stability and eye health determines whether LASIK, PRK or an ICL is the safest choice for you.",
       "Our counselling is deliberately conservative: we recommend treatment only when we would choose it for our own family.",
     ],
+    whatToExpect: {
+      title: "What to Expect at Your LASIK Evaluation",
+      items: [
+        "A 2–3 hour screening — the longest visit we offer — covering topography, pachymetry, pupil measurement and tear-film tests across 20+ parameters.",
+        "Contact lenses must rest before testing: one week for soft lenses, 2–4 weeks for RGP, so your corneal readings are accurate.",
+        "A same-day eligibility verdict — including honest advice that laser may not be your best option, and what to choose instead.",
+        "On procedure day the laser itself takes under a minute per eye; plan about 3 hours at the centre including preparation and rest.",
+      ],
+    },
     symptoms: {
       title: "You may be a candidate if you have",
       items: [
@@ -267,6 +294,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "Is LASIK permanent?", a: "The corneal correction is permanent. Normal age-related reading changes (presbyopia) can still occur in the 40s and are discussed during counselling." },
       { q: "Does the laser hurt?", a: "Numbing drops make the treatment painless. You may feel brief pressure; the laser itself is sensation-free." },
       { q: "How quickly can I return to work?", a: "Most desk-work patients resume within 2–3 days once the first review confirms smooth healing." },
+      { q: "What if my prescription changes after LASIK?", a: "The corneal correction itself is stable, but small residual shifts can occur. If your cornea retains adequate thickness, an enhancement is possible years later — this is checked and discussed during your screening." },
+      { q: "Am I too old for LASIK?", a: "There is no fixed upper age, but after the mid-40s natural presbyopia and early lens changes alter the calculus — lens-based options such as ICL or refractive lens exchange often serve better. Your evaluation settles it with data, not guesswork." },
     ],
   },
   {
@@ -284,6 +313,15 @@ export const TREATMENTS: Treatment[] = [
       "Vision lost to glaucoma cannot be recovered — but with early detection, pressure control and regular monitoring, sight can be protected for a lifetime.",
       "Our glaucoma protocol combines pressure measurement, optic-nerve imaging and visual-field testing to detect change at its earliest, most treatable stage.",
     ],
+    whatToExpect: {
+      title: "What to Expect at a Glaucoma Visit",
+      items: [
+        "A battery of painless tests: applanation pressure, gonioscopy of the drainage angle, OCT nerve imaging and automated visual-field mapping.",
+        "A formal field test demands 15–20 minutes of focused attention per eye — we schedule it so you are never rushed.",
+        "If drops are prescribed, we coach your technique and timing until it is effortless — technique decides how well the medicine works.",
+        "Early follow-ups every 3–6 months recheck pressure and compare scans and fields against your personal baseline.",
+      ],
+    },
     symptoms: {
       title: "Warning signs to watch for",
       items: [
@@ -344,6 +382,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "Can glaucoma be cured?", a: "Damage cannot be reversed, but progression can usually be halted. The goal of treatment is to preserve the vision you have for life." },
       { q: "I see fine — do I still need drops?", a: "Yes. Glaucoma has no symptoms until advanced. Drops work silently to keep pressure at a safe level." },
       { q: "Is surgery required for everyone?", a: "No. Most patients are controlled with drops or laser alone; surgery is reserved for specific situations." },
+      { q: "Do glaucoma drops have side effects?", a: "Some cause mild stinging, redness or a dry mouth, and a few can affect heart rate or breathing. We select medicines around your general health and review tolerability at every visit — an alternative molecule almost always exists." },
+      { q: "Can I drive if I have glaucoma?", a: "Yes, as long as your central vision and visual fields meet legal standards. Regular field testing matters precisely because driving fitness depends on the periphery you cannot check yourself." },
     ],
   },
   {
@@ -362,6 +402,15 @@ export const TREATMENTS: Treatment[] = [
       "The condition moves through stages: from mild background changes, to leaking and swelling at the macula, to proliferative retinopathy where fragile new vessels grow and bleed. Each stage has a different treatment threshold.",
       "The good news is that most vision loss from diabetes is preventable. With yearly dilated screening, timely laser or injection treatment and good sugar control, the overwhelming majority of patients keep useful sight for life.",
     ],
+    whatToExpect: {
+      title: "What to Expect at Your Retinal Screening",
+      items: [
+        "A dilated fundus exam with OCT macular scanning; retinal photographs are archived as your baseline for year-on-year comparison.",
+        "Dilation blurs near vision and brightens light sensitivity for 4–6 hours — sunglasses help, and a companion is safer than driving.",
+        "If swelling or new vessels are found, your treatment options — injections, laser — are explained the same visit with a written plan.",
+        "Injections take under 15 minutes: numbing drops, a 2-second injection, a brief pressure check, and you go home.",
+      ],
+    },
     symptoms: {
       title: "Warning signs of diabetic eye disease",
       items: [
@@ -422,6 +471,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "Will every diabetic get retinopathy?", a: "No. Good sugar and blood-pressure control dramatically lowers the risk — and yearly screening catches any change at its most treatable stage." },
       { q: "Can diabetic retinopathy be reversed?", a: "Early changes can stabilise and swelling can resolve with treatment, but lost vision is rarely recovered — which is why treatment is timed early." },
       { q: "My vision is fine — do I still need yearly exams?", a: "Yes. Retinopathy causes no symptoms until it is advanced. Screening finds the disease while it is still easy to halt." },
+      { q: "Do injections into the eye hurt?", a: "Numbing drops and a very fine needle make it a brief pinch at most; the eye feels gritty for a few hours afterwards. Most patients are surprised by how manageable the process is." },
+      { q: "Does good sugar control reverse retinopathy?", a: "Tight control dramatically slows or halts progression but does not undo existing damage. That is why treatment pairs a good HbA1c with timely laser or injections — and why screening starts before any symptom." },
     ],
   },
   {
@@ -439,6 +490,15 @@ export const TREATMENTS: Treatment[] = [
       "Dry AMD progresses slowly with waste build-up under the macula; wet AMD appears suddenly when abnormal vessels leak fluid and can destroy central vision within weeks. Roughly one in ten dry cases converts to wet — which is why monitoring matters.",
       "Shiv Netralay combines OCT scanning, fundus imaging and simple home Amsler-grid monitoring to catch conversion early, when anti-VEGF injections are most effective at protecting your central vision.",
     ],
+    whatToExpect: {
+      title: "What to Expect at Your Macula Visit",
+      items: [
+        "A painless OCT scan maps the macula's layers in cross-section within minutes — the single most important test for AMD.",
+        "An Amsler-grid check and dilated exam complete the picture; bring your current glasses and any previous reports.",
+        "For wet AMD, anti-VEGF injections start promptly — each session includes a scan, numbing drops, the injection and a short review.",
+        "We teach Amsler self-monitoring so new distortion between visits is caught early — protecting this eye and the other one too.",
+      ],
+    },
     symptoms: {
       title: "Symptoms of macular degeneration",
       items: [
@@ -499,6 +559,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "What is the difference between dry and wet AMD?", a: "Dry AMD progresses slowly with thinning and waste deposits. Wet AMD leaks fluid from new vessels and can damage vision in weeks — but it now responds very well to injections." },
       { q: "Do injections cure macular degeneration?", a: "They control it rather than cure it. Most patients need repeat injections at intervals, but the majority keep useful central vision long-term." },
       { q: "Can AMD be prevented?", a: "It cannot be fully prevented, but not smoking, a green-leafy diet, UV protection and AREDS2 supplements (at the right stage) measurably lower the risk and slow progression." },
+      { q: "How often will I need injections?", a: "Usually a loading course of three monthly injections, after which OCT scans set the interval — some eyes need monthly care, many stretch to 8–12 weeks. Your macula's response, not a fixed calendar, decides." },
+      { q: "Will I go completely blind from AMD?", a: "No. AMD affects central vision, while the peripheral vision used for walking and orientation is preserved. With timely injections and monitoring, severe central loss has become increasingly rare." },
     ],
   },
   {
@@ -516,6 +578,15 @@ export const TREATMENTS: Treatment[] = [
       "Corneal care demands precision: infections need culture-guided treatment, dryness and allergy need structured therapy, and dystrophies need long-term planning that may include advanced transplants.",
       "From a red painful eye after a foreign body to complex keratoconus management, we provide focused corneal evaluation and treatment under one roof.",
     ],
+    whatToExpect: {
+      title: "What to Expect at a Cornea Consultation",
+      items: [
+        "High-magnification slit-lamp microscopy, corneal topography and — where needed — tear-film and corneal-sensation testing.",
+        "For infections, a tiny surface scrape after numbing drops may be sent for lab identification so drops are targeted, not guessed.",
+        "Keratoconus workups include tomography and thickness mapping; cross-linking candidates leave with a clear, written timeline.",
+        "Specialty lens trials (RGP, scleral) are hands-on — expect fitting sessions plus insertion training at your own pace.",
+      ],
+    },
     symptoms: {
       title: "Cornea-related warning signs",
       items: [
@@ -576,6 +647,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "Is a corneal ulcer an emergency?", a: "Yes — delay of even a day can turn a treatable infection into a permanent scar. See an ophthalmologist the same day." },
       { q: "Can keratoconus be stopped?", a: "Cross-linking is designed to halt progression, especially when done early. Vision is then optimised with glasses or specialty lenses." },
       { q: "Will a transplant restore normal vision?", a: "Transplants replace scarred tissue with clear tissue; glasses or lenses are usually still needed for the sharpest vision." },
+      { q: "How do I prevent corneal ulcers?", a: "Never sleep in lenses unless they are certified for it, replace your lens case monthly, avoid home-made saline, and wear protective eyewear for grinding or farm work. Most ulcers trace back to one of these four habits." },
+      { q: "What is recovery from cross-linking like?", a: "The procedure takes under an hour; expect 2–3 days of grittiness and light sensitivity with vision fluctuating for a few weeks. No eye-rubbing for a month, and most office-goers are back at work within 3–4 days." },
     ],
   },
   {
@@ -593,6 +666,15 @@ export const TREATMENTS: Treatment[] = [
       "Screens, air-conditioning, contact lenses and certain medications steadily aggravate it. The result is eyes that feel tired by afternoon and unpredictable vision that interferes with work and reading.",
       "Our dry-eye clinic identifies your type of dryness — evaporative, aqueous-deficient or mixed — and builds a stepwise plan instead of a one-drop-fits-all approach.",
     ],
+    whatToExpect: {
+      title: "What to Expect at the Dry Eye Clinic",
+      items: [
+        "Graded testing — tear break-up time, tear meniscus height and meibomian gland imaging — builds a precise profile of why your eyes are dry.",
+        "Lids and lashes are examined for blepharitis, since lid disease and dryness almost always travel together.",
+        "Your regimen is staged: lubricants, lid hygiene and compresses first; in-clinic therapies are added only if the basics are not enough.",
+        "Reviews at 4–6 weeks track objective tear-film improvement and trim the regimen down to what is actually working.",
+      ],
+    },
     symptoms: {
       title: "Typical dry-eye complaints",
       items: [
@@ -653,6 +735,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "Can dry eye damage vision?", a: "Mild dryness mainly affects comfort, but severe untreated dryness can scar the cornea and blur vision — another reason to treat it properly." },
       { q: "Are eye drops addictive?", a: "No. Preservative-free lubricants can be used safely as advised; they support the tear film rather than suppress it." },
       { q: "Why do my watery eyes mean dryness?", a: "A poor-quality tear film triggers reflex watering. Treating the underlying dryness usually calms the reflex." },
+      { q: "Why do screens make my eyes feel worse?", a: "Concentration cuts your blink rate by up to half, so tears evaporate faster between blinks. The 20-20-20 rule, conscious blinking, a raised screen and scheduled lubricating drops usually bring real relief." },
+      { q: "How long does treatment take to work?", a: "Surface comfort improves in 1–2 weeks, but rebuilding gland health takes 6–12 weeks. Dry eye is managed like blood pressure — a maintenance rhythm, not a one-time cure." },
     ],
   },
   {
@@ -671,6 +755,15 @@ export const TREATMENTS: Treatment[] = [
       "Squint, refractive errors, congenital cataract and watering in infants all benefit from early recognition. Regular screening turns small corrections into lifelong good vision.",
       "Our pediatric approach is gentle and play-based: children feel examined while they feel explored. Parents leave understanding exactly what their child can and cannot see — and the plan to make it better.",
     ],
+    whatToExpect: {
+      title: "What to Expect at Your Child's Visit",
+      items: [
+        "Age-matched testing — picture charts and retinoscopy for pre-readers — so accurate numbers are possible even at age 2–3.",
+        "Drops used for refraction and dilation need a short wait to act; plan a relaxed 30–45 minute visit.",
+        "Findings are explained to you in plain words with a written plan — glasses, patching hours or the next review date.",
+        "Bring old prescriptions and school notes; a favourite toy helps — patience and play are part of the exam.",
+      ],
+    },
     symptoms: {
       title: "Signs parents should watch for",
       items: [
@@ -731,6 +824,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "My child is just 3 — can vision be tested?", a: "Absolutely. Age-appropriate charts, retinoscopy and objective techniques measure vision without needing the child to read letters." },
       { q: "Will squint go away on its own?", a: "No. True squint needs evaluation. Occasionally children 'grow out of' looking crossed-eyed (pseudostrabismus), but only an exam can tell the difference." },
       { q: "Is patching cruel?", a: "Patching is time-limited and reward-based; done correctly it is well tolerated and can permanently improve vision during the treatable years." },
+      { q: "Will glasses make my child's eyes weaker?", a: "No — this is a persistent myth. Correctly powered glasses sharpen vision, support learning and, in amblyopia, actively train the brain. It is the uncorrected number that holds a child back." },
+      { q: "How often should my child's eyes be checked?", a: "Once in infancy, a full exam around age 3 before school begins, then yearly during school — sooner if there is a squint, sitting very close to screens, or a family history of glasses." },
     ],
   },
   {
@@ -748,6 +843,15 @@ export const TREATMENTS: Treatment[] = [
       "We measure vision and refraction, check eye pressure, examine the front of the eye on the slit lamp and dilate to view the retina and optic nerve where needed.",
       "You leave with more than a prescription — a clear explanation, a glasses plan if needed, and a personalised screening schedule based on your age and risk factors.",
     ],
+    whatToExpect: {
+      title: "What to Expect at Your Eye Exam",
+      items: [
+        "A structured 45–60 minute visit: history, refraction, eye-pressure check, muscle balance, slit-lamp exam and dilated retinal view.",
+        "Dilation is routine — expect 3–4 hours of near blur and light sensitivity; sunglasses and an optional companion make it easier.",
+        "You leave with a written prescription, your retinal images and pressures on record, and a personalised next-visit schedule.",
+        "Extra tests like OCT or visual fields are added only when your eyes call for them — never as a routine upsell.",
+      ],
+    },
     symptoms: {
       title: "Reasons to book an exam",
       items: [
@@ -808,6 +912,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "How long does an exam take?", a: "Plan for 45–60 minutes. Dilation adds waiting time for drops to act, and we use it to examine the retina properly." },
       { q: "Can I drive after dilation?", a: "Many patients drive comfortably; if you are unsure, bring someone along or we will help you plan." },
       { q: "Do I need an exam if my vision is fine?", a: "Yes — glaucoma, early retina disease and slow prescription changes have no symptoms. Screening finds what silence hides." },
+      { q: "How often should healthy adults be examined?", a: "Every two years between 18 and 39 with healthy eyes, and yearly from 40 onwards for glaucoma screening — more often for diabetics, contact-lens wearers or anyone with a family history of eye disease." },
+      { q: "What should I bring to my exam?", a: "Your current glasses and past prescriptions, a list of medicines, blood-sugar reports if diabetic, and sunglasses for the ride home — dilation makes bright light uncomfortable for a few hours." },
     ],
   },
   {
@@ -825,6 +931,15 @@ export const TREATMENTS: Treatment[] = [
       "Many oculoplastic problems are functional, not just cosmetic: a droopy lid blocking the pupil, lashes rubbing the cornea, constant watering from a blocked duct or a lump that keeps returning. Fixing them protects sight as much as appearance.",
       "Every procedure starts with a function-first assessment and photography, so the surgical plan restores protection, comfort and a natural look — with scars hidden in the lid's natural creases wherever possible.",
     ],
+    whatToExpect: {
+      title: "What to Expect at an Oculoplasty Consultation",
+      items: [
+        "Lid measurements and photography — ptosis and lid position are documented in millimetres, never judged by eye alone.",
+        "A quick syringing test maps the tear-drainage pathway in-clinic and pinpoints the exact site of any blockage.",
+        "Surgical candidates receive a written plan: incision placement, expected bruising timeline and healing milestones before consent.",
+        "Most procedures are day-care under local anaesthesia — you walk out the same day with ice-pack instructions and a review date.",
+      ],
+    },
     symptoms: {
       title: "Signs you may need oculoplastic care",
       items: [
@@ -885,6 +1000,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "Is eyelid surgery only cosmetic?", a: "No. Ptosis correction, entropion repair and watering procedures are functional — they restore vision, protect the cornea and stop chronic irritation." },
       { q: "Will eyelid surgery leave a visible scar?", a: "Eyelid skin heals remarkably well. Incisions are placed in natural creases, and any residual redness fades over weeks to months." },
       { q: "Does constant watering always mean surgery?", a: "Not always. Many blockages respond to probing, massage or drops; surgery such as DCR is reserved for ducts that truly need a new drainage pathway." },
+      { q: "How painful is eyelid surgery?", a: "Local anaesthesia keeps you comfortable during the procedure; afterwards it is soreness rather than pain, managed with paracetamol and cold compresses. Most patients never need stronger medicine." },
+      { q: "When can I return to work after lid surgery?", a: "Stitches come out around day 5–10 and bruising fades over two weeks — concealable from the second week. Desk work in 3–5 days is typical; strenuous activity waits about two to three weeks." },
     ],
   },
   {
@@ -902,6 +1019,15 @@ export const TREATMENTS: Treatment[] = [
       "A poorly fitted lens can quietly starve the cornea of oxygen or scratch its surface, while a well-fitted one disappears on the eye and delivers vision glasses cannot always match — wider fields, no fogging, full freedom to move.",
       "Every fitting at Shiv Netralay includes corneal measurement, a supervised trial on the eye, insertion-and-removal training and a written wear-and-care plan — because safe lens wear is a habit, not a purchase.",
     ],
+    whatToExpect: {
+      title: "What to Expect at Your Lens Fitting",
+      items: [
+        "A full eye exam plus corneal curvature and tear assessment — the measurements every good fit is built on.",
+        "Trial lenses go on your eye the same day; centration, movement and comfort are judged after 20–30 minutes of settling.",
+        "Hands-on training covers insertion, removal and case hygiene — we repeat until you are genuinely confident.",
+        "You leave with a build-up wear schedule and a review appointment before your final prescription is issued.",
+      ],
+    },
     symptoms: {
       title: "Signs your current lenses need review",
       items: [
@@ -962,6 +1088,8 @@ export const TREATMENTS: Treatment[] = [
       { q: "Are contact lenses safe for long-term use?", a: "Yes — with correct fitting, disciplined hygiene and yearly check-ups. Most complications come from over-wear, sleeping in lenses or poor case hygiene, all of which are preventable habits." },
       { q: "Can I sleep in my contact lenses?", a: "Only lenses specifically certified for extended wear, and even then only as advised. Regular lenses starve the cornea of oxygen overnight and sharply raise infection risk." },
       { q: "Daily or monthly — which should I choose?", a: "It depends on how often you wear lenses. Daily disposables are the healthiest for occasional use; monthlies suit regular all-day wearers. We recommend based on your pattern, not the shelf." },
+      { q: "At what age can children start contact lenses?", a: "Maturity matters more than age — motivated children as young as 10–12 manage daily disposables well, especially for sport. We assess handling skill and hygiene habits together before prescribing." },
+      { q: "Can I swim with contact lenses?", a: "Not without protection — water carries organisms that can cause serious corneal infection. Swim goggles over lenses or prescription swimming glasses are the safe route, and a lens that gets splashed should be discarded." },
     ],
   },
 ];
